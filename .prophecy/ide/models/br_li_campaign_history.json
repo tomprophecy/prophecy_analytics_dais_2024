@@ -1,0 +1,731 @@
+{
+  "id" : "br_li_campaign_history",
+  "metainfo" : {
+    "label" : "br_li_campaign_history",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "br_li_campaign_history##ejnqjbBt" : {
+      "id" : "br_li_campaign_history##ejnqjbBt",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "br_li_campaign_history",
+        "x" : -80,
+        "y" : 140,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Creates a campaign history table based on reformatted data.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM linkedin_campaign_history\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "y7aca88J",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_group_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "cost_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "creative_selection",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "daily_budget_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "daily_budget_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "unit_cost_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "unit_cost_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "format",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "locale_country",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "locale_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "objective_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "optimization_target_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_audience_expansion_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "is_offsite_delivery_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "run_schedule_start_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "run_schedule_end_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "last_modified_at",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "created_at",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "is_latest_version",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "linkedin_campaign_history"
+        } ],
+        "outputs" : [ {
+          "id" : "TWZtijH9",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_group_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "cost_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "creative_selection",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "daily_budget_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "daily_budget_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "unit_cost_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "unit_cost_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "format",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "locale_country",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "locale_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "objective_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "optimization_target_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_audience_expansion_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "is_offsite_delivery_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "run_schedule_start_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "run_schedule_end_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "last_modified_at",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "created_at",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "is_latest_version",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "kofGIQi4mPK4pdjwALVh2" : {
+      "id" : "kofGIQi4mPK4pdjwALVh2",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "dt_li_campaign_history",
+        "slug" : "dt_li_campaign_history",
+        "x" : -600,
+        "y" : 140,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "dt_li_campaign_history",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "HNs8_TQBa3EpyTM7fHEXD",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "last_modified_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_group_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "created_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "zMW6ZTL8tMUPchcLKmMvo$$Apuo8svkXWzpFPBQLVd1V" : {
+      "id" : "zMW6ZTL8tMUPchcLKmMvo$$Apuo8svkXWzpFPBQLVd1V",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "linkedin_campaign_history",
+        "slug" : "linkedin_campaign_history",
+        "x" : -340,
+        "y" : 140,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Formats LinkedIn campaign history data for analysis, including campaign details, budget information, and timestamps. Retrieves the latest version of each campaign.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "oDlFdsgtJ1Ubq8W5NoVEP$$hVoPERDo-gwz9X9hwLu0k##id", "oDlFdsgtJ1Ubq8W5NoVEP$$hVoPERDo-gwz9X9hwLu0k##name", "oDlFdsgtJ1Ubq8W5NoVEP$$hVoPERDo-gwz9X9hwLu0k##version_tag", "oDlFdsgtJ1Ubq8W5NoVEP$$hVoPERDo-gwz9X9hwLu0k##campaign_group_id", "oDlFdsgtJ1Ubq8W5NoVEP$$hVoPERDo-gwz9X9hwLu0k##account_id", "oDlFdsgtJ1Ubq8W5NoVEP$$hVoPERDo-gwz9X9hwLu0k##last_modified_time", "oDlFdsgtJ1Ubq8W5NoVEP$$hVoPERDo-gwz9X9hwLu0k##created_time" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'linkedin'"
+          },
+          "alias" : "source_relation"
+        }, {
+          "expression" : {
+            "expression" : "id"
+          },
+          "alias" : "campaign_id"
+        }, {
+          "expression" : {
+            "expression" : "name"
+          },
+          "alias" : "campaign_name"
+        }, {
+          "expression" : {
+            "expression" : "version_tag"
+          },
+          "alias" : "version_tag"
+        }, {
+          "expression" : {
+            "expression" : "campaign_group_id"
+          },
+          "alias" : "campaign_group_id"
+        }, {
+          "expression" : {
+            "expression" : "account_id"
+          },
+          "alias" : "account_id"
+        }, {
+          "expression" : {
+            "expression" : "cast(null as string)"
+          },
+          "alias" : "status"
+        }, {
+          "expression" : {
+            "expression" : "cast(null as string)"
+          },
+          "alias" : "type"
+        }, {
+          "expression" : {
+            "expression" : "cast(null as string)"
+          },
+          "alias" : "cost_type"
+        }, {
+          "expression" : {
+            "expression" : "cast(null as string)"
+          },
+          "alias" : "creative_selection"
+        }, {
+          "expression" : {
+            "expression" : "cast(null as float)"
+          },
+          "alias" : "daily_budget_amount"
+        }, {
+          "expression" : {
+            "expression" : "cast(null as string)"
+          },
+          "alias" : "daily_budget_currency_code"
+        }, {
+          "expression" : {
+            "expression" : "cast(null as float)"
+          },
+          "alias" : "unit_cost_amount"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS STRING)"
+          },
+          "alias" : "unit_cost_currency_code"
+        }, {
+          "expression" : {
+            "expression" : "cast(null as string)"
+          },
+          "alias" : "format"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS STRING)"
+          },
+          "alias" : "locale_country"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS STRING)"
+          },
+          "alias" : "locale_language"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS STRING)"
+          },
+          "alias" : "objective_type"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS STRING)"
+          },
+          "alias" : "optimization_target_type"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS BOOLEAN)"
+          },
+          "alias" : "is_audience_expansion_enabled"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS BOOLEAN)"
+          },
+          "alias" : "is_offsite_delivery_enabled"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS TIMESTAMP)"
+          },
+          "alias" : "run_schedule_start_at"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS TIMESTAMP)"
+          },
+          "alias" : "run_schedule_end_at"
+        }, {
+          "expression" : {
+            "expression" : "last_modified_time"
+          },
+          "alias" : "last_modified_at"
+        }, {
+          "expression" : {
+            "expression" : "created_time"
+          },
+          "alias" : "created_at"
+        }, {
+          "expression" : {
+            "expression" : "row_number() over (partition by id order by last_modified_time desc) = 1"
+          },
+          "alias" : "is_latest_version"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "oDlFdsgtJ1Ubq8W5NoVEP$$hVoPERDo-gwz9X9hwLu0k",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "last_modified_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_group_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "created_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "dt_li_campaign_history"
+        } ],
+        "outputs" : [ {
+          "id" : "VuMJv0Z6HHc8j1QsYUYq0$$lY6w3oNPKVZvImowGBA4C",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_group_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "cost_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "creative_selection",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "daily_budget_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "daily_budget_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "unit_cost_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "unit_cost_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "format",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "locale_country",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "locale_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "objective_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "optimization_target_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_audience_expansion_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "is_offsite_delivery_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "run_schedule_start_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "run_schedule_end_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "last_modified_at",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "created_at",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "is_latest_version",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "ceZ8QtBHpD3XqrEmo3tBT$$V_JqBSHMBAG3rN001c1dw",
+    "source" : "kofGIQi4mPK4pdjwALVh2",
+    "sourcePort" : "HNs8_TQBa3EpyTM7fHEXD",
+    "target" : "zMW6ZTL8tMUPchcLKmMvo$$Apuo8svkXWzpFPBQLVd1V",
+    "targetPort" : "oDlFdsgtJ1Ubq8W5NoVEP$$hVoPERDo-gwz9X9hwLu0k"
+  }, {
+    "id" : "THA_buALmqHBf-Xk-bl0S$$nE6gXD-2BBTHMUP8Ez5yp",
+    "source" : "zMW6ZTL8tMUPchcLKmMvo$$Apuo8svkXWzpFPBQLVd1V",
+    "sourcePort" : "VuMJv0Z6HHc8j1QsYUYq0$$lY6w3oNPKVZvImowGBA4C",
+    "target" : "br_li_campaign_history##ejnqjbBt",
+    "targetPort" : "y7aca88J"
+  } ],
+  "component" : "Model"
+}

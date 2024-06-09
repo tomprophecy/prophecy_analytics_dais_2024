@@ -23,7 +23,270 @@ functions:
   airflowFunctions: {}
   businessRules: {}
 subgraphs: {}
-sqlModels: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/gl_all_account_report:
+    name: gl_all_account_report
+    schema: null
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - models/gold/all/gl_all_account_report.sql
+    - .prophecy/ide/models/gl_all_account_report.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-09 20:40:37'
+  .prophecy/metadata/sqlmodels/br_li_ad_analytics_by_campaign:
+    name: br_li_ad_analytics_by_campaign
+    schema:
+      providerType: Databricks
+      fields:
+      - name: source_relation
+        dataType:
+          type: String
+      - name: date_day
+        dataType:
+          type: Date
+      - name: campaign_id
+        dataType:
+          type: Integer
+      - name: clicks
+        dataType:
+          type: Integer
+      - name: impressions
+        dataType:
+          type: Integer
+      - name: cost
+        dataType:
+          type: Float
+    description: Each record in this table represents the daily performance of ads
+      at the campaign level.
+    author: maciej@prophecy.io
+    files:
+    - models/bronze/linkedin/br_li_ad_analytics_by_campaign.sql
+    - .prophecy/ide/models/br_li_ad_analytics_by_campaign.json
+    - models/bronze/linkedin/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-09 19:36:39'
+  .prophecy/metadata/sqlmodels/sv_li_account_report:
+    name: sv_li_account_report
+    schema:
+      providerType: Databricks
+      fields:
+      - name: source_relation
+        dataType:
+          type: String
+      - name: date_day
+        dataType:
+          type: Date
+      - name: account_id
+        dataType:
+          type: Integer
+      - name: account_name
+        dataType:
+          type: String
+      - name: version_tag
+        dataType:
+          type: Integer
+      - name: currency
+        dataType:
+          type: String
+      - name: status
+        dataType:
+          type: String
+      - name: type
+        dataType:
+          type: String
+      - name: last_modified_time
+        dataType:
+          type: Date
+      - name: created_time
+        dataType:
+          type: Date
+      - name: clicks
+        dataType:
+          type: Bigint
+      - name: impressions
+        dataType:
+          type: Bigint
+      - name: cost
+        dataType:
+          type: Double
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - models/silver/linkedin/sv_li_account_report.sql
+    - .prophecy/ide/models/sv_li_account_report.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-09 19:44:47'
+  .prophecy/metadata/sqlmodels/test:
+    name: test
+    schema: null
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - models/test.sql
+    - .prophecy/ide/models/test.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-09 20:30:23'
+  .prophecy/metadata/sqlmodels/br_li_account_history:
+    name: br_li_account_history
+    schema:
+      providerType: Databricks
+      fields:
+      - name: source_relation
+        dataType:
+          type: String
+      - name: account_id
+        dataType:
+          type: Integer
+      - name: account_name
+        dataType:
+          type: String
+      - name: currency
+        dataType:
+          type: String
+      - name: version_tag
+        dataType:
+          type: Integer
+      - name: status
+        dataType:
+          type: String
+      - name: type
+        dataType:
+          type: String
+      - name: last_modified_time
+        dataType:
+          type: Date
+      - name: created_time
+        dataType:
+          type: Date
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - models/bronze/linkedin/br_li_account_history.sql
+    - .prophecy/ide/models/br_li_account_history.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-09 17:06:26'
+  .prophecy/metadata/sqlmodels/br_li_campaign_history:
+    name: br_li_campaign_history
+    schema:
+      providerType: Databricks
+      fields:
+      - name: source_relation
+        dataType:
+          type: String
+      - name: campaign_id
+        dataType:
+          type: Integer
+      - name: campaign_name
+        dataType:
+          type: String
+      - name: version_tag
+        dataType:
+          type: Integer
+      - name: campaign_group_id
+        dataType:
+          type: Integer
+      - name: account_id
+        dataType:
+          type: Integer
+      - name: status
+        dataType:
+          type: String
+      - name: type
+        dataType:
+          type: String
+      - name: cost_type
+        dataType:
+          type: String
+      - name: creative_selection
+        dataType:
+          type: String
+      - name: daily_budget_amount
+        dataType:
+          type: Float
+      - name: daily_budget_currency_code
+        dataType:
+          type: String
+      - name: unit_cost_amount
+        dataType:
+          type: Float
+      - name: unit_cost_currency_code
+        dataType:
+          type: String
+      - name: format
+        dataType:
+          type: String
+      - name: locale_country
+        dataType:
+          type: String
+      - name: locale_language
+        dataType:
+          type: String
+      - name: objective_type
+        dataType:
+          type: String
+      - name: optimization_target_type
+        dataType:
+          type: String
+      - name: is_audience_expansion_enabled
+        dataType:
+          type: Boolean
+      - name: is_offsite_delivery_enabled
+        dataType:
+          type: Boolean
+      - name: run_schedule_start_at
+        dataType:
+          type: Timestamp
+      - name: run_schedule_end_at
+        dataType:
+          type: Timestamp
+      - name: last_modified_at
+        dataType:
+          type: Date
+      - name: created_at
+        dataType:
+          type: Date
+      - name: is_latest_version
+        dataType:
+          type: Boolean
+    description: Each record represents a 'version' of a campaign.
+    author: maciej@prophecy.io
+    files:
+    - models/bronze/linkedin/br_li_campaign_history.sql
+    - .prophecy/ide/models/br_li_campaign_history.json
+    - models/bronze/linkedin/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-09 18:59:28'
 sqlSnapshots: {}
 sqlTests: {}
 sqlMacros:
@@ -36,7 +299,262 @@ sqlMacros:
     - macros/generate_schema_name.sql
     - .prophecy/ide/macros/generate_schema_name.json
     createdAt: '2024-06-09 16:52:28'
-sqlSeeds: {}
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/dt_li_account_history:
+    name: dt_li_account_history
+    schema:
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+      - name: last_modified_time
+        dataType:
+          type: Date
+      - name: created_time
+        dataType:
+          type: Date
+      - name: name
+        dataType:
+          type: String
+      - name: currency
+        dataType:
+          type: String
+      - name: version_tag
+        dataType:
+          type: Integer
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - seeds/linkedin/dt_li_account_history.csv
+    createdAt: '2024-06-09 17:07:12'
+  .prophecy/metadata/sqlseeds/dt_li_ad_analytics_by_campaign:
+    name: dt_li_ad_analytics_by_campaign
+    schema:
+      providerType: Databricks
+      fields:
+      - name: campaign_id
+        dataType:
+          type: Integer
+      - name: day
+        dataType:
+          type: Date
+      - name: action_clicks
+        dataType:
+          type: String
+      - name: ad_unit_clicks
+        dataType:
+          type: String
+      - name: approximate_unique_impressions
+        dataType:
+          type: Integer
+      - name: card_clicks
+        dataType:
+          type: String
+      - name: card_impressions
+        dataType:
+          type: Integer
+      - name: clicks
+        dataType:
+          type: Integer
+      - name: comment_likes
+        dataType:
+          type: Integer
+      - name: comments
+        dataType:
+          type: String
+      - name: company_page_clicks
+        dataType:
+          type: String
+      - name: conversion_value_in_local_currency
+        dataType:
+          type: Integer
+      - name: cost_in_local_currency
+        dataType:
+          type: Float
+      - name: cost_in_usd
+        dataType:
+          type: String
+      - name: external_website_conversions
+        dataType:
+          type: Integer
+      - name: external_website_post_click_conversions
+        dataType:
+          type: String
+      - name: external_website_post_view_conversions
+        dataType:
+          type: String
+      - name: follows
+        dataType:
+          type: String
+      - name: full_screen_plays
+        dataType:
+          type: String
+      - name: impressions
+        dataType:
+          type: String
+      - name: landing_page_clicks
+        dataType:
+          type: String
+      - name: lead_generation_mail_contact_info_shares
+        dataType:
+          type: Integer
+      - name: lead_generation_mail_interested_clicks
+        dataType:
+          type: Integer
+      - name: likes
+        dataType:
+          type: String
+      - name: one_click_lead_form_opens
+        dataType:
+          type: String
+      - name: one_click_leads
+        dataType:
+          type: String
+      - name: opens
+        dataType:
+          type: Integer
+      - name: other_engagements
+        dataType:
+          type: Integer
+      - name: shares
+        dataType:
+          type: String
+      - name: text_url_clicks
+        dataType:
+          type: String
+      - name: total_engagements
+        dataType:
+          type: Integer
+      - name: video_completions
+        dataType:
+          type: String
+      - name: video_first_quartile_completions
+        dataType:
+          type: String
+      - name: video_midpoint_completions
+        dataType:
+          type: String
+      - name: video_starts
+        dataType:
+          type: String
+      - name: video_third_quartile_completions
+        dataType:
+          type: String
+      - name: video_views
+        dataType:
+          type: Integer
+      - name: viral_card_clicks
+        dataType:
+          type: String
+      - name: viral_card_impressions
+        dataType:
+          type: String
+      - name: viral_clicks
+        dataType:
+          type: Integer
+      - name: viral_comment_likes
+        dataType:
+          type: String
+      - name: viral_comments
+        dataType:
+          type: String
+      - name: viral_company_page_clicks
+        dataType:
+          type: String
+      - name: viral_external_website_conversions
+        dataType:
+          type: String
+      - name: viral_external_website_post_click_conversions
+        dataType:
+          type: Integer
+      - name: viral_external_website_post_view_conversions
+        dataType:
+          type: String
+      - name: viral_follows
+        dataType:
+          type: Integer
+      - name: viral_full_screen_plays
+        dataType:
+          type: String
+      - name: viral_impressions
+        dataType:
+          type: Integer
+      - name: viral_landing_page_clicks
+        dataType:
+          type: String
+      - name: viral_likes
+        dataType:
+          type: Integer
+      - name: viral_one_click_lead_form_opens
+        dataType:
+          type: Integer
+      - name: viral_one_click_leads
+        dataType:
+          type: String
+      - name: viral_other_engagements
+        dataType:
+          type: Integer
+      - name: viral_shares
+        dataType:
+          type: String
+      - name: viral_total_engagements
+        dataType:
+          type: String
+      - name: viral_video_completions
+        dataType:
+          type: Integer
+      - name: viral_video_first_quartile_completions
+        dataType:
+          type: Integer
+      - name: viral_video_midpoint_completions
+        dataType:
+          type: Integer
+      - name: viral_video_starts
+        dataType:
+          type: String
+      - name: viral_video_third_quartile_completions
+        dataType:
+          type: String
+      - name: viral_video_views
+        dataType:
+          type: Integer
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - seeds/linkedin/dt_li_ad_analytics_by_campaign.csv
+    createdAt: '2024-06-09 19:36:02'
+  .prophecy/metadata/sqlseeds/dt_li_campaign_history:
+    name: dt_li_campaign_history
+    schema:
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+      - name: last_modified_time
+        dataType:
+          type: Date
+      - name: account_id
+        dataType:
+          type: Integer
+      - name: campaign_group_id
+        dataType:
+          type: Integer
+      - name: created_time
+        dataType:
+          type: Date
+      - name: name
+        dataType:
+          type: String
+      - name: version_tag
+        dataType:
+          type: Integer
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - seeds/linkedin/dt_li_campaign_history.csv
+    createdAt: '2024-06-09 18:59:52'
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline:

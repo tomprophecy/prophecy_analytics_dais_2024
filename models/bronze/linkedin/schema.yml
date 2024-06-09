@@ -1,0 +1,225 @@
+---
+version: 2
+models:
+- name: "br_li_campaign_history"
+  description: "Each record represents a 'version' of a campaign."
+  columns:
+  - name: "source_relation"
+    description: "Linkedin"
+    tags: []
+    dataType:
+      type: "String"
+  - name: "campaign_id"
+    description: "Unique internal ID representing the campaign."
+    tags: []
+    tests:
+    - "not_null"
+    dataType:
+      type: "String"
+  - name: "last_modified_at"
+    description: "The timestamp of when the version was updated."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "account_id"
+    description: "The ID of the account the campaign belongs to."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "campaign_group_id"
+    description: "The ID of the campaign group the campaign belongs to."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "created_at"
+    description: "The timestamp of when the campaign was created."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "campaign_name"
+    description: "A label for the campaign."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "version_tag"
+    description: "An integer representation of the version of the campaign."
+    tags: []
+    tests:
+    - "not_null"
+    dataType:
+      type: "String"
+  - name: "is_audience_expansion_enabled"
+    description: "Boolean (default=false) representing whether Audience Expansion\
+      \ is enabled for the campaign provides query expansion for certain targeting\
+      \ criteria."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "cost_type"
+    description: "CPM - Cost per thousand advertising impressions. If type=SPONSORED_INMAILS;\
+      \ cost per send(CPS) is measured as CPM x 1000.\nCPC- Cost per individual click\
+      \ on the associated link.\nCPV- Cost per view for video ads.\n"
+    tags: []
+    dataType:
+      type: "String"
+  - name: "creative_selection"
+    description: "ROUND_ROBIN - Rotate through available creatives to serve them as\
+      \ evenly as possible.\nOPTIMIZED (default) - Bias selection taking into account\
+      \ such as expected performance. Not available for Message and Conversation Ads\
+      \ (type=SPONSORED_INMAILS).\n"
+    tags: []
+    dataType:
+      type: "String"
+  - name: "daily_budget_amount"
+    description: "Maximum amount to spend per day UTC. The amount of money as a real\
+      \ number string."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "daily_budget_currency_code"
+    description: "ISO currency code. The currency must match that of the parent account."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "format"
+    description: "The ad format on the campaign level. See https://docs.microsoft.com/en-us/linkedin/marketing/integrations/ads/campaign-formats?view=li-lms-2022-07"
+    tags: []
+    dataType:
+      type: "String"
+  - name: "locale_country"
+    description: "Locale of the campaign. An uppercase two-letter country code as\
+      \ defined by ISO-3166."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "locale_language"
+    description: "Locale of the campaign. A lowercase two-letter language code as\
+      \ defined by ISO-639."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "objective_type"
+    description: "Campaign Objective type values. Click [here](https://docs.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/ad-budget-pricing-type-combinations?view=li-lms-2022-07)\
+      \ for Campaign Objective descriptions. One of: - BRAND_AWARENESS - ENGAGEMENT\
+      \ - JOB_APPLICANTS - LEAD_GENERATION - WEBSITE_CONVERSIONS - WEBSITE_VISITS\
+      \ - VIDEO_VIEWS\n"
+    tags: []
+    dataType:
+      type: "String"
+  - name: "is_offsite_delivery_enabled"
+    description: "Boolean indicating if this campaign to allowed to be served on the\
+      \ LinkedIn Audience Network to extend the reach of your campaign by delivering\
+      \ ads beyond the  LinkedIn feed to members on third-party apps and sites.\t\
+      (default will be \"True\" from June 30, 2022)\n"
+    tags: []
+    dataType:
+      type: "String"
+  - name: "optimization_target_type"
+    description: "Determines how this campaign is optimized for spending. If this\
+      \ is not set, there is no optimization. Refer to the documentation here. Default\
+      \ = 'NONE'."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "run_schedule_start_at"
+    description: "Scheduled date range to run associated creatives. The start date\
+      \ must be non-null. Represents the inclusive (greater than or equal to) value\
+      \ in which to start the range."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "run_schedule_end_at"
+    description: "Scheduled date range to run associated creatives. The start date\
+      \ must be non-null. Represents the exclusive (strictly less than) value in which\
+      \ to end the range, if provided.\n"
+    tags: []
+    dataType:
+      type: "String"
+  - name: "status"
+    description: "ACTIVE - Denotes that the campaign is fully servable.\nPAUSED -\
+      \ Denotes that the campaign meets all requirements to be served, but temporarily\
+      \ should not be.\nARCHIVED - Denotes that the campaign is presently inactive,\
+      \ and should mostly be hidden in the UI until un-archived.\nCOMPLETED - Denotes\
+      \ that the campaign has reached a specified budgetary or chronological limit.\n\
+      CANCELED - Denotes that the campaign has been permanently canceled, such as\
+      \ when an advertising account is permanently closed.\nDRAFT - Denotes that the\
+      \ campaign is still being edited and not eligible for serving. Some validation\
+      \ will be postponed until the campaign is activated.\nPENDING_DELETION - Denotes\
+      \ that the campaign has been requested to be deleted that is currently pending.\n\
+      REMOVED - Denotes that the campaign was deleted, but must remain fetchable due\
+      \ to the existence of performance data.\n"
+    tags: []
+    dataType:
+      type: "String"
+  - name: "type"
+    description: "TEXT_AD - Text-based ads that show up in the right column or top\
+      \ of the page on LinkedIn.\nSPONSORED_UPDATES - Native ads that promote a company's\
+      \ content updates in the LinkedIn feed.\nSPONSORED_INMAILS - Personalized messages\
+      \ with a call-to-action button delivered to a LinkedIn's member inbox.\nDYNAMIC\
+      \ - Ads that are dynamically personalized.\n"
+    tags: []
+    dataType:
+      type: "String"
+  - name: "unit_cost_amount"
+    description: "This value is used as one of the following: amount to bid (for manual\
+      \ bidding), amount which is the target cost (for target cost bidding) per click,\
+      \  impression, or other event depending on the pricing model, or cost cap (for\
+      \ cost cap bidding). The amount of money as a real number string.  The amount\
+      \ should be non-negative if the bidding strategy is manual, target cost, or\
+      \ cost cap bidding. The default is 0 with the currency code set to match that\
+      \ of the associated account.\n"
+    tags: []
+    dataType:
+      type: "String"
+  - name: "unit_cost_currency_code"
+    description: "Amount to bid per click, impression, or other event depending on\
+      \ the pricing model. The default is 0 with the currency code set to match that\
+      \ of the associated account.  ISO currency code.\n"
+    tags: []
+    dataType:
+      type: "String"
+  - name: "is_latest_version"
+    description: "Boolean of whether the record is the latest version of the campaign."
+    tags: []
+    dataType:
+      type: "String"
+- name: "br_li_ad_analytics_by_campaign"
+  description: "Each record in this table represents the daily performance of ads\
+    \ at the campaign level."
+  columns:
+  - name: "source_relation"
+    description: "Linkedin"
+    tags: []
+    dataType:
+      type: "String"
+  - name: "campaign_id"
+    description: "The ID of the related creative."
+    tags: []
+    tests:
+    - "not_null"
+    dataType:
+      type: "String"
+  - name: "date_day"
+    description: "The day of the activity."
+    tags: []
+    tests:
+    - "not_null"
+    dataType:
+      type: "String"
+  - name: "clicks"
+    description: "The count of chargeable clicks."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "impressions"
+    description: "This is the count of \"impressions\" for Direct Ads and Sponsored\
+      \ Updates and \"sends\" for InMails."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "cost"
+    description: "The cost of the ads in the local currency or USD."
+    tags: []
+    dataType:
+      type: "String"
+sources: []

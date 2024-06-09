@@ -1,0 +1,881 @@
+{
+  "id" : "br_li_ad_analytics_by_campaign",
+  "metainfo" : {
+    "label" : "br_li_ad_analytics_by_campaign",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "br_li_ad_analytics_by_campaign##YDQGe51j" : {
+      "id" : "br_li_ad_analytics_by_campaign##YDQGe51j",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "br_li_ad_analytics_by_campaign",
+        "x" : 220,
+        "y" : 60,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Analyzes ad analytics by campaign.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM cleanup\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "yyTd5zwp",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date_day",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "cost",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "cleanup"
+        } ],
+        "outputs" : [ {
+          "id" : "kMy1yEId",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date_day",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "cost",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "azan8eGljYQRaUYEfQb-u" : {
+      "id" : "azan8eGljYQRaUYEfQb-u",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "dt_li_ad_analytics_by_campaign",
+        "slug" : "dt_li_ad_analytics_by_campaign",
+        "x" : -220,
+        "y" : 60,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "dt_li_ad_analytics_by_campaign",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "fkb721jw5cKbO5C-0Mq8a",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "day",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "action_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ad_unit_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "approximate_unique_impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "card_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "card_impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "comment_likes",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "comments",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "company_page_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "conversion_value_in_local_currency",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "cost_in_local_currency",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "cost_in_usd",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "external_website_conversions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "external_website_post_click_conversions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "external_website_post_view_conversions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "follows",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "full_screen_plays",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "impressions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "landing_page_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "lead_generation_mail_contact_info_shares",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "lead_generation_mail_interested_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "likes",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "one_click_lead_form_opens",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "one_click_leads",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "opens",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "other_engagements",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "shares",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "text_url_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "total_engagements",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "video_completions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "video_first_quartile_completions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "video_midpoint_completions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "video_starts",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "video_third_quartile_completions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "video_views",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_card_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_card_impressions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_comment_likes",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_comments",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_company_page_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_external_website_conversions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_external_website_post_click_conversions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_external_website_post_view_conversions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_follows",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_full_screen_plays",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_landing_page_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_likes",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_one_click_lead_form_opens",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_one_click_leads",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_other_engagements",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_shares",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_total_engagements",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_video_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_video_first_quartile_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_video_midpoint_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_video_starts",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_video_third_quartile_completions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_video_views",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "G_iyC47KkqWT5lFrMeAm4$$2SvLinqPM0mMKAhKY3N4s" : {
+      "id" : "G_iyC47KkqWT5lFrMeAm4$$2SvLinqPM0mMKAhKY3N4s",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "cleanup",
+        "slug" : "cleanup",
+        "x" : 0,
+        "y" : 60,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Reformats LinkedIn ad analytics data by campaign, including source relation, date, campaign ID, clicks, impressions, and cost.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v##day", "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v##campaign_id", "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v##clicks", "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v##impressions", "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v##cost_in_usd" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'linkedin'"
+          },
+          "alias" : "source_relation"
+        }, {
+          "expression" : {
+            "expression" : "day"
+          },
+          "alias" : "date_day"
+        }, {
+          "expression" : {
+            "expression" : "campaign_id"
+          },
+          "alias" : "campaign_id"
+        }, {
+          "expression" : {
+            "expression" : "clicks"
+          },
+          "alias" : "clicks"
+        }, {
+          "expression" : {
+            "expression" : "CAST(impressions AS INT)"
+          },
+          "alias" : "impressions"
+        }, {
+          "expression" : {
+            "expression" : "CAST(cost_in_usd AS FLOAT)"
+          },
+          "alias" : "cost"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "day",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "action_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ad_unit_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "approximate_unique_impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "card_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "card_impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "comment_likes",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "comments",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "company_page_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "conversion_value_in_local_currency",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "cost_in_local_currency",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "cost_in_usd",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "external_website_conversions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "external_website_post_click_conversions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "external_website_post_view_conversions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "follows",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "full_screen_plays",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "impressions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "landing_page_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "lead_generation_mail_contact_info_shares",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "lead_generation_mail_interested_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "likes",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "one_click_lead_form_opens",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "one_click_leads",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "opens",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "other_engagements",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "shares",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "text_url_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "total_engagements",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "video_completions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "video_first_quartile_completions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "video_midpoint_completions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "video_starts",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "video_third_quartile_completions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "video_views",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_card_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_card_impressions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_comment_likes",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_comments",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_company_page_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_external_website_conversions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_external_website_post_click_conversions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_external_website_post_view_conversions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_follows",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_full_screen_plays",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_landing_page_clicks",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_likes",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_one_click_lead_form_opens",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_one_click_leads",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_other_engagements",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_shares",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_total_engagements",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_video_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_video_first_quartile_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_video_midpoint_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_video_starts",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_video_third_quartile_completions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "viral_video_views",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "dt_li_ad_analytics_by_campaign"
+        } ],
+        "outputs" : [ {
+          "id" : "XIBLHVFPj4ibdozXtd3BH$$85JSH5zI0ciGOy1X-kFIS",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date_day",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "cost",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "a6-BsFGTVWyIM5Sg87Nve$$dTmA3DGWZ-oS2_FzxNW2C",
+    "source" : "azan8eGljYQRaUYEfQb-u",
+    "sourcePort" : "fkb721jw5cKbO5C-0Mq8a",
+    "target" : "G_iyC47KkqWT5lFrMeAm4$$2SvLinqPM0mMKAhKY3N4s",
+    "targetPort" : "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v"
+  }, {
+    "id" : "yNa10mUM74hxJIKQ5DPKL",
+    "source" : "G_iyC47KkqWT5lFrMeAm4$$2SvLinqPM0mMKAhKY3N4s",
+    "sourcePort" : "XIBLHVFPj4ibdozXtd3BH$$85JSH5zI0ciGOy1X-kFIS",
+    "target" : "br_li_ad_analytics_by_campaign##YDQGe51j",
+    "targetPort" : "yyTd5zwp"
+  } ],
+  "component" : "Model"
+}

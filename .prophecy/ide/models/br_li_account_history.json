@@ -1,0 +1,383 @@
+{
+  "id" : "br_li_account_history",
+  "metainfo" : {
+    "label" : "br_li_account_history",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "userDefinedConfig" : {
+        "vars" : { }
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "Reformat_1##A5TvK22C" : {
+      "id" : "Reformat_1##A5TvK22C",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "linkedin_account_data",
+        "slug" : "linkedin_account_data",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Reformats account data from the 'linkedin' source relation for analysis. It includes account ID, name, currency, version tag, status, type, last modified time, and created time."
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'linkedin'"
+          },
+          "alias" : "source_relation"
+        }, {
+          "expression" : {
+            "expression" : "id"
+          },
+          "alias" : "account_id"
+        }, {
+          "expression" : {
+            "expression" : "name"
+          },
+          "alias" : "account_name"
+        }, {
+          "expression" : {
+            "expression" : "currency"
+          },
+          "alias" : "currency"
+        }, {
+          "expression" : {
+            "expression" : "version_tag"
+          },
+          "alias" : "version_tag"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)"
+          },
+          "alias" : "status"
+        }, {
+          "expression" : {
+            "expression" : "CAST(NULL AS string)"
+          },
+          "alias" : "type"
+        }, {
+          "expression" : {
+            "expression" : "last_modified_time"
+          },
+          "alias" : "last_modified_time"
+        }, {
+          "expression" : {
+            "expression" : "created_time"
+          },
+          "alias" : "created_time"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "c9J4a9xL",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "last_modified_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "created_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "currency",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "account_history_data"
+        } ],
+        "outputs" : [ {
+          "id" : "P0ZZ4uuP",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "currency",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_modified_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "created_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "br_li_account_history##vg2onY2x" : {
+      "id" : "br_li_account_history##vg2onY2x",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "br_li_account_history",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM linkedin_account_data\n",
+        "isModel" : false,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UpG0AlDe",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "currency",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_modified_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "created_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "linkedin_account_data"
+        } ],
+        "outputs" : [ {
+          "id" : "lyLXZY4Q",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "currency",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_modified_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "created_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "RXmGl_Gi4O0_uKbairK9n" : {
+      "id" : "RXmGl_Gi4O0_uKbairK9n",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "dt_li_account_history",
+        "slug" : "dt_li_account_history",
+        "x" : 0,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "dt_li_account_history",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "0M5PPpuwQSLUr_NEtseM7",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "last_modified_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "created_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "currency",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "gpqZ1JR6",
+    "source" : "Reformat_1##A5TvK22C",
+    "sourcePort" : "P0ZZ4uuP",
+    "target" : "br_li_account_history##vg2onY2x",
+    "targetPort" : "UpG0AlDe"
+  }, {
+    "id" : "STHgdiebu2cfYokKZOJBv$$aKWybavmDN1E0ZKvGmVjh",
+    "source" : "RXmGl_Gi4O0_uKbairK9n",
+    "sourcePort" : "0M5PPpuwQSLUr_NEtseM7",
+    "target" : "Reformat_1##A5TvK22C",
+    "targetPort" : "c9J4a9xL"
+  } ],
+  "component" : "Model"
+}

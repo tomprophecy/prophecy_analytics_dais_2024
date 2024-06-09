@@ -1,0 +1,808 @@
+{
+  "id" : "test",
+  "metainfo" : {
+    "label" : "test",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "test##dzK4IJ43" : {
+      "id" : "test##dzK4IJ43",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "test",
+        "x" : 200,
+        "y" : -20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM in0\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sIZdolk6",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "QTTmNIG0",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "yrSzwYSlHDZUdnX8xEmQY" : {
+      "id" : "yrSzwYSlHDZUdnX8xEmQY",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "br_li_account_history",
+        "slug" : "br_li_account_history",
+        "x" : -540,
+        "y" : -140,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "br_li_account_history",
+          "sourceType" : "Model",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "oFGhxTsr5DKdw6ZrCh5n5",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "currency",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_modified_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "created_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "QCsXIXcc9AlxlM4eVz7YO" : {
+      "id" : "QCsXIXcc9AlxlM4eVz7YO",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "br_li_campaign_history",
+        "slug" : "br_li_campaign_history",
+        "x" : -540,
+        "y" : 60,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "br_li_campaign_history",
+          "sourceType" : "Model",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "8ImKaBCRoFBChWPe1o7L3",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_group_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "cost_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "creative_selection",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "daily_budget_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "daily_budget_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "unit_cost_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "unit_cost_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "format",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "locale_country",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "locale_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "objective_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "optimization_target_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_audience_expansion_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "is_offsite_delivery_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "run_schedule_start_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "run_schedule_end_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "last_modified_at",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "created_at",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "is_latest_version",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "7_O5tXbCl0IlKUoqFXUea$$tWqg7idi9gGDVYbFXOazI" : {
+      "id" : "7_O5tXbCl0IlKUoqFXUea$$tWqg7idi9gGDVYbFXOazI",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "by_created_time_last_modified_time",
+        "slug" : "by_created_time_last_modified_time",
+        "x" : -340,
+        "y" : -40,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Combines campaign and account history data based on their account ID.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "br_li_campaign_history",
+          "expression" : {
+            "expression" : "br_li_account_history.account_id = br_li_campaign_history.account_id"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "br_li_campaign_history.campaign_id"
+          },
+          "alias" : "campaign_id"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.campaign_name"
+          },
+          "alias" : "campaign_name"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.campaign_group_id"
+          },
+          "alias" : "campaign_group_id"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.cost_type"
+          },
+          "alias" : "cost_type"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.creative_selection"
+          },
+          "alias" : "creative_selection"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.daily_budget_amount"
+          },
+          "alias" : "daily_budget_amount"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.daily_budget_currency_code"
+          },
+          "alias" : "daily_budget_currency_code"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.unit_cost_amount"
+          },
+          "alias" : "unit_cost_amount"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.unit_cost_currency_code"
+          },
+          "alias" : "unit_cost_currency_code"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.format"
+          },
+          "alias" : "format"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.locale_country"
+          },
+          "alias" : "locale_country"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.locale_language"
+          },
+          "alias" : "locale_language"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.objective_type"
+          },
+          "alias" : "objective_type"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.optimization_target_type"
+          },
+          "alias" : "optimization_target_type"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.is_audience_expansion_enabled"
+          },
+          "alias" : "is_audience_expansion_enabled"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.is_offsite_delivery_enabled"
+          },
+          "alias" : "is_offsite_delivery_enabled"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.run_schedule_start_at"
+          },
+          "alias" : "run_schedule_start_at"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.run_schedule_end_at"
+          },
+          "alias" : "run_schedule_end_at"
+        }, {
+          "expression" : {
+            "expression" : "br_li_campaign_history.is_latest_version"
+          },
+          "alias" : "is_latest_version"
+        }, {
+          "expression" : {
+            "expression" : "br_li_account_history.account_id"
+          },
+          "alias" : "account_id"
+        }, {
+          "expression" : {
+            "expression" : "br_li_account_history.account_name"
+          },
+          "alias" : "account_name"
+        }, {
+          "expression" : {
+            "expression" : "br_li_account_history.type"
+          },
+          "alias" : "type"
+        }, {
+          "expression" : {
+            "expression" : "br_li_account_history.last_modified_time"
+          },
+          "alias" : "last_modified_time"
+        }, {
+          "expression" : {
+            "expression" : "br_li_account_history.created_time"
+          },
+          "alias" : "created_time"
+        }, {
+          "expression" : {
+            "expression" : "br_li_account_history.source_relation"
+          },
+          "alias" : "source_relation"
+        }, {
+          "expression" : {
+            "expression" : "br_li_account_history.status"
+          },
+          "alias" : "status"
+        }, {
+          "expression" : {
+            "expression" : "br_li_account_history.currency"
+          },
+          "alias" : "currency"
+        }, {
+          "expression" : {
+            "expression" : "br_li_account_history.version_tag"
+          },
+          "alias" : "version_tag"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "9cGNTDVUetAGHO3kNbF2X$$CYvaG2GfZFKW5ApK9ixr4##account_id", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##account_id", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##campaign_id", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##campaign_name", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##campaign_group_id", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##cost_type", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##creative_selection", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##daily_budget_amount", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##daily_budget_currency_code", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##unit_cost_amount", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##unit_cost_currency_code", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##format", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##locale_country", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##locale_language", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##objective_type", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##optimization_target_type", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##is_audience_expansion_enabled", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##is_offsite_delivery_enabled", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##run_schedule_start_at", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##run_schedule_end_at", "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o##is_latest_version", "9cGNTDVUetAGHO3kNbF2X$$CYvaG2GfZFKW5ApK9ixr4##account_id", "9cGNTDVUetAGHO3kNbF2X$$CYvaG2GfZFKW5ApK9ixr4##account_name", "9cGNTDVUetAGHO3kNbF2X$$CYvaG2GfZFKW5ApK9ixr4##type", "9cGNTDVUetAGHO3kNbF2X$$CYvaG2GfZFKW5ApK9ixr4##last_modified_time", "9cGNTDVUetAGHO3kNbF2X$$CYvaG2GfZFKW5ApK9ixr4##created_time", "9cGNTDVUetAGHO3kNbF2X$$CYvaG2GfZFKW5ApK9ixr4##source_relation", "9cGNTDVUetAGHO3kNbF2X$$CYvaG2GfZFKW5ApK9ixr4##status", "9cGNTDVUetAGHO3kNbF2X$$CYvaG2GfZFKW5ApK9ixr4##currency", "9cGNTDVUetAGHO3kNbF2X$$CYvaG2GfZFKW5ApK9ixr4##version_tag" ],
+        "headAlias" : "br_li_account_history"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9cGNTDVUetAGHO3kNbF2X$$CYvaG2GfZFKW5ApK9ixr4",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "currency",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_modified_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "created_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "br_li_account_history"
+        }, {
+          "id" : "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_group_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "cost_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "creative_selection",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "daily_budget_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "daily_budget_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "unit_cost_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "unit_cost_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "format",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "locale_country",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "locale_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "objective_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "optimization_target_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_audience_expansion_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "is_offsite_delivery_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "run_schedule_start_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "run_schedule_end_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "last_modified_at",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "created_at",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "is_latest_version",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "br_li_campaign_history"
+        } ],
+        "outputs" : [ {
+          "id" : "3JuWPbVXXyVPkWOHTkVBp$$fPzoY8skMUkn9MiLKQiqE",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_group_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "cost_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "creative_selection",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "daily_budget_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "daily_budget_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "unit_cost_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "unit_cost_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "format",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "locale_country",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "locale_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "objective_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "optimization_target_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_audience_expansion_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "is_offsite_delivery_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "run_schedule_start_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "run_schedule_end_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "is_latest_version",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_modified_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "created_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "currency",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "version_tag",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "MvUd2XVCRnKOFFr_4Q4vK$$Kv-fj7AzixPOtj5Hkl95q",
+    "source" : "yrSzwYSlHDZUdnX8xEmQY",
+    "sourcePort" : "oFGhxTsr5DKdw6ZrCh5n5",
+    "target" : "7_O5tXbCl0IlKUoqFXUea$$tWqg7idi9gGDVYbFXOazI",
+    "targetPort" : "9cGNTDVUetAGHO3kNbF2X$$CYvaG2GfZFKW5ApK9ixr4"
+  }, {
+    "id" : "kx7yP1DheqlFLH1x_FtMh$$gpF0cy3XQQPSdzP3iEgaJ",
+    "source" : "QCsXIXcc9AlxlM4eVz7YO",
+    "sourcePort" : "8ImKaBCRoFBChWPe1o7L3",
+    "target" : "7_O5tXbCl0IlKUoqFXUea$$tWqg7idi9gGDVYbFXOazI",
+    "targetPort" : "lM_elzZjhAo09JFAWCdeO$$BB42QGoesfI4Cua9FYE7o"
+  } ],
+  "component" : "Model"
+}

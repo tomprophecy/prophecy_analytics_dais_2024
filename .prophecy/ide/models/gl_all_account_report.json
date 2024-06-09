@@ -1,0 +1,49 @@
+{
+  "id" : "gl_all_account_report",
+  "metainfo" : {
+    "label" : "gl_all_account_report",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "gl_all_account_report##u28eqomf" : {
+      "id" : "gl_all_account_report##u28eqomf",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "gl_all_account_report",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "LX2oZhEf",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "sgahGHsB",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Model"
+}
