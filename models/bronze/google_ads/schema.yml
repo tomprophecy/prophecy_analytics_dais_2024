@@ -52,4 +52,106 @@ models:
     tags: []
     dataType:
       type: "String"
+- name: "br_go_ad_history"
+  description: "Each record represents a version of an ad in Google Ads."
+  columns:
+  - name: "source_relation"
+    description: "The source of the record if the unioning functionality is being\
+      \ used. If not this field will be empty."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "ad_group_id"
+    description: "The ID of the AdGroup."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "ad_id"
+    description: "The ID of the Ad."
+    tags: []
+    tests:
+    - "not_null"
+    dataType:
+      type: "String"
+  - name: "updated_at"
+    description: "Timestamp of when the record was last updated in Google Ads."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "display_url"
+    description: "The display url of the ad that is being served."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "ad_type"
+    description: "The type of the ad in Google Ads."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "ad_status"
+    description: "Status of the Ad."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "is_most_recent_record"
+    description: "Boolean representing whether the record is the most recent version\
+      \ of the object."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "source_final_urls"
+    description: "The original list of final urls expressed as an array. Please be\
+      \ aware the test used on this field is intended to warn you if you have fields\
+      \ with multiple urls. If you do, the `final_url` field will filter down the\
+      \ urls within the array to just the first. Therefore, this package will only\
+      \ leverage one of possibly many urls within this field array."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "final_url"
+    description: "The first url in the list of the urls within the `final_urls` source\
+      \ field."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "base_url"
+    description: "The base URL of the ad, extracted from the `final_urls`."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "url_host"
+    description: "The URL host of the ad, extracted from the `final_urls`."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "url_path"
+    description: "The URL path of the ad, extracted from the `final_urls`."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "utm_source"
+    description: "The utm_source parameter of the ad, extracted from the `final_urls`."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "utm_medium"
+    description: "The utm_medium parameter of the ad, extracted from the `final_urls`."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "utm_campaign"
+    description: "The utm_campaign parameter of the ad, extracted from the `final_urls`."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "utm_content"
+    description: "The utm_content parameter of the ad, extracted from the `final_urls`."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "utm_term"
+    description: "The utm_term parameter of the ad, extracted from the `final_urls`."
+    tags: []
+    dataType:
+      type: "String"
 sources: []

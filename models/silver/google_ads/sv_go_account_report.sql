@@ -1,12 +1,4 @@
-WITH br_go_account_stats_1 AS (
-
-  SELECT * 
-  
-  FROM {{ ref('br_go_account_stats')}}
-
-),
-
-br_go_account_history_1 AS (
+WITH br_go_account_history AS (
 
   SELECT * 
   
@@ -14,38 +6,49 @@ br_go_account_history_1 AS (
 
 ),
 
-by_source_relation_account_id AS (
+br_go_account_stats AS (
 
-  SELECT 
-    br_go_account_stats_1.date_day AS date_day,
-    br_go_account_stats_1.ad_network_type AS ad_network_type,
-    br_go_account_stats_1.device AS device,
-    br_go_account_stats_1.clicks AS clicks,
-    br_go_account_stats_1.spend AS spend,
-    br_go_account_stats_1.impressions AS impressions,
-    br_go_account_history_1.currency_code AS currency_code,
-    br_go_account_history_1.account_name AS account_name,
-    br_go_account_history_1.time_zone AS time_zone,
-    br_go_account_history_1.source_relation AS source_relation,
-    br_go_account_history_1.is_most_recent_record AS is_most_recent_record,
-    br_go_account_history_1.account_id AS account_id,
-    br_go_account_history_1.updated_at AS updated_at,
-    br_go_account_history_1.auto_tagging_enabled AS auto_tagging_enabled
+  SELECT * 
   
-  FROM br_go_account_history_1
-  INNER JOIN br_go_account_stats_1
-     ON br_go_account_history_1.account_id = br_go_account_stats_1.account_id
-    AND br_go_account_history_1.source_relation = br_go_account_stats_1.source_relation
+  FROM {{ ref('br_go_account_stats')}}
 
 ),
 
-total_spend_clicks_impressions AS (
+by_source_relation_account_id AS (
+
+  SELECT 
+    br_go_account_stats.date_day AS date_day,
+    br_go_account_stats.ad_network_type AS ad_network_type,
+    br_go_account_stats.device AS device,
+    br_go_account_stats.clicks AS clicks,
+    br_go_account_stats.spend AS spend,
+    br_go_account_stats.impressions AS impressions,
+    br_go_account_history.currency_code AS currency_code,
+    br_go_account_history.updated_at AS updated_at,
+    br_go_account_history.account_id AS account_id,
+    br_go_account_history.source_relation AS source_relation,
+    br_go_account_history.account_name AS account_name,
+    br_go_account_history.auto_tagging_enabled AS auto_tagging_enabled,
+    br_go_account_history.time_zone AS time_zone,
+    br_go_account_history.is_most_recent_record AS is_most_recent_record
+  
+  FROM br_go_account_history
+  INNER JOIN br_go_account_stats
+     ON br_go_account_history.account_id = br_go_account_stats.account_id
+    AND br_go_account_history.source_relation = br_go_account_stats.source_relation
+
+),
+
+total_metrics_by_account AS (
 
   SELECT 
     account_id,
-    SUM(spend) AS TOTAL_SPEND,
     SUM(clicks) AS TOTAL_CLICKS,
     SUM(impressions) AS TOTAL_IMPRESSIONS,
+    SUM(spend) AS TOTAL_SPEND,
+    MAX(date_day) AS date_day,
+    MAX(ad_network_type) AS ad_network_type,
+    MAX(device) AS device,
     MAX(currency_code) AS currency_code,
     MAX(updated_at) AS updated_at,
     MAX(source_relation) AS source_relation,
@@ -54,12 +57,22 @@ total_spend_clicks_impressions AS (
     MAX(time_zone) AS time_zone,
     MAX(is_most_recent_record) AS is_most_recent_record
   
-  FROM by_source_relation_account_id AS by_source_relation_account_name
+  FROM by_source_relation_account_id
   
   GROUP BY account_id
+
+),
+
+limit_100 AS (
+
+  SELECT * 
+  
+  FROM total_metrics_by_account
+  
+  LIMIT 100
 
 )
 
 SELECT *
 
-FROM total_spend_clicks_impressions
+FROM limit_100

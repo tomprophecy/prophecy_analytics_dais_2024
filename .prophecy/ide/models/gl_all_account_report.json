@@ -203,11 +203,6 @@
                 "type" : "Integer"
               }
             }, {
-              "name" : "TOTAL_SPEND",
-              "dataType" : {
-                "type" : "Double"
-              }
-            }, {
               "name" : "TOTAL_CLICKS",
               "dataType" : {
                 "type" : "Bigint"
@@ -216,6 +211,26 @@
               "name" : "TOTAL_IMPRESSIONS",
               "dataType" : {
                 "type" : "Bigint"
+              }
+            }, {
+              "name" : "TOTAL_SPEND",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "date_day",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ad_network_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "device",
+              "dataType" : {
+                "type" : "String"
               }
             }, {
               "name" : "currency_code",
@@ -510,11 +525,6 @@
                 "type" : "Integer"
               }
             }, {
-              "name" : "TOTAL_SPEND",
-              "dataType" : {
-                "type" : "Double"
-              }
-            }, {
               "name" : "TOTAL_CLICKS",
               "dataType" : {
                 "type" : "Bigint"
@@ -523,6 +533,26 @@
               "name" : "TOTAL_IMPRESSIONS",
               "dataType" : {
                 "type" : "Bigint"
+              }
+            }, {
+              "name" : "TOTAL_SPEND",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "date_day",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ad_network_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "device",
+              "dataType" : {
+                "type" : "String"
               }
             }, {
               "name" : "currency_code",

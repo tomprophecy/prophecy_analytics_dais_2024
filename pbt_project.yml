@@ -120,6 +120,48 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2024-06-09 19:44:47'
+  .prophecy/metadata/sqlmodels/br_go_ad_history:
+    name: br_go_ad_history
+    schema:
+      providerType: Databricks
+      fields:
+      - name: ad_group_id
+        dataType:
+          type: Float
+      - name: id
+        dataType:
+          type: Float
+      - name: name
+        dataType:
+          type: String
+      - name: updated_at
+        dataType:
+          type: Date
+      - name: type
+        dataType:
+          type: String
+      - name: status
+        dataType:
+          type: String
+      - name: display_url
+        dataType:
+          type: String
+      - name: final_urls
+        dataType:
+          type: String
+    description: Each record represents a version of an ad in Google Ads.
+    author: maciej@prophecy.io
+    files:
+    - models/bronze/google_ads/br_go_ad_history.sql
+    - .prophecy/ide/models/br_go_ad_history.json
+    - models/bronze/google_ads/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-10 20:09:31'
   .prophecy/metadata/sqlmodels/br_go_account_history:
     name: br_go_account_history
     schema:
@@ -309,15 +351,24 @@ sqlModels:
       - name: account_id
         dataType:
           type: Integer
-      - name: TOTAL_SPEND
-        dataType:
-          type: Double
       - name: TOTAL_CLICKS
         dataType:
           type: Bigint
       - name: TOTAL_IMPRESSIONS
         dataType:
           type: Bigint
+      - name: TOTAL_SPEND
+        dataType:
+          type: Double
+      - name: date_day
+        dataType:
+          type: Integer
+      - name: ad_network_type
+        dataType:
+          type: String
+      - name: device
+        dataType:
+          type: String
       - name: currency_code
         dataType:
           type: String
@@ -350,7 +401,7 @@ sqlModels:
       seeds: []
       sources: []
       snapshots: []
-    createdAt: '2024-06-09 21:12:38'
+    createdAt: '2024-06-10 19:58:04'
   .prophecy/metadata/sqlmodels/gl_all_account_report:
     name: gl_all_account_report
     schema:
@@ -440,7 +491,32 @@ sqlModels:
     createdAt: '2024-06-09 21:06:20'
 sqlSnapshots: {}
 sqlTests: {}
-sqlMacros: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/default__google_ads_extract_url_parameter:
+    name: default__google_ads_extract_url_parameter
+    macroType: expression
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - macros/google_ads_extract_url_parameter.sql
+    createdAt: '2024-06-10 20:40:06'
+  .prophecy/metadata/sqlmacros/google_ads_extract_url_parameter:
+    name: google_ads_extract_url_parameter
+    macroType: query
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - macros/google_ads_extract_url_parameter.sql
+    - .prophecy/ide/macros/google_ads_extract_url_parameter.json
+    createdAt: '2024-06-10 20:39:58'
+  .prophecy/metadata/sqlmacros/spark__google_ads_extract_url_parameter:
+    name: spark__google_ads_extract_url_parameter
+    macroType: expression
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - macros/google_ads_extract_url_parameter.sql
+    createdAt: '2024-06-10 20:40:06'
 sqlSeeds:
   .prophecy/metadata/sqlseeds/dt_li_campaign_history:
     name: dt_li_campaign_history
@@ -528,6 +604,40 @@ sqlSeeds:
     files:
     - seeds/google_ads/dt_go_account_history.csv
     createdAt: '2024-06-09 21:00:10'
+  .prophecy/metadata/sqlseeds/dt_go_ad_history:
+    name: dt_go_ad_history
+    schema:
+      providerType: Databricks
+      fields:
+      - name: ad_group_id
+        dataType:
+          type: Float
+      - name: id
+        dataType:
+          type: Float
+      - name: name
+        dataType:
+          type: String
+      - name: updated_at
+        dataType:
+          type: Date
+      - name: type
+        dataType:
+          type: String
+      - name: status
+        dataType:
+          type: String
+      - name: display_url
+        dataType:
+          type: String
+      - name: final_urls
+        dataType:
+          type: String
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - seeds/google_ads/dt_go_ad_history.csv
+    createdAt: '2024-06-10 20:09:04'
   .prophecy/metadata/sqlseeds/dt_go_account_stats:
     name: dt_go_account_stats
     schema:
