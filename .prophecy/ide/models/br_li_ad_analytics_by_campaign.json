@@ -5,7 +5,2527 @@
     "autoLayout" : false,
     "staleState" : "none",
     "sourceSuggestions" : {
-      "sources" : [ ]
+      "sources" : [ {
+        "source" : {
+          "table" : {
+            "name" : "br_go_account_stats",
+            "sourceType" : "Model"
+          }
+        },
+        "sourceComponentKind" : "Model",
+        "sourceLabel" : "br_go_account_stats",
+        "canJoinWith" : [ {
+          "processLabel" : "linkedin_ad_analytics_by_campaign_data",
+          "processId" : "7WCU1F4aU-X6_EKFaagyv",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "clicks", "impressions" ],
+            "conditions" : [ {
+              "alias" : "br_go_account_stats",
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.clicks = br_go_account_stats.clicks AND linkedin_ad_analytics_by_campaign_data.impressions = br_go_account_stats.impressions"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "br_go_account_stats.source_relation"
+              },
+              "alias" : "source_relation"
+            }, {
+              "expression" : {
+                "expression" : "br_go_account_stats.account_id"
+              },
+              "alias" : "account_id"
+            }, {
+              "expression" : {
+                "expression" : "br_go_account_stats.date_day"
+              },
+              "alias" : "date_day"
+            }, {
+              "expression" : {
+                "expression" : "br_go_account_stats.ad_network_type"
+              },
+              "alias" : "ad_network_type"
+            }, {
+              "expression" : {
+                "expression" : "br_go_account_stats.device"
+              },
+              "alias" : "device"
+            }, {
+              "expression" : {
+                "expression" : "br_go_account_stats.spend"
+              },
+              "alias" : "spend"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_comment_likes"
+              },
+              "alias" : "viral_comment_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_midpoint_completions"
+              },
+              "alias" : "video_midpoint_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_post_click_conversions"
+              },
+              "alias" : "external_website_post_click_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_first_quartile_completions"
+              },
+              "alias" : "viral_video_first_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.other_engagements"
+              },
+              "alias" : "other_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.one_click_lead_form_opens"
+              },
+              "alias" : "one_click_lead_form_opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.comment_likes"
+              },
+              "alias" : "comment_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_midpoint_completions"
+              },
+              "alias" : "viral_video_midpoint_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_card_impressions"
+              },
+              "alias" : "viral_card_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_impressions"
+              },
+              "alias" : "viral_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_full_screen_plays"
+              },
+              "alias" : "viral_full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_likes"
+              },
+              "alias" : "viral_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_company_page_clicks"
+              },
+              "alias" : "viral_company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.landing_page_clicks"
+              },
+              "alias" : "landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.impressions"
+              },
+              "alias" : "impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_conversions"
+              },
+              "alias" : "external_website_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.opens"
+              },
+              "alias" : "opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.card_clicks"
+              },
+              "alias" : "card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_landing_page_clicks"
+              },
+              "alias" : "viral_landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.cost_in_local_currency"
+              },
+              "alias" : "cost_in_local_currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_card_clicks"
+              },
+              "alias" : "viral_card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.comments"
+              },
+              "alias" : "comments"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_follows"
+              },
+              "alias" : "viral_follows"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.lead_generation_mail_interested_clicks"
+              },
+              "alias" : "lead_generation_mail_interested_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.shares"
+              },
+              "alias" : "shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.ad_unit_clicks"
+              },
+              "alias" : "ad_unit_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.clicks"
+              },
+              "alias" : "clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_third_quartile_completions"
+              },
+              "alias" : "viral_video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.conversion_value_in_local_currency"
+              },
+              "alias" : "conversion_value_in_local_currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.text_url_clicks"
+              },
+              "alias" : "text_url_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_clicks"
+              },
+              "alias" : "viral_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_one_click_lead_form_opens"
+              },
+              "alias" : "viral_one_click_lead_form_opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_shares"
+              },
+              "alias" : "viral_shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.cost_in_usd"
+              },
+              "alias" : "cost_in_usd"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_completions"
+              },
+              "alias" : "viral_video_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.approximate_unique_impressions"
+              },
+              "alias" : "approximate_unique_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_post_click_conversions"
+              },
+              "alias" : "viral_external_website_post_click_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_completions"
+              },
+              "alias" : "video_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_starts"
+              },
+              "alias" : "video_starts"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.follows"
+              },
+              "alias" : "follows"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_comments"
+              },
+              "alias" : "viral_comments"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.action_clicks"
+              },
+              "alias" : "action_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.campaign_id"
+              },
+              "alias" : "campaign_id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_total_engagements"
+              },
+              "alias" : "viral_total_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_views"
+              },
+              "alias" : "viral_video_views"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_post_view_conversions"
+              },
+              "alias" : "viral_external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.full_screen_plays"
+              },
+              "alias" : "full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_one_click_leads"
+              },
+              "alias" : "viral_one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_views"
+              },
+              "alias" : "video_views"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_first_quartile_completions"
+              },
+              "alias" : "video_first_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.day"
+              },
+              "alias" : "day"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_post_view_conversions"
+              },
+              "alias" : "external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.one_click_leads"
+              },
+              "alias" : "one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.likes"
+              },
+              "alias" : "likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.total_engagements"
+              },
+              "alias" : "total_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_other_engagements"
+              },
+              "alias" : "viral_other_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.company_page_clicks"
+              },
+              "alias" : "company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_third_quartile_completions"
+              },
+              "alias" : "video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_starts"
+              },
+              "alias" : "viral_video_starts"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.lead_generation_mail_contact_info_shares"
+              },
+              "alias" : "lead_generation_mail_contact_info_shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.card_impressions"
+              },
+              "alias" : "card_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_conversions"
+              },
+              "alias" : "viral_external_website_conversions"
+            } ],
+            "headAlias" : "br_go_account_stats",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "clicks", "impressions" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "br_li_campaign_history",
+            "sourceType" : "Model"
+          }
+        },
+        "sourceComponentKind" : "Model",
+        "sourceLabel" : "br_li_campaign_history",
+        "canJoinWith" : [ {
+          "processLabel" : "linkedin_ad_analytics_by_campaign_data",
+          "processId" : "7WCU1F4aU-X6_EKFaagyv",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "campaign_id" ],
+            "conditions" : [ {
+              "alias" : "br_li_campaign_history",
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.campaign_id = br_li_campaign_history.campaign_id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "br_li_campaign_history.source_relation"
+              },
+              "alias" : "source_relation"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.campaign_name"
+              },
+              "alias" : "campaign_name"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.version_tag"
+              },
+              "alias" : "version_tag"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.campaign_group_id"
+              },
+              "alias" : "campaign_group_id"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.account_id"
+              },
+              "alias" : "account_id"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.status"
+              },
+              "alias" : "status"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.type"
+              },
+              "alias" : "type"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.cost_type"
+              },
+              "alias" : "cost_type"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.creative_selection"
+              },
+              "alias" : "creative_selection"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.daily_budget_amount"
+              },
+              "alias" : "daily_budget_amount"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.daily_budget_currency_code"
+              },
+              "alias" : "daily_budget_currency_code"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.unit_cost_amount"
+              },
+              "alias" : "unit_cost_amount"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.unit_cost_currency_code"
+              },
+              "alias" : "unit_cost_currency_code"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.format"
+              },
+              "alias" : "format"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.locale_country"
+              },
+              "alias" : "locale_country"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.locale_language"
+              },
+              "alias" : "locale_language"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.objective_type"
+              },
+              "alias" : "objective_type"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.optimization_target_type"
+              },
+              "alias" : "optimization_target_type"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.is_audience_expansion_enabled"
+              },
+              "alias" : "is_audience_expansion_enabled"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.is_offsite_delivery_enabled"
+              },
+              "alias" : "is_offsite_delivery_enabled"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.run_schedule_start_at"
+              },
+              "alias" : "run_schedule_start_at"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.run_schedule_end_at"
+              },
+              "alias" : "run_schedule_end_at"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.last_modified_at"
+              },
+              "alias" : "last_modified_at"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.created_at"
+              },
+              "alias" : "created_at"
+            }, {
+              "expression" : {
+                "expression" : "br_li_campaign_history.is_latest_version"
+              },
+              "alias" : "is_latest_version"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_comment_likes"
+              },
+              "alias" : "viral_comment_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_midpoint_completions"
+              },
+              "alias" : "video_midpoint_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_post_click_conversions"
+              },
+              "alias" : "external_website_post_click_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_first_quartile_completions"
+              },
+              "alias" : "viral_video_first_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.other_engagements"
+              },
+              "alias" : "other_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.one_click_lead_form_opens"
+              },
+              "alias" : "one_click_lead_form_opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.comment_likes"
+              },
+              "alias" : "comment_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_midpoint_completions"
+              },
+              "alias" : "viral_video_midpoint_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_card_impressions"
+              },
+              "alias" : "viral_card_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_impressions"
+              },
+              "alias" : "viral_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_full_screen_plays"
+              },
+              "alias" : "viral_full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_likes"
+              },
+              "alias" : "viral_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_company_page_clicks"
+              },
+              "alias" : "viral_company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.landing_page_clicks"
+              },
+              "alias" : "landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.impressions"
+              },
+              "alias" : "impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_conversions"
+              },
+              "alias" : "external_website_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.opens"
+              },
+              "alias" : "opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.card_clicks"
+              },
+              "alias" : "card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_landing_page_clicks"
+              },
+              "alias" : "viral_landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.cost_in_local_currency"
+              },
+              "alias" : "cost_in_local_currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_card_clicks"
+              },
+              "alias" : "viral_card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.comments"
+              },
+              "alias" : "comments"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_follows"
+              },
+              "alias" : "viral_follows"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.lead_generation_mail_interested_clicks"
+              },
+              "alias" : "lead_generation_mail_interested_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.shares"
+              },
+              "alias" : "shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.ad_unit_clicks"
+              },
+              "alias" : "ad_unit_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.clicks"
+              },
+              "alias" : "clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_third_quartile_completions"
+              },
+              "alias" : "viral_video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.conversion_value_in_local_currency"
+              },
+              "alias" : "conversion_value_in_local_currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.text_url_clicks"
+              },
+              "alias" : "text_url_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_clicks"
+              },
+              "alias" : "viral_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_one_click_lead_form_opens"
+              },
+              "alias" : "viral_one_click_lead_form_opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_shares"
+              },
+              "alias" : "viral_shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.cost_in_usd"
+              },
+              "alias" : "cost_in_usd"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_completions"
+              },
+              "alias" : "viral_video_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.approximate_unique_impressions"
+              },
+              "alias" : "approximate_unique_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_post_click_conversions"
+              },
+              "alias" : "viral_external_website_post_click_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_completions"
+              },
+              "alias" : "video_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_starts"
+              },
+              "alias" : "video_starts"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.follows"
+              },
+              "alias" : "follows"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_comments"
+              },
+              "alias" : "viral_comments"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.action_clicks"
+              },
+              "alias" : "action_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.campaign_id"
+              },
+              "alias" : "campaign_id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_total_engagements"
+              },
+              "alias" : "viral_total_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_views"
+              },
+              "alias" : "viral_video_views"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_post_view_conversions"
+              },
+              "alias" : "viral_external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.full_screen_plays"
+              },
+              "alias" : "full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_one_click_leads"
+              },
+              "alias" : "viral_one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_views"
+              },
+              "alias" : "video_views"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_first_quartile_completions"
+              },
+              "alias" : "video_first_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.day"
+              },
+              "alias" : "day"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_post_view_conversions"
+              },
+              "alias" : "external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.one_click_leads"
+              },
+              "alias" : "one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.likes"
+              },
+              "alias" : "likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.total_engagements"
+              },
+              "alias" : "total_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_other_engagements"
+              },
+              "alias" : "viral_other_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.company_page_clicks"
+              },
+              "alias" : "company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_third_quartile_completions"
+              },
+              "alias" : "video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_starts"
+              },
+              "alias" : "viral_video_starts"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.lead_generation_mail_contact_info_shares"
+              },
+              "alias" : "lead_generation_mail_contact_info_shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.card_impressions"
+              },
+              "alias" : "card_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_conversions"
+              },
+              "alias" : "viral_external_website_conversions"
+            } ],
+            "headAlias" : "br_li_campaign_history",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "campaign_id" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "dt_go_account_stats",
+            "sourceType" : "Seed"
+          }
+        },
+        "sourceComponentKind" : "Seed",
+        "sourceLabel" : "dt_go_account_stats",
+        "canJoinWith" : [ {
+          "processLabel" : "linkedin_ad_analytics_by_campaign_data",
+          "processId" : "7WCU1F4aU-X6_EKFaagyv",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "impressions", "clicks" ],
+            "conditions" : [ {
+              "alias" : "dt_go_account_stats",
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.clicks = dt_go_account_stats.clicks AND linkedin_ad_analytics_by_campaign_data.impressions = dt_go_account_stats.impressions"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "dt_go_account_stats._fivetran_id"
+              },
+              "alias" : "_fivetran_id"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.date"
+              },
+              "alias" : "date"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats._fivetran_synced"
+              },
+              "alias" : "_fivetran_synced"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.active_view_impressions"
+              },
+              "alias" : "active_view_impressions"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.active_view_measurability"
+              },
+              "alias" : "active_view_measurability"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.active_view_measurable_cost_micros"
+              },
+              "alias" : "active_view_measurable_cost_micros"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.active_view_measurable_impressions"
+              },
+              "alias" : "active_view_measurable_impressions"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.active_view_viewability"
+              },
+              "alias" : "active_view_viewability"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.ad_network_type"
+              },
+              "alias" : "ad_network_type"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.conversions"
+              },
+              "alias" : "conversions"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.conversions_value"
+              },
+              "alias" : "conversions_value"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.cost_micros"
+              },
+              "alias" : "cost_micros"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.device"
+              },
+              "alias" : "device"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.interaction_event_types"
+              },
+              "alias" : "interaction_event_types"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.interactions"
+              },
+              "alias" : "interactions"
+            }, {
+              "expression" : {
+                "expression" : "dt_go_account_stats.view_through_conversions"
+              },
+              "alias" : "view_through_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_comment_likes"
+              },
+              "alias" : "viral_comment_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_midpoint_completions"
+              },
+              "alias" : "video_midpoint_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_post_click_conversions"
+              },
+              "alias" : "external_website_post_click_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_first_quartile_completions"
+              },
+              "alias" : "viral_video_first_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.other_engagements"
+              },
+              "alias" : "other_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.one_click_lead_form_opens"
+              },
+              "alias" : "one_click_lead_form_opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.comment_likes"
+              },
+              "alias" : "comment_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_midpoint_completions"
+              },
+              "alias" : "viral_video_midpoint_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_card_impressions"
+              },
+              "alias" : "viral_card_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_impressions"
+              },
+              "alias" : "viral_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_full_screen_plays"
+              },
+              "alias" : "viral_full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_likes"
+              },
+              "alias" : "viral_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_company_page_clicks"
+              },
+              "alias" : "viral_company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.landing_page_clicks"
+              },
+              "alias" : "landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.impressions"
+              },
+              "alias" : "impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_conversions"
+              },
+              "alias" : "external_website_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.opens"
+              },
+              "alias" : "opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.card_clicks"
+              },
+              "alias" : "card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_landing_page_clicks"
+              },
+              "alias" : "viral_landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.cost_in_local_currency"
+              },
+              "alias" : "cost_in_local_currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_card_clicks"
+              },
+              "alias" : "viral_card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.comments"
+              },
+              "alias" : "comments"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_follows"
+              },
+              "alias" : "viral_follows"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.lead_generation_mail_interested_clicks"
+              },
+              "alias" : "lead_generation_mail_interested_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.shares"
+              },
+              "alias" : "shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.ad_unit_clicks"
+              },
+              "alias" : "ad_unit_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.clicks"
+              },
+              "alias" : "clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_third_quartile_completions"
+              },
+              "alias" : "viral_video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.conversion_value_in_local_currency"
+              },
+              "alias" : "conversion_value_in_local_currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.text_url_clicks"
+              },
+              "alias" : "text_url_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_clicks"
+              },
+              "alias" : "viral_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_one_click_lead_form_opens"
+              },
+              "alias" : "viral_one_click_lead_form_opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_shares"
+              },
+              "alias" : "viral_shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.cost_in_usd"
+              },
+              "alias" : "cost_in_usd"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_completions"
+              },
+              "alias" : "viral_video_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.approximate_unique_impressions"
+              },
+              "alias" : "approximate_unique_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_post_click_conversions"
+              },
+              "alias" : "viral_external_website_post_click_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_completions"
+              },
+              "alias" : "video_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_starts"
+              },
+              "alias" : "video_starts"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.follows"
+              },
+              "alias" : "follows"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_comments"
+              },
+              "alias" : "viral_comments"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.action_clicks"
+              },
+              "alias" : "action_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.campaign_id"
+              },
+              "alias" : "campaign_id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_total_engagements"
+              },
+              "alias" : "viral_total_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_views"
+              },
+              "alias" : "viral_video_views"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_post_view_conversions"
+              },
+              "alias" : "viral_external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.full_screen_plays"
+              },
+              "alias" : "full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_one_click_leads"
+              },
+              "alias" : "viral_one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_views"
+              },
+              "alias" : "video_views"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_first_quartile_completions"
+              },
+              "alias" : "video_first_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.day"
+              },
+              "alias" : "day"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_post_view_conversions"
+              },
+              "alias" : "external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.one_click_leads"
+              },
+              "alias" : "one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.likes"
+              },
+              "alias" : "likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.total_engagements"
+              },
+              "alias" : "total_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_other_engagements"
+              },
+              "alias" : "viral_other_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.company_page_clicks"
+              },
+              "alias" : "company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_third_quartile_completions"
+              },
+              "alias" : "video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_starts"
+              },
+              "alias" : "viral_video_starts"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.lead_generation_mail_contact_info_shares"
+              },
+              "alias" : "lead_generation_mail_contact_info_shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.card_impressions"
+              },
+              "alias" : "card_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_conversions"
+              },
+              "alias" : "viral_external_website_conversions"
+            } ],
+            "headAlias" : "dt_go_account_stats",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "impressions", "clicks" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "dt_li_ad_analytics_by_campaign",
+            "sourceType" : "Seed"
+          }
+        },
+        "sourceComponentKind" : "Seed",
+        "sourceLabel" : "dt_li_ad_analytics_by_campaign",
+        "canJoinWith" : [ {
+          "processLabel" : "linkedin_ad_analytics_by_campaign_data",
+          "processId" : "7WCU1F4aU-X6_EKFaagyv",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "viral_video_views", "lead_generation_mail_interested_clicks", "viral_one_click_lead_form_opens", "card_impressions", "other_engagements", "viral_external_website_post_click_conversions", "video_views", "viral_video_completions", "external_website_conversions", "total_engagements", "viral_other_engagements", "viral_clicks", "clicks", "comment_likes", "viral_impressions", "approximate_unique_impressions", "opens", "cost_in_local_currency", "viral_follows", "viral_video_midpoint_completions", "viral_video_first_quartile_completions", "campaign_id", "day", "lead_generation_mail_contact_info_shares", "viral_likes" ],
+            "conditions" : [ {
+              "alias" : "dt_li_ad_analytics_by_campaign",
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.approximate_unique_impressions = dt_li_ad_analytics_by_campaign.approximate_unique_impressions AND linkedin_ad_analytics_by_campaign_data.campaign_id = dt_li_ad_analytics_by_campaign.campaign_id AND linkedin_ad_analytics_by_campaign_data.card_impressions = dt_li_ad_analytics_by_campaign.card_impressions AND linkedin_ad_analytics_by_campaign_data.clicks = dt_li_ad_analytics_by_campaign.clicks AND linkedin_ad_analytics_by_campaign_data.comment_likes = dt_li_ad_analytics_by_campaign.comment_likes AND linkedin_ad_analytics_by_campaign_data.cost_in_local_currency = dt_li_ad_analytics_by_campaign.cost_in_local_currency AND linkedin_ad_analytics_by_campaign_data.day = dt_li_ad_analytics_by_campaign.day AND linkedin_ad_analytics_by_campaign_data.external_website_conversions = dt_li_ad_analytics_by_campaign.external_website_conversions AND linkedin_ad_analytics_by_campaign_data.lead_generation_mail_contact_info_shares = dt_li_ad_analytics_by_campaign.lead_generation_mail_contact_info_shares AND linkedin_ad_analytics_by_campaign_data.lead_generation_mail_interested_clicks = dt_li_ad_analytics_by_campaign.lead_generation_mail_interested_clicks AND linkedin_ad_analytics_by_campaign_data.opens = dt_li_ad_analytics_by_campaign.opens AND linkedin_ad_analytics_by_campaign_data.other_engagements = dt_li_ad_analytics_by_campaign.other_engagements AND linkedin_ad_analytics_by_campaign_data.total_engagements = dt_li_ad_analytics_by_campaign.total_engagements AND linkedin_ad_analytics_by_campaign_data.video_views = dt_li_ad_analytics_by_campaign.video_views AND linkedin_ad_analytics_by_campaign_data.viral_clicks = dt_li_ad_analytics_by_campaign.viral_clicks AND linkedin_ad_analytics_by_campaign_data.viral_external_website_post_click_conversions = dt_li_ad_analytics_by_campaign.viral_external_website_post_click_conversions AND linkedin_ad_analytics_by_campaign_data.viral_follows = dt_li_ad_analytics_by_campaign.viral_follows AND linkedin_ad_analytics_by_campaign_data.viral_impressions = dt_li_ad_analytics_by_campaign.viral_impressions AND linkedin_ad_analytics_by_campaign_data.viral_likes = dt_li_ad_analytics_by_campaign.viral_likes AND linkedin_ad_analytics_by_campaign_data.viral_one_click_lead_form_opens = dt_li_ad_analytics_by_campaign.viral_one_click_lead_form_opens AND linkedin_ad_analytics_by_campaign_data.viral_other_engagements = dt_li_ad_analytics_by_campaign.viral_other_engagements AND linkedin_ad_analytics_by_campaign_data.viral_video_completions = dt_li_ad_analytics_by_campaign.viral_video_completions AND linkedin_ad_analytics_by_campaign_data.viral_video_first_quartile_completions = dt_li_ad_analytics_by_campaign.viral_video_first_quartile_completions AND linkedin_ad_analytics_by_campaign_data.viral_video_midpoint_completions = dt_li_ad_analytics_by_campaign.viral_video_midpoint_completions AND linkedin_ad_analytics_by_campaign_data.viral_video_views = dt_li_ad_analytics_by_campaign.viral_video_views"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.action_clicks"
+              },
+              "alias" : "action_clicks"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.ad_unit_clicks"
+              },
+              "alias" : "ad_unit_clicks"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.card_clicks"
+              },
+              "alias" : "card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.comments"
+              },
+              "alias" : "comments"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.company_page_clicks"
+              },
+              "alias" : "company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.conversion_value_in_local_currency"
+              },
+              "alias" : "conversion_value_in_local_currency"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.cost_in_usd"
+              },
+              "alias" : "cost_in_usd"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.external_website_post_click_conversions"
+              },
+              "alias" : "external_website_post_click_conversions"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.external_website_post_view_conversions"
+              },
+              "alias" : "external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.follows"
+              },
+              "alias" : "follows"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.full_screen_plays"
+              },
+              "alias" : "full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.impressions"
+              },
+              "alias" : "impressions"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.landing_page_clicks"
+              },
+              "alias" : "landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.likes"
+              },
+              "alias" : "likes"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.one_click_lead_form_opens"
+              },
+              "alias" : "one_click_lead_form_opens"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.one_click_leads"
+              },
+              "alias" : "one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.shares"
+              },
+              "alias" : "shares"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.text_url_clicks"
+              },
+              "alias" : "text_url_clicks"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.video_completions"
+              },
+              "alias" : "video_completions"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.video_first_quartile_completions"
+              },
+              "alias" : "video_first_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.video_midpoint_completions"
+              },
+              "alias" : "video_midpoint_completions"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.video_starts"
+              },
+              "alias" : "video_starts"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.video_third_quartile_completions"
+              },
+              "alias" : "video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_card_clicks"
+              },
+              "alias" : "viral_card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_card_impressions"
+              },
+              "alias" : "viral_card_impressions"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_comment_likes"
+              },
+              "alias" : "viral_comment_likes"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_comments"
+              },
+              "alias" : "viral_comments"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_company_page_clicks"
+              },
+              "alias" : "viral_company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_external_website_conversions"
+              },
+              "alias" : "viral_external_website_conversions"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_external_website_post_view_conversions"
+              },
+              "alias" : "viral_external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_full_screen_plays"
+              },
+              "alias" : "viral_full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_landing_page_clicks"
+              },
+              "alias" : "viral_landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_one_click_leads"
+              },
+              "alias" : "viral_one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_shares"
+              },
+              "alias" : "viral_shares"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_total_engagements"
+              },
+              "alias" : "viral_total_engagements"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_video_starts"
+              },
+              "alias" : "viral_video_starts"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_ad_analytics_by_campaign.viral_video_third_quartile_completions"
+              },
+              "alias" : "viral_video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_comment_likes"
+              },
+              "alias" : "viral_comment_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_midpoint_completions"
+              },
+              "alias" : "video_midpoint_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_post_click_conversions"
+              },
+              "alias" : "external_website_post_click_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_first_quartile_completions"
+              },
+              "alias" : "viral_video_first_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.other_engagements"
+              },
+              "alias" : "other_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.one_click_lead_form_opens"
+              },
+              "alias" : "one_click_lead_form_opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.comment_likes"
+              },
+              "alias" : "comment_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_midpoint_completions"
+              },
+              "alias" : "viral_video_midpoint_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_card_impressions"
+              },
+              "alias" : "viral_card_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_impressions"
+              },
+              "alias" : "viral_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_full_screen_plays"
+              },
+              "alias" : "viral_full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_likes"
+              },
+              "alias" : "viral_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_company_page_clicks"
+              },
+              "alias" : "viral_company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.landing_page_clicks"
+              },
+              "alias" : "landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.impressions"
+              },
+              "alias" : "impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_conversions"
+              },
+              "alias" : "external_website_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.opens"
+              },
+              "alias" : "opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.card_clicks"
+              },
+              "alias" : "card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_landing_page_clicks"
+              },
+              "alias" : "viral_landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.cost_in_local_currency"
+              },
+              "alias" : "cost_in_local_currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_card_clicks"
+              },
+              "alias" : "viral_card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.comments"
+              },
+              "alias" : "comments"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_follows"
+              },
+              "alias" : "viral_follows"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.lead_generation_mail_interested_clicks"
+              },
+              "alias" : "lead_generation_mail_interested_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.shares"
+              },
+              "alias" : "shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.ad_unit_clicks"
+              },
+              "alias" : "ad_unit_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.clicks"
+              },
+              "alias" : "clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_third_quartile_completions"
+              },
+              "alias" : "viral_video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.conversion_value_in_local_currency"
+              },
+              "alias" : "conversion_value_in_local_currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.text_url_clicks"
+              },
+              "alias" : "text_url_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_clicks"
+              },
+              "alias" : "viral_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_one_click_lead_form_opens"
+              },
+              "alias" : "viral_one_click_lead_form_opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_shares"
+              },
+              "alias" : "viral_shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.cost_in_usd"
+              },
+              "alias" : "cost_in_usd"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_completions"
+              },
+              "alias" : "viral_video_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.approximate_unique_impressions"
+              },
+              "alias" : "approximate_unique_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_post_click_conversions"
+              },
+              "alias" : "viral_external_website_post_click_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_completions"
+              },
+              "alias" : "video_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_starts"
+              },
+              "alias" : "video_starts"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.follows"
+              },
+              "alias" : "follows"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_comments"
+              },
+              "alias" : "viral_comments"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.action_clicks"
+              },
+              "alias" : "action_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.campaign_id"
+              },
+              "alias" : "campaign_id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_total_engagements"
+              },
+              "alias" : "viral_total_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_views"
+              },
+              "alias" : "viral_video_views"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_post_view_conversions"
+              },
+              "alias" : "viral_external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.full_screen_plays"
+              },
+              "alias" : "full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_one_click_leads"
+              },
+              "alias" : "viral_one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_views"
+              },
+              "alias" : "video_views"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_first_quartile_completions"
+              },
+              "alias" : "video_first_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.day"
+              },
+              "alias" : "day"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_post_view_conversions"
+              },
+              "alias" : "external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.one_click_leads"
+              },
+              "alias" : "one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.likes"
+              },
+              "alias" : "likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.total_engagements"
+              },
+              "alias" : "total_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_other_engagements"
+              },
+              "alias" : "viral_other_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.company_page_clicks"
+              },
+              "alias" : "company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_third_quartile_completions"
+              },
+              "alias" : "video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_starts"
+              },
+              "alias" : "viral_video_starts"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.lead_generation_mail_contact_info_shares"
+              },
+              "alias" : "lead_generation_mail_contact_info_shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.card_impressions"
+              },
+              "alias" : "card_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_conversions"
+              },
+              "alias" : "viral_external_website_conversions"
+            } ],
+            "headAlias" : "dt_li_ad_analytics_by_campaign",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "viral_video_views", "lead_generation_mail_interested_clicks", "viral_one_click_lead_form_opens", "card_impressions", "other_engagements", "viral_external_website_post_click_conversions", "video_views", "viral_video_completions", "external_website_conversions", "total_engagements", "viral_other_engagements", "viral_clicks", "clicks", "comment_likes", "viral_impressions", "approximate_unique_impressions", "opens", "cost_in_local_currency", "viral_follows", "viral_video_midpoint_completions", "viral_video_first_quartile_completions", "campaign_id", "day", "lead_generation_mail_contact_info_shares", "viral_likes" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "dt_li_campaign_history",
+            "sourceType" : "Seed"
+          }
+        },
+        "sourceComponentKind" : "Seed",
+        "sourceLabel" : "dt_li_campaign_history",
+        "canJoinWith" : [ {
+          "processLabel" : "linkedin_ad_analytics_by_campaign_data",
+          "processId" : "7WCU1F4aU-X6_EKFaagyv",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "campaign_id" ],
+            "conditions" : [ {
+              "alias" : "dt_li_campaign_history",
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.campaign_id = dt_li_campaign_history.campaign_group_id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "dt_li_campaign_history.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_campaign_history.last_modified_time"
+              },
+              "alias" : "last_modified_time"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_campaign_history.account_id"
+              },
+              "alias" : "account_id"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_campaign_history.created_time"
+              },
+              "alias" : "created_time"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_campaign_history.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_campaign_history.version_tag"
+              },
+              "alias" : "version_tag"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_comment_likes"
+              },
+              "alias" : "viral_comment_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_midpoint_completions"
+              },
+              "alias" : "video_midpoint_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_post_click_conversions"
+              },
+              "alias" : "external_website_post_click_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_first_quartile_completions"
+              },
+              "alias" : "viral_video_first_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.other_engagements"
+              },
+              "alias" : "other_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.one_click_lead_form_opens"
+              },
+              "alias" : "one_click_lead_form_opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.comment_likes"
+              },
+              "alias" : "comment_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_midpoint_completions"
+              },
+              "alias" : "viral_video_midpoint_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_card_impressions"
+              },
+              "alias" : "viral_card_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_impressions"
+              },
+              "alias" : "viral_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_full_screen_plays"
+              },
+              "alias" : "viral_full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_likes"
+              },
+              "alias" : "viral_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_company_page_clicks"
+              },
+              "alias" : "viral_company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.landing_page_clicks"
+              },
+              "alias" : "landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.impressions"
+              },
+              "alias" : "impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_conversions"
+              },
+              "alias" : "external_website_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.opens"
+              },
+              "alias" : "opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.card_clicks"
+              },
+              "alias" : "card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_landing_page_clicks"
+              },
+              "alias" : "viral_landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.cost_in_local_currency"
+              },
+              "alias" : "cost_in_local_currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_card_clicks"
+              },
+              "alias" : "viral_card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.comments"
+              },
+              "alias" : "comments"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_follows"
+              },
+              "alias" : "viral_follows"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.lead_generation_mail_interested_clicks"
+              },
+              "alias" : "lead_generation_mail_interested_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.shares"
+              },
+              "alias" : "shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.ad_unit_clicks"
+              },
+              "alias" : "ad_unit_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.clicks"
+              },
+              "alias" : "clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_third_quartile_completions"
+              },
+              "alias" : "viral_video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.conversion_value_in_local_currency"
+              },
+              "alias" : "conversion_value_in_local_currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.text_url_clicks"
+              },
+              "alias" : "text_url_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_clicks"
+              },
+              "alias" : "viral_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_one_click_lead_form_opens"
+              },
+              "alias" : "viral_one_click_lead_form_opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_shares"
+              },
+              "alias" : "viral_shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.cost_in_usd"
+              },
+              "alias" : "cost_in_usd"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_completions"
+              },
+              "alias" : "viral_video_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.approximate_unique_impressions"
+              },
+              "alias" : "approximate_unique_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_post_click_conversions"
+              },
+              "alias" : "viral_external_website_post_click_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_completions"
+              },
+              "alias" : "video_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_starts"
+              },
+              "alias" : "video_starts"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.follows"
+              },
+              "alias" : "follows"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_comments"
+              },
+              "alias" : "viral_comments"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.action_clicks"
+              },
+              "alias" : "action_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.campaign_id"
+              },
+              "alias" : "campaign_id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_total_engagements"
+              },
+              "alias" : "viral_total_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_views"
+              },
+              "alias" : "viral_video_views"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_post_view_conversions"
+              },
+              "alias" : "viral_external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.full_screen_plays"
+              },
+              "alias" : "full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_one_click_leads"
+              },
+              "alias" : "viral_one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_views"
+              },
+              "alias" : "video_views"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_first_quartile_completions"
+              },
+              "alias" : "video_first_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.day"
+              },
+              "alias" : "day"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_post_view_conversions"
+              },
+              "alias" : "external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.one_click_leads"
+              },
+              "alias" : "one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.likes"
+              },
+              "alias" : "likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.total_engagements"
+              },
+              "alias" : "total_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_other_engagements"
+              },
+              "alias" : "viral_other_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.company_page_clicks"
+              },
+              "alias" : "company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_third_quartile_completions"
+              },
+              "alias" : "video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_starts"
+              },
+              "alias" : "viral_video_starts"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.lead_generation_mail_contact_info_shares"
+              },
+              "alias" : "lead_generation_mail_contact_info_shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.card_impressions"
+              },
+              "alias" : "card_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_conversions"
+              },
+              "alias" : "viral_external_website_conversions"
+            } ],
+            "headAlias" : "dt_li_campaign_history",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "campaign_id" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "linkedin_campaign_history_data",
+            "sourceName" : "linkedin",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "linkedin_campaign_history_data",
+        "canJoinWith" : [ {
+          "processLabel" : "linkedin_ad_analytics_by_campaign_data",
+          "processId" : "7WCU1F4aU-X6_EKFaagyv",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "campaign_id" ],
+            "conditions" : [ {
+              "alias" : "linkedin_campaign_history_data",
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.campaign_id = linkedin_campaign_history_data.campaign_group_id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.last_modified_time"
+              },
+              "alias" : "last_modified_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.account_id"
+              },
+              "alias" : "account_id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.created_time"
+              },
+              "alias" : "created_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.version_tag"
+              },
+              "alias" : "version_tag"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_comment_likes"
+              },
+              "alias" : "viral_comment_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_midpoint_completions"
+              },
+              "alias" : "video_midpoint_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_post_click_conversions"
+              },
+              "alias" : "external_website_post_click_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_first_quartile_completions"
+              },
+              "alias" : "viral_video_first_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.other_engagements"
+              },
+              "alias" : "other_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.one_click_lead_form_opens"
+              },
+              "alias" : "one_click_lead_form_opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.comment_likes"
+              },
+              "alias" : "comment_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_midpoint_completions"
+              },
+              "alias" : "viral_video_midpoint_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_card_impressions"
+              },
+              "alias" : "viral_card_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_impressions"
+              },
+              "alias" : "viral_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_full_screen_plays"
+              },
+              "alias" : "viral_full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_likes"
+              },
+              "alias" : "viral_likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_company_page_clicks"
+              },
+              "alias" : "viral_company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.landing_page_clicks"
+              },
+              "alias" : "landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.impressions"
+              },
+              "alias" : "impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_conversions"
+              },
+              "alias" : "external_website_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.opens"
+              },
+              "alias" : "opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.card_clicks"
+              },
+              "alias" : "card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_landing_page_clicks"
+              },
+              "alias" : "viral_landing_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.cost_in_local_currency"
+              },
+              "alias" : "cost_in_local_currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_card_clicks"
+              },
+              "alias" : "viral_card_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.comments"
+              },
+              "alias" : "comments"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_follows"
+              },
+              "alias" : "viral_follows"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.lead_generation_mail_interested_clicks"
+              },
+              "alias" : "lead_generation_mail_interested_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.shares"
+              },
+              "alias" : "shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.ad_unit_clicks"
+              },
+              "alias" : "ad_unit_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.clicks"
+              },
+              "alias" : "clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_third_quartile_completions"
+              },
+              "alias" : "viral_video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.conversion_value_in_local_currency"
+              },
+              "alias" : "conversion_value_in_local_currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.text_url_clicks"
+              },
+              "alias" : "text_url_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_clicks"
+              },
+              "alias" : "viral_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_one_click_lead_form_opens"
+              },
+              "alias" : "viral_one_click_lead_form_opens"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_shares"
+              },
+              "alias" : "viral_shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.cost_in_usd"
+              },
+              "alias" : "cost_in_usd"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_completions"
+              },
+              "alias" : "viral_video_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.approximate_unique_impressions"
+              },
+              "alias" : "approximate_unique_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_post_click_conversions"
+              },
+              "alias" : "viral_external_website_post_click_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_completions"
+              },
+              "alias" : "video_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_starts"
+              },
+              "alias" : "video_starts"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.follows"
+              },
+              "alias" : "follows"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_comments"
+              },
+              "alias" : "viral_comments"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.action_clicks"
+              },
+              "alias" : "action_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.campaign_id"
+              },
+              "alias" : "campaign_id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_total_engagements"
+              },
+              "alias" : "viral_total_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_views"
+              },
+              "alias" : "viral_video_views"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_post_view_conversions"
+              },
+              "alias" : "viral_external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.full_screen_plays"
+              },
+              "alias" : "full_screen_plays"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_one_click_leads"
+              },
+              "alias" : "viral_one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_views"
+              },
+              "alias" : "video_views"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_first_quartile_completions"
+              },
+              "alias" : "video_first_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.day"
+              },
+              "alias" : "day"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.external_website_post_view_conversions"
+              },
+              "alias" : "external_website_post_view_conversions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.one_click_leads"
+              },
+              "alias" : "one_click_leads"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.likes"
+              },
+              "alias" : "likes"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.total_engagements"
+              },
+              "alias" : "total_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_other_engagements"
+              },
+              "alias" : "viral_other_engagements"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.company_page_clicks"
+              },
+              "alias" : "company_page_clicks"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.video_third_quartile_completions"
+              },
+              "alias" : "video_third_quartile_completions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_video_starts"
+              },
+              "alias" : "viral_video_starts"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.lead_generation_mail_contact_info_shares"
+              },
+              "alias" : "lead_generation_mail_contact_info_shares"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.card_impressions"
+              },
+              "alias" : "card_impressions"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_ad_analytics_by_campaign_data.viral_external_website_conversions"
+              },
+              "alias" : "viral_external_website_conversions"
+            } ],
+            "headAlias" : "linkedin_campaign_history_data",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "campaign_id" ],
+          "isRecommended" : false
+        } ]
+      } ]
     },
     "version" : 3
   },
@@ -114,347 +2634,6 @@
         "autoUpdateOnRun" : false
       }
     },
-    "azan8eGljYQRaUYEfQb-u" : {
-      "id" : "azan8eGljYQRaUYEfQb-u",
-      "component" : "Seed",
-      "metadata" : {
-        "label" : "dt_li_ad_analytics_by_campaign",
-        "slug" : "dt_li_ad_analytics_by_campaign",
-        "x" : -220,
-        "y" : 60,
-        "phase" : 0
-      },
-      "properties" : {
-        "table" : {
-          "name" : "dt_li_ad_analytics_by_campaign",
-          "sourceType" : "Seed",
-          "alias" : ""
-        }
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "fkb721jw5cKbO5C-0Mq8a",
-          "schema" : {
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "campaign_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "day",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "action_clicks",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ad_unit_clicks",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "approximate_unique_impressions",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "card_clicks",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "card_impressions",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "clicks",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "comment_likes",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "comments",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "company_page_clicks",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "conversion_value_in_local_currency",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "cost_in_local_currency",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "cost_in_usd",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "external_website_conversions",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "external_website_post_click_conversions",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "external_website_post_view_conversions",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "follows",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "full_screen_plays",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "impressions",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "landing_page_clicks",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "lead_generation_mail_contact_info_shares",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "lead_generation_mail_interested_clicks",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "likes",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "one_click_lead_form_opens",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "one_click_leads",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "opens",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "other_engagements",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "shares",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "text_url_clicks",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "total_engagements",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "video_completions",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "video_first_quartile_completions",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "video_midpoint_completions",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "video_starts",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "video_third_quartile_completions",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "video_views",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "viral_card_clicks",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_card_impressions",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_clicks",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "viral_comment_likes",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_comments",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_company_page_clicks",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_external_website_conversions",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_external_website_post_click_conversions",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "viral_external_website_post_view_conversions",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_follows",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "viral_full_screen_plays",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_impressions",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "viral_landing_page_clicks",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_likes",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "viral_one_click_lead_form_opens",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "viral_one_click_leads",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_other_engagements",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "viral_shares",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_total_engagements",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_video_completions",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "viral_video_first_quartile_completions",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "viral_video_midpoint_completions",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "viral_video_starts",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_video_third_quartile_completions",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "viral_video_views",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            } ]
-          },
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      }
-    },
     "G_iyC47KkqWT5lFrMeAm4$$2SvLinqPM0mMKAhKY3N4s" : {
       "id" : "G_iyC47KkqWT5lFrMeAm4$$2SvLinqPM0mMKAhKY3N4s",
       "component" : "Reformat",
@@ -469,7 +2648,7 @@
         "autoUpdateComment" : true
       },
       "properties" : {
-        "columnsSelector" : [ "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v##day", "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v##campaign_id", "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v##clicks", "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v##impressions", "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v##cost_in_usd" ],
+        "columnsSelector" : [ ],
         "expressions" : [ {
           "expression" : {
             "expression" : "'linkedin'"
@@ -506,7 +2685,7 @@
         "inputs" : [ {
           "id" : "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v",
           "schema" : {
-            "providerType" : "Databricks",
+            "providerType" : "databricks",
             "fields" : [ {
               "name" : "campaign_id",
               "dataType" : {
@@ -520,12 +2699,12 @@
             }, {
               "name" : "action_clicks",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "ad_unit_clicks",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "approximate_unique_impressions",
@@ -535,7 +2714,7 @@
             }, {
               "name" : "card_clicks",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "card_impressions",
@@ -555,17 +2734,17 @@
             }, {
               "name" : "comments",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "company_page_clicks",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "conversion_value_in_local_currency",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Float"
               }
             }, {
               "name" : "cost_in_local_currency",
@@ -575,7 +2754,7 @@
             }, {
               "name" : "cost_in_usd",
               "dataType" : {
-                "type" : "String"
+                "type" : "Float"
               }
             }, {
               "name" : "external_website_conversions",
@@ -585,32 +2764,32 @@
             }, {
               "name" : "external_website_post_click_conversions",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "external_website_post_view_conversions",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "follows",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "full_screen_plays",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "impressions",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "landing_page_clicks",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "lead_generation_mail_contact_info_shares",
@@ -625,17 +2804,17 @@
             }, {
               "name" : "likes",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "one_click_lead_form_opens",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "one_click_leads",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "opens",
@@ -650,12 +2829,12 @@
             }, {
               "name" : "shares",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "text_url_clicks",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "total_engagements",
@@ -665,27 +2844,27 @@
             }, {
               "name" : "video_completions",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "video_first_quartile_completions",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "video_midpoint_completions",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "video_starts",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "video_third_quartile_completions",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "video_views",
@@ -695,12 +2874,12 @@
             }, {
               "name" : "viral_card_clicks",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_card_impressions",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_clicks",
@@ -710,22 +2889,22 @@
             }, {
               "name" : "viral_comment_likes",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_comments",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_company_page_clicks",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_external_website_conversions",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_external_website_post_click_conversions",
@@ -735,7 +2914,7 @@
             }, {
               "name" : "viral_external_website_post_view_conversions",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_follows",
@@ -745,7 +2924,7 @@
             }, {
               "name" : "viral_full_screen_plays",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_impressions",
@@ -755,7 +2934,7 @@
             }, {
               "name" : "viral_landing_page_clicks",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_likes",
@@ -770,7 +2949,7 @@
             }, {
               "name" : "viral_one_click_leads",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_other_engagements",
@@ -780,12 +2959,12 @@
             }, {
               "name" : "viral_shares",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_total_engagements",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_video_completions",
@@ -805,12 +2984,12 @@
             }, {
               "name" : "viral_video_starts",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_video_third_quartile_completions",
               "dataType" : {
-                "type" : "String"
+                "type" : "Integer"
               }
             }, {
               "name" : "viral_video_views",
@@ -862,20 +3041,362 @@
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       }
+    },
+    "7WCU1F4aU-X6_EKFaagyv" : {
+      "id" : "7WCU1F4aU-X6_EKFaagyv",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "linkedin_ad_analytics_by_campaign_data",
+        "slug" : "linkedin_ad_analytics_by_campaign_data",
+        "x" : -200,
+        "y" : 60,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "linkedin_ad_analytics_by_campaign_data",
+          "sourceType" : "Source",
+          "sourceName" : "linkedin",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "qNU0kxC4GWwHtreYQFraq",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "day",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "action_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "ad_unit_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "approximate_unique_impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "card_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "card_impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "comment_likes",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "comments",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "company_page_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "conversion_value_in_local_currency",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "cost_in_local_currency",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "cost_in_usd",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "external_website_conversions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "external_website_post_click_conversions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "external_website_post_view_conversions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "follows",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "full_screen_plays",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "landing_page_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "lead_generation_mail_contact_info_shares",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "lead_generation_mail_interested_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "likes",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "one_click_lead_form_opens",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "one_click_leads",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "opens",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "other_engagements",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "shares",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "text_url_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "total_engagements",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "video_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "video_first_quartile_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "video_midpoint_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "video_starts",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "video_third_quartile_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "video_views",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_card_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_card_impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_comment_likes",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_comments",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_company_page_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_external_website_conversions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_external_website_post_click_conversions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_external_website_post_view_conversions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_follows",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_full_screen_plays",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_impressions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_landing_page_clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_likes",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_one_click_lead_form_opens",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_one_click_leads",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_other_engagements",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_shares",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_total_engagements",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_video_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_video_first_quartile_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_video_midpoint_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_video_starts",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_video_third_quartile_completions",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "viral_video_views",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
     }
   },
   "connections" : [ {
-    "id" : "a6-BsFGTVWyIM5Sg87Nve$$dTmA3DGWZ-oS2_FzxNW2C",
-    "source" : "azan8eGljYQRaUYEfQb-u",
-    "sourcePort" : "fkb721jw5cKbO5C-0Mq8a",
-    "target" : "G_iyC47KkqWT5lFrMeAm4$$2SvLinqPM0mMKAhKY3N4s",
-    "targetPort" : "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v"
-  }, {
     "id" : "yNa10mUM74hxJIKQ5DPKL",
     "source" : "G_iyC47KkqWT5lFrMeAm4$$2SvLinqPM0mMKAhKY3N4s",
     "sourcePort" : "XIBLHVFPj4ibdozXtd3BH$$85JSH5zI0ciGOy1X-kFIS",
     "target" : "br_li_ad_analytics_by_campaign##YDQGe51j",
     "targetPort" : "yyTd5zwp"
+  }, {
+    "id" : "36SFe_99UWz9JwTy2Uphb$$HcJDUIbqNxPneVcNVnz7h",
+    "source" : "7WCU1F4aU-X6_EKFaagyv",
+    "sourcePort" : "qNU0kxC4GWwHtreYQFraq",
+    "target" : "G_iyC47KkqWT5lFrMeAm4$$2SvLinqPM0mMKAhKY3N4s",
+    "targetPort" : "VS0I5QIKr572Q8_W8BKqg$$Sy3IEY_vYWNZSSNOu4W9v"
   } ],
   "component" : "Model"
 }

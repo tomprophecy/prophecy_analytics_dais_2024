@@ -151,12 +151,12 @@
             }, {
               "name" : "last_modified_at",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "created_at",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "is_latest_version",
@@ -181,7 +181,7 @@
         "y" : -180,
         "phase" : 0,
         "macroDependencies" : [ ],
-        "comment" : "Aggregates campaign analytics data to provide a summary for each account.",
+        "comment" : "Summarizes campaign analytics by account, aggregating clicks, impressions, and cost. The summary includes the most recent record for each account.",
         "autoUpdateComment" : true
       },
       "properties" : {
@@ -250,6 +250,11 @@
             "expression" : "sum(cost)"
           },
           "alias" : "cost"
+        }, {
+          "expression" : {
+            "expression" : "true"
+          },
+          "alias" : "is_most_recent_record"
         } ],
         "allowSelection" : true,
         "condition" : {
@@ -317,12 +322,12 @@
             }, {
               "name" : "last_modified_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "created_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "clicks",
@@ -390,12 +395,12 @@
             }, {
               "name" : "last_modified_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "created_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "clicks",
@@ -411,6 +416,11 @@
               "name" : "cost",
               "dataType" : {
                 "type" : "Double"
+              }
+            }, {
+              "name" : "is_most_recent_record",
+              "dataType" : {
+                "type" : "Boolean"
               }
             } ]
           },
@@ -481,12 +491,12 @@
             }, {
               "name" : "last_modified_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "created_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             } ]
           },
@@ -565,12 +575,12 @@
             }, {
               "name" : "last_modified_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "created_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "clicks",
@@ -586,6 +596,11 @@
               "name" : "cost",
               "dataType" : {
                 "type" : "Double"
+              }
+            }, {
+              "name" : "is_most_recent_record",
+              "dataType" : {
+                "type" : "Boolean"
               }
             } ]
           },
@@ -638,12 +653,12 @@
             }, {
               "name" : "last_modified_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "created_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "clicks",
@@ -659,6 +674,11 @@
               "name" : "cost",
               "dataType" : {
                 "type" : "Double"
+              }
+            }, {
+              "name" : "is_most_recent_record",
+              "dataType" : {
+                "type" : "Boolean"
               }
             } ]
           },
@@ -931,12 +951,12 @@
             }, {
               "name" : "last_modified_at",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "created_at",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "is_latest_version",
@@ -988,12 +1008,12 @@
             }, {
               "name" : "last_modified_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "created_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             } ]
           },
@@ -1051,12 +1071,12 @@
             }, {
               "name" : "last_modified_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "created_time",
               "dataType" : {
-                "type" : "Date"
+                "type" : "Timestamp"
               }
             }, {
               "name" : "clicks",

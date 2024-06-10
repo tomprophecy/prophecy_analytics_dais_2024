@@ -1,0 +1,450 @@
+{
+  "id" : "br_go_account_history",
+  "metainfo" : {
+    "label" : "br_go_account_history",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "885FrILwBVMd2B_dCr8xd$$lzMHxtqv2huDF4kp_Vt7B" : {
+      "id" : "885FrILwBVMd2B_dCr8xd$$lzMHxtqv2huDF4kp_Vt7B",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "cleanup",
+        "slug" : "cleanup",
+        "x" : -380,
+        "y" : -260,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Cleans up and organizes Google Ads account history data, selecting the most recent record for each account.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX##id", "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX##updated_at", "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX##currency_code", "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX##auto_tagging_enabled", "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX##time_zone", "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX##descriptive_name" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'google_ads'"
+          },
+          "alias" : "source_relation"
+        }, {
+          "expression" : {
+            "expression" : "id"
+          },
+          "alias" : "account_id"
+        }, {
+          "expression" : {
+            "expression" : "updated_at"
+          },
+          "alias" : "updated_at"
+        }, {
+          "expression" : {
+            "expression" : "currency_code"
+          },
+          "alias" : "currency_code"
+        }, {
+          "expression" : {
+            "expression" : "auto_tagging_enabled"
+          },
+          "alias" : "auto_tagging_enabled"
+        }, {
+          "expression" : {
+            "expression" : "time_zone"
+          },
+          "alias" : "time_zone"
+        }, {
+          "expression" : {
+            "expression" : "descriptive_name"
+          },
+          "alias" : "account_name"
+        }, {
+          "expression" : {
+            "expression" : "row_number() over (partition by id order by updated_at desc) = 1"
+          },
+          "alias" : "is_most_recent_record"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "updated_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "_fivetran_synced",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "auto_tagging_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "descriptive_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "final_url_suffix",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "hidden",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "manager",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "manager_customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "optimization_score",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "pay_per_conversion_eligibility_failure_reasons",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "test_account",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "time_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "tracking_url_template",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "dt_go_account_history"
+        } ],
+        "outputs" : [ {
+          "id" : "hfbEJWM_CKk2sjw7AyK68$$wP58ITXTGY0y-41Md-X2G",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "updated_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "auto_tagging_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "time_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_most_recent_record",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "br_go_account_history##N6LWCnpg" : {
+      "id" : "br_go_account_history##N6LWCnpg",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "br_go_account_history",
+        "x" : -160,
+        "y" : -260,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM cleanup\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "LIWb4cvI",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "updated_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "auto_tagging_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "time_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_most_recent_record",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "cleanup"
+        } ],
+        "outputs" : [ {
+          "id" : "oTRVDXOA",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "updated_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "auto_tagging_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "time_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_most_recent_record",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "_HWOMmFfq-tP-gVxSSg70" : {
+      "id" : "_HWOMmFfq-tP-gVxSSg70",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "account_history",
+        "slug" : "account_history",
+        "x" : -580,
+        "y" : -260,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "google_account_history_data",
+          "sourceType" : "Source",
+          "sourceName" : "google",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "wJzu0_fncZ7Ppxt_SBxDD",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "updated_at",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "_fivetran_synced",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "auto_tagging_enabled",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "descriptive_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "final_url_suffix",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "hidden",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "manager",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "manager_customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "optimization_score",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "pay_per_conversion_eligibility_failure_reasons",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "test_account",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "time_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "tracking_url_template",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "ay2snevIL4arm1e19EQ7W$$q0bsh72anDezw8nSEzS-3",
+    "source" : "885FrILwBVMd2B_dCr8xd$$lzMHxtqv2huDF4kp_Vt7B",
+    "sourcePort" : "hfbEJWM_CKk2sjw7AyK68$$wP58ITXTGY0y-41Md-X2G",
+    "target" : "br_go_account_history##N6LWCnpg",
+    "targetPort" : "LIWb4cvI"
+  }, {
+    "id" : "dTnADctdN60pbxhH0SC4o$$ezTS8q_M3gJyb4Dy310Wv",
+    "source" : "_HWOMmFfq-tP-gVxSSg70",
+    "sourcePort" : "wJzu0_fncZ7Ppxt_SBxDD",
+    "target" : "885FrILwBVMd2B_dCr8xd$$lzMHxtqv2huDF4kp_Vt7B",
+    "targetPort" : "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX"
+  } ],
+  "component" : "Model"
+}

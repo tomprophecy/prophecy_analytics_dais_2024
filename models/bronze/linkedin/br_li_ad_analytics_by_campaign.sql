@@ -1,8 +1,8 @@
-WITH dt_li_ad_analytics_by_campaign AS (
+WITH linkedin_ad_analytics_by_campaign_data AS (
 
   SELECT * 
   
-  FROM {{ ref('dt_li_ad_analytics_by_campaign')}}
+  FROM {{ source('linkedin', 'linkedin_ad_analytics_by_campaign_data') }}
 
 ),
 
@@ -17,7 +17,7 @@ cleanup AS (
     CAST(impressions AS INT) AS impressions,
     CAST(cost_in_usd AS FLOAT) AS cost
   
-  FROM dt_li_ad_analytics_by_campaign
+  FROM linkedin_ad_analytics_by_campaign_data AS dt_li_ad_analytics_by_campaign
 
 )
 

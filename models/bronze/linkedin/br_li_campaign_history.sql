@@ -1,8 +1,8 @@
-WITH dt_li_campaign_history AS (
+WITH linkedin_campaign_history_data AS (
 
   SELECT * 
   
-  FROM {{ ref('dt_li_campaign_history')}}
+  FROM {{ source('linkedin', 'linkedin_campaign_history_data') }}
 
 ),
 
@@ -37,7 +37,7 @@ linkedin_campaign_history AS (
     created_time AS created_at,
     row_number() OVER (PARTITION BY id ORDER BY last_modified_time DESC) = 1 AS is_latest_version
   
-  FROM dt_li_campaign_history
+  FROM linkedin_campaign_history_data AS dt_li_campaign_history
 
 )
 

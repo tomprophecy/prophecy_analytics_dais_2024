@@ -51,7 +51,7 @@ campaign_analytics_history_join AS (
 
 campaign_analytics_summary AS (
 
-  {#Aggregates campaign analytics data to provide a summary for each account.#}
+  {#Summarizes campaign analytics by account, aggregating clicks, impressions, and cost. The summary includes the most recent record for each account.#}
   SELECT 
     any_value(source_relation) AS source_relation,
     any_value(date_day) AS date_day,
@@ -65,7 +65,8 @@ campaign_analytics_summary AS (
     any_value(created_time) AS created_time,
     sum(clicks) AS clicks,
     sum(impressions) AS impressions,
-    sum(cost) AS cost
+    sum(cost) AS cost,
+    true AS is_most_recent_record
   
   FROM campaign_analytics_history_join AS in0
   

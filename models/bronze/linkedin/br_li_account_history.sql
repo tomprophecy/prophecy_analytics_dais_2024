@@ -1,8 +1,8 @@
-WITH dt_li_account_history AS (
+WITH linkedin_account_history_data AS (
 
   SELECT * 
   
-  FROM {{ ref('dt_li_account_history')}}
+  FROM {{ source('linkedin', 'linkedin_account_history_data') }}
 
 ),
 
@@ -20,7 +20,7 @@ linkedin_account_data AS (
     last_modified_time AS last_modified_time,
     created_time AS created_time
   
-  FROM dt_li_account_history AS account_history_data
+  FROM linkedin_account_history_data AS account_history_data
 
 )
 

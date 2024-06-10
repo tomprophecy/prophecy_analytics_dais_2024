@@ -1,0 +1,55 @@
+---
+version: 2
+models:
+- name: "br_go_account_stats"
+  description: "Each record represents the daily performance of an account in Google\
+    \ Ads broken down to the ad network and device type."
+  columns:
+  - name: "source_relation"
+    description: "The source of the record if the unioning functionality is being\
+      \ used. If not this field will be empty."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "account_id"
+    description: "The ID of the Account."
+    tags: []
+    tests:
+    - "not_null"
+    dataType:
+      type: "Integer"
+  - name: "date_day"
+    description: "The date being reported on."
+    tags: []
+    tests:
+    - "not_null"
+    dataType:
+      type: "String"
+  - name: "ad_network_type"
+    description: "The Google Ad network type used across the account."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "device"
+    description: "Account ad performance per unique device where the ads were served."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "clicks"
+    description: "The number of clicks."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "spend"
+    description: "The sum of your cost-per-click (CPC) and cost-per-thousand impressions\
+      \ (CPM) costs during this period."
+    tags: []
+    dataType:
+      type: "String"
+  - name: "impressions"
+    description: "Count of how often your ad has appeared on a search results page\
+      \ or website on the Google Network."
+    tags: []
+    dataType:
+      type: "String"
+sources: []
