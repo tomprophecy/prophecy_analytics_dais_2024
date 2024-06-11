@@ -1,0 +1,531 @@
+{
+  "id" : "br_am_campaign_level_report",
+  "metainfo" : {
+    "label" : "br_am_campaign_level_report",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "br_am_campaign_level_report##KWoEw77G" : {
+      "id" : "br_am_campaign_level_report##KWoEw77G",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "br_am_campaign_level_report",
+        "x" : 140,
+        "y" : -40,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Generates a campaign level report based on cleanup data.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM cleanup\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "bQmuOeL6",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date_day",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "impressions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "cost",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "campaign_applicable_budget_rule_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_applicable_budget_rule_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_bidding_strategy",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_budget_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "campaign_budget_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_budget_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_rule_based_budget_amount",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "cleanup"
+        } ],
+        "outputs" : [ {
+          "id" : "vlTzskMI",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date_day",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "impressions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "cost",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "campaign_applicable_budget_rule_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_applicable_budget_rule_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_bidding_strategy",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_budget_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "campaign_budget_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_budget_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_rule_based_budget_amount",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ychOe6NL_s4Uy1jyr9NOW" : {
+      "id" : "ychOe6NL_s4Uy1jyr9NOW",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "campaign_level_report",
+        "slug" : "campaign_level_report",
+        "x" : -240,
+        "y" : -40,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "dt_am_campaign_level_report",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "gOCUPuUPoYONEQhL9Dfdi",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "_fivetran_synced",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "campaign_applicable_budget_rule_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_applicable_budget_rule_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_bidding_strategy",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_budget_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "campaign_budget_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_budget_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "cost",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "impressions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_rule_based_budget_amount",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "uoMBjaS2EMSOVmzDH7hLN$$X5qOWYUXLGXCdSYkQpiKF" : {
+      "id" : "uoMBjaS2EMSOVmzDH7hLN$$X5qOWYUXLGXCdSYkQpiKF",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "cleanup",
+        "slug" : "cleanup",
+        "x" : -40,
+        "y" : -40,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Restructures campaign level report data from the 'amazon' source, including various metrics such as clicks, impressions, cost, and campaign budget.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "1IBhpaiNoNnEc1eb0Okw9$$NlfZtvE_y95PuVTcEPvd1##campaign_id", "1IBhpaiNoNnEc1eb0Okw9$$NlfZtvE_y95PuVTcEPvd1##clicks", "1IBhpaiNoNnEc1eb0Okw9$$NlfZtvE_y95PuVTcEPvd1##impressions", "1IBhpaiNoNnEc1eb0Okw9$$NlfZtvE_y95PuVTcEPvd1##cost", "1IBhpaiNoNnEc1eb0Okw9$$NlfZtvE_y95PuVTcEPvd1##campaign_applicable_budget_rule_id", "1IBhpaiNoNnEc1eb0Okw9$$NlfZtvE_y95PuVTcEPvd1##campaign_applicable_budget_rule_name", "1IBhpaiNoNnEc1eb0Okw9$$NlfZtvE_y95PuVTcEPvd1##campaign_bidding_strategy", "1IBhpaiNoNnEc1eb0Okw9$$NlfZtvE_y95PuVTcEPvd1##campaign_budget_amount", "1IBhpaiNoNnEc1eb0Okw9$$NlfZtvE_y95PuVTcEPvd1##campaign_budget_currency_code", "1IBhpaiNoNnEc1eb0Okw9$$NlfZtvE_y95PuVTcEPvd1##campaign_budget_type", "1IBhpaiNoNnEc1eb0Okw9$$NlfZtvE_y95PuVTcEPvd1##campaign_rule_based_budget_amount" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'amazon'"
+          },
+          "alias" : "source_relation"
+        }, {
+          "expression" : {
+            "expression" : "DAY(DATE)"
+          },
+          "alias" : "date_day"
+        }, {
+          "expression" : {
+            "expression" : "CAST(campaign_id AS STRING)"
+          },
+          "alias" : "campaign_id"
+        }, {
+          "expression" : {
+            "expression" : "clicks"
+          },
+          "alias" : "clicks"
+        }, {
+          "expression" : {
+            "expression" : "impressions"
+          },
+          "alias" : "impressions"
+        }, {
+          "expression" : {
+            "expression" : "cost"
+          },
+          "alias" : "cost"
+        }, {
+          "expression" : {
+            "expression" : "campaign_applicable_budget_rule_id"
+          },
+          "alias" : "campaign_applicable_budget_rule_id"
+        }, {
+          "expression" : {
+            "expression" : "campaign_applicable_budget_rule_name"
+          },
+          "alias" : "campaign_applicable_budget_rule_name"
+        }, {
+          "expression" : {
+            "expression" : "campaign_bidding_strategy"
+          },
+          "alias" : "campaign_bidding_strategy"
+        }, {
+          "expression" : {
+            "expression" : "campaign_budget_amount"
+          },
+          "alias" : "campaign_budget_amount"
+        }, {
+          "expression" : {
+            "expression" : "campaign_budget_currency_code"
+          },
+          "alias" : "campaign_budget_currency_code"
+        }, {
+          "expression" : {
+            "expression" : "campaign_budget_type"
+          },
+          "alias" : "campaign_budget_type"
+        }, {
+          "expression" : {
+            "expression" : "campaign_rule_based_budget_amount"
+          },
+          "alias" : "campaign_rule_based_budget_amount"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1IBhpaiNoNnEc1eb0Okw9$$NlfZtvE_y95PuVTcEPvd1",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "_fivetran_synced",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "campaign_applicable_budget_rule_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_applicable_budget_rule_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_bidding_strategy",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_budget_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "campaign_budget_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_budget_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "cost",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "impressions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_rule_based_budget_amount",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "campaign_level_report"
+        } ],
+        "outputs" : [ {
+          "id" : "y_6rtDYclbno6tf32qOKY$$ZBkvpMERKlu_QrBitq-Ln",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "date_day",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "clicks",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "impressions",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "cost",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "campaign_applicable_budget_rule_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_applicable_budget_rule_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_bidding_strategy",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_budget_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "campaign_budget_currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_budget_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_rule_based_budget_amount",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "V5ZMp9Enq3tXIj_vBKsHI$$vDzCHFUOOQRjCrLMlT3kR",
+    "source" : "ychOe6NL_s4Uy1jyr9NOW",
+    "sourcePort" : "gOCUPuUPoYONEQhL9Dfdi",
+    "target" : "uoMBjaS2EMSOVmzDH7hLN$$X5qOWYUXLGXCdSYkQpiKF",
+    "targetPort" : "1IBhpaiNoNnEc1eb0Okw9$$NlfZtvE_y95PuVTcEPvd1"
+  }, {
+    "id" : "kDGaRtqwVZEGIVCb7F9_9$$_ig9djhVF00tZRi2x3sWQ",
+    "source" : "uoMBjaS2EMSOVmzDH7hLN$$X5qOWYUXLGXCdSYkQpiKF",
+    "sourcePort" : "y_6rtDYclbno6tf32qOKY$$ZBkvpMERKlu_QrBitq-Ln",
+    "target" : "br_am_campaign_level_report##KWoEw77G",
+    "targetPort" : "bQmuOeL6"
+  } ],
+  "component" : "Model"
+}

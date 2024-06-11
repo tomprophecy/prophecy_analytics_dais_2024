@@ -1,0 +1,641 @@
+{
+  "id" : "br_am_campaign_history",
+  "metainfo" : {
+    "label" : "br_am_campaign_history",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "br_am_campaign_history##X7ey8CD2" : {
+      "id" : "br_am_campaign_history##X7ey8CD2",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "br_am_campaign_history",
+        "x" : 80,
+        "y" : 140,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Extracts campaign history from the AM campaign dataset.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM cleanup\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C7zcCGK6",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "creation_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "last_updated_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "portfolio_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "bidding_strategy",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "budget",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "budget_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "effective_budget",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "end_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "profile_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "serving_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "start_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "state",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "targeting_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_most_recent_record",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "cleanup"
+        } ],
+        "outputs" : [ {
+          "id" : "KFJk8OrW",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "creation_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "last_updated_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "portfolio_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "bidding_strategy",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "budget",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "budget_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "effective_budget",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "end_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "profile_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "serving_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "start_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "state",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "targeting_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_most_recent_record",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "zBhlJac8PmWP2uUqPY0F_" : {
+      "id" : "zBhlJac8PmWP2uUqPY0F_",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "dt_am_campaign_history",
+        "slug" : "dt_am_campaign_history",
+        "x" : -360,
+        "y" : 140,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "dt_am_campaign_history",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "6uzMacluGYitFp-SF5xcW",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "last_updated_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "_fivetran_synced",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "bidding_strategy",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "creation_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "budget",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "end_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "portfolio_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "profile_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "serving_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "start_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "state",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "targeting_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "budget_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "effective_budget",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "o-PGElkUBBazdXRoCNrcN$$pWs-9T6MyvZ200hLloe66" : {
+      "id" : "o-PGElkUBBazdXRoCNrcN$$pWs-9T6MyvZ200hLloe66",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "cleanup",
+        "slug" : "cleanup",
+        "x" : -140,
+        "y" : 140,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Formats campaign history data from the 'amazon' source, including campaign details, budget, and serving status. The query selects the most recent record for each campaign based on the last updated date.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##id", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##name", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##creation_date", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##last_updated_date", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##portfolio_id", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##bidding_strategy", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##budget", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##budget_type", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##effective_budget", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##end_date", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##profile_id", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##serving_status", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##start_date", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##state", "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da##targeting_type" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'amazon'"
+          },
+          "alias" : "source_relation"
+        }, {
+          "expression" : {
+            "expression" : "CAST(id AS STRING)"
+          },
+          "alias" : "campaign_id"
+        }, {
+          "expression" : {
+            "expression" : "name"
+          },
+          "alias" : "campaign_name"
+        }, {
+          "expression" : {
+            "expression" : "creation_date"
+          },
+          "alias" : "creation_date"
+        }, {
+          "expression" : {
+            "expression" : "last_updated_date"
+          },
+          "alias" : "last_updated_date"
+        }, {
+          "expression" : {
+            "expression" : "portfolio_id"
+          },
+          "alias" : "portfolio_id"
+        }, {
+          "expression" : {
+            "expression" : "bidding_strategy"
+          },
+          "alias" : "bidding_strategy"
+        }, {
+          "expression" : {
+            "expression" : "budget"
+          },
+          "alias" : "budget"
+        }, {
+          "expression" : {
+            "expression" : "budget_type"
+          },
+          "alias" : "budget_type"
+        }, {
+          "expression" : {
+            "expression" : "effective_budget"
+          },
+          "alias" : "effective_budget"
+        }, {
+          "expression" : {
+            "expression" : "end_date"
+          },
+          "alias" : "end_date"
+        }, {
+          "expression" : {
+            "expression" : "profile_id"
+          },
+          "alias" : "profile_id"
+        }, {
+          "expression" : {
+            "expression" : "serving_status"
+          },
+          "alias" : "serving_status"
+        }, {
+          "expression" : {
+            "expression" : "start_date"
+          },
+          "alias" : "start_date"
+        }, {
+          "expression" : {
+            "expression" : "state"
+          },
+          "alias" : "state"
+        }, {
+          "expression" : {
+            "expression" : "targeting_type"
+          },
+          "alias" : "targeting_type"
+        }, {
+          "expression" : {
+            "expression" : "row_number() over (partition by id order by last_updated_date desc) = 1"
+          },
+          "alias" : "is_most_recent_record"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "last_updated_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "_fivetran_synced",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "bidding_strategy",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "creation_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "budget",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "end_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "portfolio_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "profile_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "serving_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "start_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "state",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "targeting_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "budget_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "effective_budget",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "RyyoBwMiwz8vU2t5zmSVN$$abehR95q1YoSqv4S4HhsF",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "campaign_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "creation_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "last_updated_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "portfolio_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "bidding_strategy",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "budget",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "budget_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "effective_budget",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "end_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "profile_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "serving_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "start_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "state",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "targeting_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_most_recent_record",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "OhDmZVmgnsOvgJkF3XEXy$$5aJ-nlNNXE-k3gnusAQQ9",
+    "source" : "o-PGElkUBBazdXRoCNrcN$$pWs-9T6MyvZ200hLloe66",
+    "sourcePort" : "RyyoBwMiwz8vU2t5zmSVN$$abehR95q1YoSqv4S4HhsF",
+    "target" : "br_am_campaign_history##X7ey8CD2",
+    "targetPort" : "C7zcCGK6"
+  }, {
+    "id" : "_ZsIPetoD7gQJoCS-tHlg$$G3mhvMH2xM2HQ2oAmG-Oe",
+    "source" : "zBhlJac8PmWP2uUqPY0F_",
+    "sourcePort" : "6uzMacluGYitFp-SF5xcW",
+    "target" : "o-PGElkUBBazdXRoCNrcN$$pWs-9T6MyvZ200hLloe66",
+    "targetPort" : "ERVajDCmN4oFCTOkerO6E$$N4Oz9RLErAmUHgymBk2Da"
+  } ],
+  "component" : "Model"
+}

@@ -51,7 +51,7 @@
             }, {
               "name" : "date_day",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Date"
               }
             }, {
               "name" : "ad_network_type",
@@ -99,7 +99,7 @@
             }, {
               "name" : "date_day",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Date"
               }
             }, {
               "name" : "ad_network_type",
@@ -144,11 +144,11 @@
         "y" : 80,
         "phase" : 0,
         "macroDependencies" : [ ],
-        "comment" : "Cleans up and transforms Google Ads account statistics data for analysis.",
+        "comment" : "Cleans up and organizes account statistics data from the 'google_ads' source, including information on customer ID, date, ad network type, device, clicks, spend, and impressions.",
         "autoUpdateComment" : true
       },
       "properties" : {
-        "columnsSelector" : [ "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##ad_network_type", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##device", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##clicks", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##cost_micros", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##impressions" ],
+        "columnsSelector" : [ "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##customer_id", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##DATE", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##ad_network_type", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##device", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##clicks", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##cost_micros", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##impressions" ],
         "expressions" : [ {
           "expression" : {
             "expression" : "'google_ads'"
@@ -161,7 +161,7 @@
           "alias" : "account_id"
         }, {
           "expression" : {
-            "expression" : "DAY(DATE)"
+            "expression" : "DATE"
           },
           "alias" : "date_day"
         }, {
@@ -312,7 +312,7 @@
             }, {
               "name" : "date_day",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Date"
               }
             }, {
               "name" : "ad_network_type",

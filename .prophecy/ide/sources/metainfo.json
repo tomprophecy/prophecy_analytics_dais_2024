@@ -623,6 +623,14 @@
     "prophecyProjectDependencies" : { }
   },
   "entitiesToSync" : [ {
+    "name" : "br_am_campaign_history",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "br_am_profile",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
     "name" : "br_go_account_history",
     "type" : "Model",
     "syncedOnce" : false
@@ -648,6 +656,10 @@
     "syncedOnce" : true
   }, {
     "name" : "gl_all_account_report",
+    "type" : "Model",
+    "syncedOnce" : false
+  }, {
+    "name" : "sv_am_account_report",
     "type" : "Model",
     "syncedOnce" : false
   }, {

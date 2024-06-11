@@ -116,7 +116,7 @@
             "fields" : [ {
               "name" : "date_day",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Date"
               }
             }, {
               "name" : "ad_network_type",
@@ -214,7 +214,7 @@
             }, {
               "name" : "date_day",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Date"
               }
             }, {
               "name" : "ad_network_type",
@@ -311,7 +311,7 @@
             }, {
               "name" : "date_day",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Date"
               }
             }, {
               "name" : "ad_network_type",
@@ -389,7 +389,7 @@
             }, {
               "name" : "date_day",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Date"
               }
             }, {
               "name" : "ad_network_type",
@@ -493,7 +493,7 @@
             }, {
               "name" : "date_day",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Date"
               }
             }, {
               "name" : "ad_network_type",
@@ -571,7 +571,7 @@
             }, {
               "name" : "date_day",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Date"
               }
             }, {
               "name" : "ad_network_type",
@@ -660,7 +660,7 @@
             }, {
               "name" : "date_day",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Date"
               }
             }, {
               "name" : "ad_network_type",
@@ -700,6 +700,7 @@
       "component" : "Model",
       "metadata" : {
         "label" : "br_go_account_history",
+        "slug" : "br_go_account_history",
         "x" : 20,
         "y" : 20,
         "phase" : 0
@@ -922,7 +923,7 @@
             }, {
               "name" : "date_day",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Date"
               }
             }, {
               "name" : "ad_network_type",
@@ -960,7 +961,7 @@
             "fields" : [ {
               "name" : "date_day",
               "dataType" : {
-                "type" : "Integer"
+                "type" : "Date"
               }
             }, {
               "name" : "ad_network_type",

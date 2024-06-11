@@ -8,11 +8,11 @@ WITH account_stats_data AS (
 
 cleanup AS (
 
-  {#Cleans up and transforms Google Ads account statistics data for analysis.#}
+  {#Cleans up and organizes account statistics data from the 'google_ads' source, including information on customer ID, date, ad network type, device, clicks, spend, and impressions.#}
   SELECT 
     'google_ads' AS source_relation,
     customer_id AS account_id,
-    DAY(DATE) AS date_day,
+    DATE AS date_day,
     ad_network_type AS ad_network_type,
     device AS device,
     clicks AS clicks,

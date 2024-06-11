@@ -24,7 +24,7 @@ models:
     tests:
     - "not_null"
     dataType:
-      type: "String"
+      type: "Date"
   - name: "ad_network_type"
     description: "The Google Ad network type used across the account."
     tags: []

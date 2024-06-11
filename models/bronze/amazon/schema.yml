@@ -1,0 +1,103 @@
+---
+version: 2
+models:
+- name: "br_am_campaign_level_report"
+  description: "Campaign reports contain performance data broken down at the campaign\
+    \ level."
+  columns:
+  - name: "source_relation"
+    dataType:
+      type: "String"
+  - name: "date_day"
+    dataType:
+      type: "Integer"
+  - name: "campaign_id"
+    dataType:
+      type: "String"
+  - name: "clicks"
+    dataType:
+      type: "Integer"
+  - name: "impressions"
+    dataType:
+      type: "String"
+  - name: "cost"
+    dataType:
+      type: "Float"
+  - name: "campaign_applicable_budget_rule_id"
+    dataType:
+      type: "String"
+  - name: "campaign_applicable_budget_rule_name"
+    dataType:
+      type: "String"
+  - name: "campaign_bidding_strategy"
+    dataType:
+      type: "String"
+  - name: "campaign_budget_amount"
+    dataType:
+      type: "Float"
+  - name: "campaign_budget_currency_code"
+    dataType:
+      type: "String"
+  - name: "campaign_budget_type"
+    dataType:
+      type: "String"
+  - name: "campaign_rule_based_budget_amount"
+    dataType:
+      type: "String"
+- name: "br_am_profile"
+  description: "Each record represents a profile. Advertisers who operate in more\
+    \ than one marketplace (for example, Amazon.com, Amazon.co.uk, Amazon.co.jp) will\
+    \ have one profile associated with each marketplace."
+  columns:
+  - name: "source_relation"
+  - name: "_fivetran_deleted"
+  - name: "profile_id"
+    tests:
+    - "not_null"
+  - name: "account_id"
+  - name: "account_marketplace_string_id"
+    description: "The identifier of the marketplace to which the account is associated."
+  - name: "account_name"
+  - name: "account_sub_type"
+    description: "The account subtype."
+  - name: "account_type"
+    description: "One of seller, vendor, or agency."
+  - name: "account_valid_payment_method"
+    description: "For Vendors, this returns if the Advertiser has set up a valid payment\
+      \ method."
+  - name: "country_code"
+  - name: "currency_code"
+  - name: "daily_budget"
+    description: "Daily budget for Sponsored Product campaigns for seller type accounts."
+  - name: "timezone"
+    description: "The time zone used for all date-based campaign management and reporting."
+- name: "br_am_campaign_history"
+  description: "Each record represents a campaign in Amazon Ads."
+  columns:
+  - name: "source_relation"
+  - name: "campaign_id"
+    tests:
+    - "not_null"
+  - name: "campaign_name"
+  - name: "creation_date"
+  - name: "last_updated_date"
+  - name: "portfolio_id"
+  - name: "bidding_strategy"
+    description: "The bidding strategy associated with a campaign (legacyForSales,\
+      \ autoForSales, or manual.)"
+  - name: "budget"
+    description: "The budget for the campaign."
+  - name: "budget_type"
+  - name: "effective_budget"
+    description: "Adjusted budget for the campaign that has been impacted by a budget\
+      \ rule."
+  - name: "end_date"
+    description: "The end date of the campaign."
+  - name: "profile_id"
+  - name: "serving_status"
+  - name: "start_date"
+    description: "The start date of the campaign."
+  - name: "state"
+  - name: "targeting_type"
+    description: "The type of targeting used for the campaign, either manual or auto."
+  - name: "is_most_recent_record"

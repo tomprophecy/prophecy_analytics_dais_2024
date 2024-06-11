@@ -1,0 +1,531 @@
+{
+  "id" : "br_am_profile",
+  "metainfo" : {
+    "label" : "br_am_profile",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "br_am_profile##BScs8m8g" : {
+      "id" : "br_am_profile##BScs8m8g",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "br_am_profile",
+        "x" : 100,
+        "y" : 0,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Creates a business relationship account manager profile.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM cleanup\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "OFV1SOv1",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "_fivetran_deleted",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "profile_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_marketplace_string_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_sub_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_valid_payment_method",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "daily_budget",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "timezone",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "cleanup"
+        } ],
+        "outputs" : [ {
+          "id" : "uBZo8thw",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "_fivetran_deleted",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "profile_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_marketplace_string_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_sub_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_valid_payment_method",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "daily_budget",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "timezone",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Y4og1jo9B_ky6cy4lIjOS" : {
+      "id" : "Y4og1jo9B_ky6cy4lIjOS",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "profile",
+        "slug" : "profile",
+        "x" : -300,
+        "y" : 0,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "dt_am_profile",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "fMhjfFdoKDW-A1iyRpOlf",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "_fivetran_deleted",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "_fivetran_synced",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_marketplace_string_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_sub_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_valid_payment_method",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "daily_budget",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "timezone",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ipC39sB_jRNya_2Vjal68$$6k0ErQax5sBuk_NIpCmv1" : {
+      "id" : "ipC39sB_jRNya_2Vjal68$$6k0ErQax5sBuk_NIpCmv1",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "cleanup",
+        "slug" : "cleanup",
+        "x" : -100,
+        "y" : 0,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Reformats data from the 'dt_am_profile' table, extracting relevant fields and assigning appropriate data types.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm##_fivetran_deleted", "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm##id", "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm##account_id", "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm##account_marketplace_string_id", "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm##account_name", "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm##account_sub_type", "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm##account_type", "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm##account_valid_payment_method", "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm##country_code", "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm##currency_code", "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm##daily_budget", "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm##timezone" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "'amazon'"
+          },
+          "alias" : "source_relation"
+        }, {
+          "expression" : {
+            "expression" : "_fivetran_deleted"
+          },
+          "alias" : "_fivetran_deleted"
+        }, {
+          "expression" : {
+            "expression" : "id"
+          },
+          "alias" : "profile_id"
+        }, {
+          "expression" : {
+            "expression" : "CAST(account_id AS STRING)"
+          },
+          "alias" : "account_id"
+        }, {
+          "expression" : {
+            "expression" : "account_marketplace_string_id"
+          },
+          "alias" : "account_marketplace_string_id"
+        }, {
+          "expression" : {
+            "expression" : "account_name"
+          },
+          "alias" : "account_name"
+        }, {
+          "expression" : {
+            "expression" : "account_sub_type"
+          },
+          "alias" : "account_sub_type"
+        }, {
+          "expression" : {
+            "expression" : "account_type"
+          },
+          "alias" : "account_type"
+        }, {
+          "expression" : {
+            "expression" : "account_valid_payment_method"
+          },
+          "alias" : "account_valid_payment_method"
+        }, {
+          "expression" : {
+            "expression" : "country_code"
+          },
+          "alias" : "country_code"
+        }, {
+          "expression" : {
+            "expression" : "currency_code"
+          },
+          "alias" : "currency_code"
+        }, {
+          "expression" : {
+            "expression" : "daily_budget"
+          },
+          "alias" : "daily_budget"
+        }, {
+          "expression" : {
+            "expression" : "timezone"
+          },
+          "alias" : "timezone"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "_fivetran_deleted",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "_fivetran_synced",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_marketplace_string_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_sub_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_valid_payment_method",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "daily_budget",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "timezone",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "I_EEfqNVv-IYjvbnQtNNL$$uyA6x_ZrLPdh4MgZPS7Uo",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "source_relation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "_fivetran_deleted",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "profile_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "account_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_marketplace_string_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_sub_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_valid_payment_method",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "currency_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "daily_budget",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "timezone",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "dlJD2PmqVwXYEY7nPpTfT$$2qCmaa9K4EQDbjacwQfGH",
+    "source" : "ipC39sB_jRNya_2Vjal68$$6k0ErQax5sBuk_NIpCmv1",
+    "sourcePort" : "I_EEfqNVv-IYjvbnQtNNL$$uyA6x_ZrLPdh4MgZPS7Uo",
+    "target" : "br_am_profile##BScs8m8g",
+    "targetPort" : "OFV1SOv1"
+  }, {
+    "id" : "kIgJZyb5dMc8B7c6P4iaC$$E_6XFZSihC1aMYoaF4-1u",
+    "source" : "Y4og1jo9B_ky6cy4lIjOS",
+    "sourcePort" : "fMhjfFdoKDW-A1iyRpOlf",
+    "target" : "ipC39sB_jRNya_2Vjal68$$6k0ErQax5sBuk_NIpCmv1",
+    "targetPort" : "lXv3qouxF_jRylShucfii$$Ag8lMs7XdXpAXukyhBWgm"
+  } ],
+  "component" : "Model"
+}

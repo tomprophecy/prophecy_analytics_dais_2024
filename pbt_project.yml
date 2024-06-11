@@ -61,6 +61,65 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2024-06-09 19:36:39'
+  .prophecy/metadata/sqlmodels/br_am_profile:
+    name: br_am_profile
+    schema:
+      providerType: Databricks
+      fields:
+      - name: source_relation
+        dataType:
+          type: String
+      - name: _fivetran_deleted
+        dataType:
+          type: String
+      - name: profile_id
+        dataType:
+          type: Integer
+      - name: account_id
+        dataType:
+          type: String
+      - name: account_marketplace_string_id
+        dataType:
+          type: String
+      - name: account_name
+        dataType:
+          type: String
+      - name: account_sub_type
+        dataType:
+          type: String
+      - name: account_type
+        dataType:
+          type: String
+      - name: account_valid_payment_method
+        dataType:
+          type: String
+      - name: country_code
+        dataType:
+          type: String
+      - name: currency_code
+        dataType:
+          type: String
+      - name: daily_budget
+        dataType:
+          type: Integer
+      - name: timezone
+        dataType:
+          type: String
+    description: Each record represents a profile. Advertisers who operate in more
+      than one marketplace (for example, Amazon.com, Amazon.co.uk, Amazon.co.jp) will
+      have one profile associated with each marketplace.
+    author: maciej@prophecy.io
+    files:
+    - models/bronze/amazon/br_am_profile.sql
+    - .prophecy/ide/models/br_am_profile.json
+    - models/bronze/amazon/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-11 03:44:53'
   .prophecy/metadata/sqlmodels/sv_li_account_report:
     name: sv_li_account_report
     schema:
@@ -343,6 +402,258 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2024-06-09 18:59:28'
+  .prophecy/metadata/sqlmodels/br_am_campaign_history:
+    name: br_am_campaign_history
+    schema:
+      providerType: Databricks
+      fields:
+      - name: source_relation
+        dataType:
+          type: String
+      - name: campaign_id
+        dataType:
+          type: String
+      - name: campaign_name
+        dataType:
+          type: String
+      - name: creation_date
+        dataType:
+          type: Date
+      - name: last_updated_date
+        dataType:
+          type: Date
+      - name: portfolio_id
+        dataType:
+          type: Integer
+      - name: bidding_strategy
+        dataType:
+          type: String
+      - name: budget
+        dataType:
+          type: Integer
+      - name: budget_type
+        dataType:
+          type: String
+      - name: effective_budget
+        dataType:
+          type: String
+      - name: end_date
+        dataType:
+          type: String
+      - name: profile_id
+        dataType:
+          type: Integer
+      - name: serving_status
+        dataType:
+          type: String
+      - name: start_date
+        dataType:
+          type: Date
+      - name: state
+        dataType:
+          type: String
+      - name: targeting_type
+        dataType:
+          type: String
+      - name: is_most_recent_record
+        dataType:
+          type: Boolean
+    description: Each record represents a campaign in Amazon Ads.
+    author: maciej@prophecy.io
+    files:
+    - models/bronze/amazon/br_am_campaign_history.sql
+    - .prophecy/ide/models/br_am_campaign_history.json
+    - models/bronze/amazon/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-11 03:48:00'
+  .prophecy/metadata/sqlmodels/gl_all_account_report:
+    name: gl_all_account_report
+    schema:
+      providerType: Databricks
+      fields:
+      - name: source_relation
+        dataType:
+          type: String
+      - name: account_id
+        dataType:
+          type: Integer
+      - name: account_name
+        dataType:
+          type: String
+      - name: clicks
+        dataType:
+          type: Bigint
+      - name: impressions
+        dataType:
+          type: Float
+      - name: cost
+        dataType:
+          type: Float
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - models/gold/all/gl_all_account_report.sql
+    - .prophecy/ide/models/gl_all_account_report.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-09 20:40:37'
+  .prophecy/metadata/sqlmodels/br_go_account_stats:
+    name: br_go_account_stats
+    schema:
+      providerType: Databricks
+      fields:
+      - name: source_relation
+        dataType:
+          type: String
+      - name: account_id
+        dataType:
+          type: Integer
+      - name: date_day
+        dataType:
+          type: Date
+      - name: ad_network_type
+        dataType:
+          type: String
+      - name: device
+        dataType:
+          type: String
+      - name: clicks
+        dataType:
+          type: Integer
+      - name: spend
+        dataType:
+          type: Double
+      - name: impressions
+        dataType:
+          type: Integer
+    description: Each record represents the daily performance of an account in Google
+      Ads broken down to the ad network and device type.
+    author: maciej@prophecy.io
+    files:
+    - models/bronze/google_ads/br_go_account_stats.sql
+    - .prophecy/ide/models/br_go_account_stats.json
+    - models/bronze/google_ads/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-09 21:06:20'
+  .prophecy/metadata/sqlmodels/br_am_campaign_level_report:
+    name: br_am_campaign_level_report
+    schema:
+      providerType: Databricks
+      fields:
+      - name: source_relation
+        dataType:
+          type: String
+      - name: date_day
+        dataType:
+          type: Integer
+      - name: campaign_id
+        dataType:
+          type: String
+      - name: clicks
+        dataType:
+          type: Integer
+      - name: impressions
+        dataType:
+          type: String
+      - name: cost
+        dataType:
+          type: Float
+      - name: campaign_applicable_budget_rule_id
+        dataType:
+          type: String
+      - name: campaign_applicable_budget_rule_name
+        dataType:
+          type: String
+      - name: campaign_bidding_strategy
+        dataType:
+          type: String
+      - name: campaign_budget_amount
+        dataType:
+          type: Float
+      - name: campaign_budget_currency_code
+        dataType:
+          type: String
+      - name: campaign_budget_type
+        dataType:
+          type: String
+      - name: campaign_rule_based_budget_amount
+        dataType:
+          type: String
+    description: Campaign reports contain performance data broken down at the campaign
+      level.
+    author: maciej@prophecy.io
+    files:
+    - models/bronze/amazon/br_am_campaign_level_report.sql
+    - .prophecy/ide/models/br_am_campaign_level_report.json
+    - models/bronze/amazon/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-11 03:42:29'
+  .prophecy/metadata/sqlmodels/sv_am_account_report:
+    name: sv_am_account_report
+    schema:
+      providerType: Databricks
+      fields:
+      - name: profile_id
+        dataType:
+          type: Integer
+      - name: campaign_id
+        dataType:
+          type: String
+      - name: campaign_name
+        dataType:
+          type: String
+      - name: account_name
+        dataType:
+          type: String
+      - name: country_code
+        dataType:
+          type: String
+      - name: creation_date
+        dataType:
+          type: Date
+      - name: last_updated_date
+        dataType:
+          type: Date
+      - name: total_clicks
+        dataType:
+          type: Bigint
+      - name: total_impressions
+        dataType:
+          type: Double
+      - name: total_cost
+        dataType:
+          type: Double
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - models/silver/amazon/sv_am_account_report.sql
+    - .prophecy/ide/models/sv_am_account_report.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-11 03:50:11'
   .prophecy/metadata/sqlmodels/sv_go_account_report:
     name: sv_go_account_report
     schema:
@@ -362,7 +673,7 @@ sqlModels:
           type: Double
       - name: date_day
         dataType:
-          type: Integer
+          type: Date
       - name: ad_network_type
         dataType:
           type: String
@@ -402,121 +713,9 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2024-06-10 19:58:04'
-  .prophecy/metadata/sqlmodels/gl_all_account_report:
-    name: gl_all_account_report
-    schema:
-      providerType: Databricks
-      fields:
-      - name: ACCOUNT_ID
-        dataType:
-          type: Integer
-      - name: ACCOUNT_NAME
-        dataType:
-          type: String
-      - name: CURRENCY_CODE
-        dataType:
-          type: String
-      - name: SPEND
-        dataType:
-          type: Float
-      - name: CLICKS
-        dataType:
-          type: Bigint
-      - name: IMPRESSIONS
-        dataType:
-          type: Bigint
-      - name: UPDATED_AT
-        dataType:
-          type: Timestamp
-      - name: SOURCE_RELATION
-        dataType:
-          type: String
-      - name: SOURCE
-        dataType:
-          type: String
-    description: null
-    author: maciej@prophecy.io
-    files:
-    - models/gold/all/gl_all_account_report.sql
-    - .prophecy/ide/models/gl_all_account_report.json
-    sqlDependencies:
-      models: []
-      datasets: []
-      seeds: []
-      sources: []
-      snapshots: []
-    createdAt: '2024-06-09 20:40:37'
-  .prophecy/metadata/sqlmodels/br_go_account_stats:
-    name: br_go_account_stats
-    schema:
-      providerType: Databricks
-      fields:
-      - name: source_relation
-        dataType:
-          type: String
-      - name: account_id
-        dataType:
-          type: Integer
-      - name: date_day
-        dataType:
-          type: Integer
-      - name: ad_network_type
-        dataType:
-          type: String
-      - name: device
-        dataType:
-          type: String
-      - name: clicks
-        dataType:
-          type: Integer
-      - name: spend
-        dataType:
-          type: Double
-      - name: impressions
-        dataType:
-          type: Integer
-    description: Each record represents the daily performance of an account in Google
-      Ads broken down to the ad network and device type.
-    author: maciej@prophecy.io
-    files:
-    - models/bronze/google_ads/br_go_account_stats.sql
-    - .prophecy/ide/models/br_go_account_stats.json
-    - models/bronze/google_ads/schema.yml
-    sqlDependencies:
-      models: []
-      datasets: []
-      seeds: []
-      sources: []
-      snapshots: []
-    createdAt: '2024-06-09 21:06:20'
 sqlSnapshots: {}
 sqlTests: {}
-sqlMacros:
-  .prophecy/metadata/sqlmacros/default__google_ads_extract_url_parameter:
-    name: default__google_ads_extract_url_parameter
-    macroType: expression
-    description: null
-    author: maciej@prophecy.io
-    files:
-    - macros/google_ads_extract_url_parameter.sql
-    createdAt: '2024-06-10 20:40:06'
-  .prophecy/metadata/sqlmacros/google_ads_extract_url_parameter:
-    name: google_ads_extract_url_parameter
-    macroType: query
-    description: null
-    author: maciej@prophecy.io
-    files:
-    - macros/google_ads_extract_url_parameter.sql
-    - .prophecy/ide/macros/google_ads_extract_url_parameter.json
-    createdAt: '2024-06-10 20:39:58'
-  .prophecy/metadata/sqlmacros/spark__google_ads_extract_url_parameter:
-    name: spark__google_ads_extract_url_parameter
-    macroType: expression
-    description: null
-    author: maciej@prophecy.io
-    files:
-    - macros/google_ads_extract_url_parameter.sql
-    createdAt: '2024-06-10 20:40:06'
+sqlMacros: {}
 sqlSeeds:
   .prophecy/metadata/sqlseeds/dt_li_campaign_history:
     name: dt_li_campaign_history
@@ -549,6 +748,55 @@ sqlSeeds:
     files:
     - seeds/linkedin/dt_li_campaign_history.csv
     createdAt: '2024-06-09 18:59:52'
+  .prophecy/metadata/sqlseeds/dt_am_profile:
+    name: dt_am_profile
+    schema:
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+      - name: _fivetran_deleted
+        dataType:
+          type: String
+      - name: _fivetran_synced
+        dataType:
+          type: Date
+      - name: account_id
+        dataType:
+          type: String
+      - name: account_marketplace_string_id
+        dataType:
+          type: String
+      - name: account_name
+        dataType:
+          type: String
+      - name: account_sub_type
+        dataType:
+          type: String
+      - name: account_type
+        dataType:
+          type: String
+      - name: account_valid_payment_method
+        dataType:
+          type: String
+      - name: country_code
+        dataType:
+          type: String
+      - name: currency_code
+        dataType:
+          type: String
+      - name: daily_budget
+        dataType:
+          type: Integer
+      - name: timezone
+        dataType:
+          type: String
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - seeds/amazon/dt_am_profile.csv
+    createdAt: '2024-06-11 03:45:03'
   .prophecy/metadata/sqlseeds/dt_go_account_history:
     name: dt_go_account_history
     schema:
@@ -705,34 +953,6 @@ sqlSeeds:
     files:
     - seeds/google_ads/dt_go_account_stats.csv
     createdAt: '2024-06-09 21:00:29'
-  .prophecy/metadata/sqlseeds/dt_li_account_history:
-    name: dt_li_account_history
-    schema:
-      providerType: Databricks
-      fields:
-      - name: id
-        dataType:
-          type: Integer
-      - name: last_modified_time
-        dataType:
-          type: Date
-      - name: created_time
-        dataType:
-          type: Date
-      - name: name
-        dataType:
-          type: String
-      - name: currency
-        dataType:
-          type: String
-      - name: version_tag
-        dataType:
-          type: Integer
-    description: null
-    author: maciej@prophecy.io
-    files:
-    - seeds/linkedin/dt_li_account_history.csv
-    createdAt: '2024-06-09 17:07:12'
   .prophecy/metadata/sqlseeds/dt_li_ad_analytics_by_campaign:
     name: dt_li_ad_analytics_by_campaign
     schema:
@@ -929,6 +1149,141 @@ sqlSeeds:
     files:
     - seeds/linkedin/dt_li_ad_analytics_by_campaign.csv
     createdAt: '2024-06-09 19:36:02'
+  .prophecy/metadata/sqlseeds/dt_am_campaign_history:
+    name: dt_am_campaign_history
+    schema:
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+      - name: last_updated_date
+        dataType:
+          type: Date
+      - name: _fivetran_synced
+        dataType:
+          type: Date
+      - name: bidding_strategy
+        dataType:
+          type: String
+      - name: creation_date
+        dataType:
+          type: Date
+      - name: budget
+        dataType:
+          type: Integer
+      - name: end_date
+        dataType:
+          type: String
+      - name: name
+        dataType:
+          type: String
+      - name: portfolio_id
+        dataType:
+          type: Integer
+      - name: profile_id
+        dataType:
+          type: Integer
+      - name: serving_status
+        dataType:
+          type: String
+      - name: start_date
+        dataType:
+          type: Date
+      - name: state
+        dataType:
+          type: String
+      - name: targeting_type
+        dataType:
+          type: String
+      - name: budget_type
+        dataType:
+          type: String
+      - name: effective_budget
+        dataType:
+          type: String
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - seeds/amazon/dt_am_campaign_history.csv
+    createdAt: '2024-06-11 03:47:23'
+  .prophecy/metadata/sqlseeds/dt_am_campaign_level_report:
+    name: dt_am_campaign_level_report
+    schema:
+      providerType: Databricks
+      fields:
+      - name: campaign_id
+        dataType:
+          type: Integer
+      - name: date
+        dataType:
+          type: Date
+      - name: _fivetran_synced
+        dataType:
+          type: Date
+      - name: campaign_applicable_budget_rule_id
+        dataType:
+          type: String
+      - name: campaign_applicable_budget_rule_name
+        dataType:
+          type: String
+      - name: campaign_bidding_strategy
+        dataType:
+          type: String
+      - name: campaign_budget_amount
+        dataType:
+          type: Float
+      - name: campaign_budget_currency_code
+        dataType:
+          type: String
+      - name: campaign_budget_type
+        dataType:
+          type: String
+      - name: clicks
+        dataType:
+          type: Integer
+      - name: cost
+        dataType:
+          type: Float
+      - name: impressions
+        dataType:
+          type: String
+      - name: campaign_rule_based_budget_amount
+        dataType:
+          type: String
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - seeds/amazon/dt_am_campaign_level_report.csv
+    createdAt: '2024-06-11 02:06:43'
+  .prophecy/metadata/sqlseeds/dt_li_account_history:
+    name: dt_li_account_history
+    schema:
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+      - name: last_modified_time
+        dataType:
+          type: Date
+      - name: created_time
+        dataType:
+          type: Date
+      - name: name
+        dataType:
+          type: String
+      - name: currency
+        dataType:
+          type: String
+      - name: version_tag
+        dataType:
+          type: Integer
+    description: null
+    author: maciej@prophecy.io
+    files:
+    - seeds/linkedin/dt_li_account_history.csv
+    createdAt: '2024-06-09 17:07:12'
 sqlSources:
   .prophecy/metadata/sqlsources/google:
     name: google
