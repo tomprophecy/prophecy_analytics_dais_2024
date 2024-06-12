@@ -1,0 +1,260 @@
+{
+  "metainfo" : {
+    "type" : "Prophecy",
+    "fabricId" : "140",
+    "jobId" : "jobs/weekly_job",
+    "name" : "weekly_job",
+    "dagName" : "beta_maciej_prophecy_prophecy_analytics_dais_2024_weekly_job",
+    "schedule" : "0 0 * * 1",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "availableFabrics" : [ {
+      "id" : "137",
+      "name" : "airflow",
+      "trialStartDate" : 1718116777639
+    }, {
+      "id" : "140",
+      "name" : "airflow-composer"
+    } ],
+    "maxActiveRuns" : 1,
+    "endDate" : "2024-07-02",
+    "catchup" : false,
+    "tags" : [ ],
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ],
+    "dynamicPipelineStatus" : {
+      "databricks" : false,
+      "dataproc" : false,
+      "emr" : false,
+      "onprem" : false
+    }
+  },
+  "processes" : {
+    "UFN7nMZAuCBDHwN-tFunQ" : {
+      "id" : "UFN7nMZAuCBDHwN-tFunQ",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "analytics",
+        "slug" : "analytics",
+        "x" : -160,
+        "y" : -40
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "82nLyyOMidyvBlOUFKnMV",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "j0ndsSmSWFcS0ZEuPh_2j",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "entityId" : null,
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "model" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "currentProjectSnapshots" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "runRun" : null,
+        "vars" : null,
+        "isAdhocRunFromSameProject" : null,
+        "customVersion" : false,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "302",
+        "runMode" : "project",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "loadingModels" : false,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : null,
+        "entityName" : null,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "snapshot" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : null,
+        "printerWidth" : null,
+        "sqlFabricId" : "134",
+        "gitEntityValue" : null,
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : null,
+        "loadingSnapshots" : false,
+        "noAnonymousUsageStats" : null,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : null,
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null,
+        "entityKind" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "k3vj4AWXtbhApg3jP5mFx" : {
+      "id" : "k3vj4AWXtbhApg3jP5mFx",
+      "component" : "S3FileSensor",
+      "metadata" : {
+        "label" : "wait_for_data",
+        "slug" : "wait_for_data",
+        "x" : -400,
+        "y" : -40
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "G9eQFEF1e-EloXAtL_DOw",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "xzVo0FIZTVqHTf1Q2m_UA",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "awsConnectionId" : "aws_default",
+        "wildCardMatch" : false,
+        "responseCheck" : null,
+        "verifySslCertificates" : true,
+        "s3Paths" : "s3://airflow-guide/configs.csv",
+        "timeout" : 600,
+        "bucketName" : null,
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "j9qNkn_8Yr29zbUqiJe8Y" : {
+      "id" : "j9qNkn_8Yr29zbUqiJe8Y",
+      "component" : "TableauExtract",
+      "metadata" : {
+        "label" : "extract_to_tab",
+        "slug" : "extract_to_tab",
+        "x" : 80,
+        "y" : -40
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "C-jxciyd7JQaqG8wghXrY",
+          "slug" : "Model_0"
+        } ],
+        "outputs" : [ {
+          "id" : "6piCw0HYxFV-t8PTSPcqb",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "table_name" : "some_table",
+        "tableau_project_name" : "CustomersOrders",
+        "catalog_name" : "hive_metastore",
+        "databricks_conn_id" : null,
+        "source_type" : "DATABRICKS",
+        "use_catalog" : true,
+        "database_name" : "main",
+        "tableau_conn_id" : "tableau_pooja",
+        "warehouse_conn_id" : "dev_databricks_admin",
+        "tableau_extract_name" : "some_extract_name",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "mjC9DBskyXoWmdxGzWfRa" : {
+      "id" : "mjC9DBskyXoWmdxGzWfRa",
+      "component" : "Email",
+      "metadata" : {
+        "label" : "notify_users",
+        "slug" : "notify_users",
+        "x" : 300,
+        "y" : -40
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "un2LkRPJkn9DCD5VL63HU",
+          "slug" : "TableauExtract_1"
+        } ],
+        "outputs" : [ {
+          "id" : "1Fif-1uOGaTHje4UZRtMu",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "emailCC" : null,
+        "subject" : "Weekly Job complete",
+        "emailBCC" : null,
+        "emailTo" : "maciej@prophecy.io",
+        "emailConnectionId" : "email_default",
+        "htmlContent" : "Weekly job completed successfully on {{ds}} ",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ {
+    "id" : "PizgrVVvQm24m5b0HyVxO",
+    "source" : "k3vj4AWXtbhApg3jP5mFx",
+    "target" : "UFN7nMZAuCBDHwN-tFunQ",
+    "sourcePort" : "xzVo0FIZTVqHTf1Q2m_UA",
+    "targetPort" : "82nLyyOMidyvBlOUFKnMV"
+  }, {
+    "id" : "FYmlXbFexSYA7ONvios0B",
+    "source" : "UFN7nMZAuCBDHwN-tFunQ",
+    "target" : "j9qNkn_8Yr29zbUqiJe8Y",
+    "sourcePort" : "j0ndsSmSWFcS0ZEuPh_2j",
+    "targetPort" : "C-jxciyd7JQaqG8wghXrY"
+  }, {
+    "id" : "4riHdP4Cb7gWHprO58r9K",
+    "source" : "j9qNkn_8Yr29zbUqiJe8Y",
+    "target" : "mjC9DBskyXoWmdxGzWfRa",
+    "sourcePort" : "6piCw0HYxFV-t8PTSPcqb",
+    "targetPort" : "un2LkRPJkn9DCD5VL63HU"
+  } ]
+}
