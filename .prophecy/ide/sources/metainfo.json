@@ -8,7 +8,7 @@
     "editable" : true
   },
   "providerType" : "databricks",
-  "fabricId" : "134",
+  "fabricId" : "148",
   "prophecyIDEFolder" : {
     "name" : "",
     "children" : { },
@@ -20,7 +20,7 @@
     "name" : "",
     "children" : [ {
       "type" : "Catalog",
-      "name" : "dais_2024",
+      "name" : "dais_2024_analytics_data_raw",
       "children" : [ {
         "type" : "Schema",
         "name" : "analytics_data",
@@ -593,10 +593,6 @@
         }
       }, {
         "type" : "Schema",
-        "name" : "default",
-        "children" : [ ]
-      }, {
-        "type" : "Schema",
         "name" : "information_schema",
         "children" : [ ]
       } ]
@@ -610,11 +606,19 @@
       "children" : [ ]
     }, {
       "type" : "Catalog",
+      "name" : "nyc_taxi",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
       "name" : "samples",
       "children" : [ ]
     }, {
       "type" : "Catalog",
       "name" : "system",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "tom",
       "children" : [ ]
     } ]
   },

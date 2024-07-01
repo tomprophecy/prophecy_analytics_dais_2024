@@ -1,8 +1,8 @@
-WITH account_history AS (
+WITH google_account_history_data AS (
 
   SELECT * 
   
-  FROM {{ source('google', 'google_account_history_data') }}
+  FROM {{ source('dais_2024_analytics_data_raw.analytics_data', 'google_account_history_data') }}
 
 ),
 
@@ -19,7 +19,7 @@ cleanup AS (
     descriptive_name AS account_name,
     row_number() OVER (PARTITION BY id ORDER BY updated_at DESC) = 1 AS is_most_recent_record
   
-  FROM account_history AS dt_go_account_history
+  FROM google_account_history_data AS dt_go_account_history
 
 )
 

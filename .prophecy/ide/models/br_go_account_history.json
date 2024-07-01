@@ -5,7 +5,1329 @@
     "autoLayout" : false,
     "staleState" : "none",
     "sourceSuggestions" : {
-      "sources" : [ ]
+      "sources" : [ {
+        "source" : {
+          "table" : {
+            "name" : "dt_am_campaign_history",
+            "sourceType" : "Seed"
+          }
+        },
+        "sourceComponentKind" : "Seed",
+        "sourceLabel" : "dt_am_campaign_history",
+        "canJoinWith" : [ {
+          "processLabel" : "google_account_history_data",
+          "processId" : "iQKR81vQinxkrJeE291D4",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id" ],
+            "conditions" : [ {
+              "alias" : "dt_am_campaign_history",
+              "expression" : {
+                "expression" : "google_account_history_data.id = dt_am_campaign_history.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.last_updated_date"
+              },
+              "alias" : "last_updated_date"
+            }, {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.bidding_strategy"
+              },
+              "alias" : "bidding_strategy"
+            }, {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.creation_date"
+              },
+              "alias" : "creation_date"
+            }, {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.budget"
+              },
+              "alias" : "budget"
+            }, {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.end_date"
+              },
+              "alias" : "end_date"
+            }, {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.portfolio_id"
+              },
+              "alias" : "portfolio_id"
+            }, {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.profile_id"
+              },
+              "alias" : "profile_id"
+            }, {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.serving_status"
+              },
+              "alias" : "serving_status"
+            }, {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.start_date"
+              },
+              "alias" : "start_date"
+            }, {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.state"
+              },
+              "alias" : "state"
+            }, {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.targeting_type"
+              },
+              "alias" : "targeting_type"
+            }, {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.budget_type"
+              },
+              "alias" : "budget_type"
+            }, {
+              "expression" : {
+                "expression" : "dt_am_campaign_history.effective_budget"
+              },
+              "alias" : "effective_budget"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.final_url_suffix"
+              },
+              "alias" : "final_url_suffix"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager"
+              },
+              "alias" : "manager"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.descriptive_name"
+              },
+              "alias" : "descriptive_name"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.test_account"
+              },
+              "alias" : "test_account"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.tracking_url_template"
+              },
+              "alias" : "tracking_url_template"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.time_zone"
+              },
+              "alias" : "time_zone"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager_customer_id"
+              },
+              "alias" : "manager_customer_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.currency_code"
+              },
+              "alias" : "currency_code"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.optimization_score"
+              },
+              "alias" : "optimization_score"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data._fivetran_synced"
+              },
+              "alias" : "_fivetran_synced"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.auto_tagging_enabled"
+              },
+              "alias" : "auto_tagging_enabled"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.updated_at"
+              },
+              "alias" : "updated_at"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.pay_per_conversion_eligibility_failure_reasons"
+              },
+              "alias" : "pay_per_conversion_eligibility_failure_reasons"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.hidden"
+              },
+              "alias" : "hidden"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "dt_am_campaign_history",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "dt_li_campaign_history",
+            "sourceType" : "Seed"
+          }
+        },
+        "sourceComponentKind" : "Seed",
+        "sourceLabel" : "dt_li_campaign_history",
+        "canJoinWith" : [ {
+          "processLabel" : "google_account_history_data",
+          "processId" : "iQKR81vQinxkrJeE291D4",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id" ],
+            "conditions" : [ {
+              "alias" : "dt_li_campaign_history",
+              "expression" : {
+                "expression" : "google_account_history_data.id = dt_li_campaign_history.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "dt_li_campaign_history.last_modified_time"
+              },
+              "alias" : "last_modified_time"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_campaign_history.account_id"
+              },
+              "alias" : "account_id"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_campaign_history.campaign_group_id"
+              },
+              "alias" : "campaign_group_id"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_campaign_history.created_time"
+              },
+              "alias" : "created_time"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_campaign_history.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "dt_li_campaign_history.version_tag"
+              },
+              "alias" : "version_tag"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.final_url_suffix"
+              },
+              "alias" : "final_url_suffix"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager"
+              },
+              "alias" : "manager"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.descriptive_name"
+              },
+              "alias" : "descriptive_name"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.test_account"
+              },
+              "alias" : "test_account"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.tracking_url_template"
+              },
+              "alias" : "tracking_url_template"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.time_zone"
+              },
+              "alias" : "time_zone"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager_customer_id"
+              },
+              "alias" : "manager_customer_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.currency_code"
+              },
+              "alias" : "currency_code"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.optimization_score"
+              },
+              "alias" : "optimization_score"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data._fivetran_synced"
+              },
+              "alias" : "_fivetran_synced"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.auto_tagging_enabled"
+              },
+              "alias" : "auto_tagging_enabled"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.updated_at"
+              },
+              "alias" : "updated_at"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.pay_per_conversion_eligibility_failure_reasons"
+              },
+              "alias" : "pay_per_conversion_eligibility_failure_reasons"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.hidden"
+              },
+              "alias" : "hidden"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "dt_li_campaign_history",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "google_account_stats_data",
+            "sourceName" : "google",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "google_account_stats_data",
+        "canJoinWith" : [ {
+          "processLabel" : "google_account_history_data",
+          "processId" : "iQKR81vQinxkrJeE291D4",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "_fivetran_synced" ],
+            "conditions" : [ {
+              "alias" : "google_account_stats_data",
+              "expression" : {
+                "expression" : "google_account_history_data._fivetran_synced = google_account_stats_data._fivetran_synced"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "google_account_stats_data._fivetran_id"
+              },
+              "alias" : "_fivetran_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.date"
+              },
+              "alias" : "date"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.active_view_impressions"
+              },
+              "alias" : "active_view_impressions"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.active_view_measurability"
+              },
+              "alias" : "active_view_measurability"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.active_view_measurable_cost_micros"
+              },
+              "alias" : "active_view_measurable_cost_micros"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.active_view_measurable_impressions"
+              },
+              "alias" : "active_view_measurable_impressions"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.active_view_viewability"
+              },
+              "alias" : "active_view_viewability"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.ad_network_type"
+              },
+              "alias" : "ad_network_type"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.clicks"
+              },
+              "alias" : "clicks"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.conversions"
+              },
+              "alias" : "conversions"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.conversions_value"
+              },
+              "alias" : "conversions_value"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.cost_micros"
+              },
+              "alias" : "cost_micros"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.device"
+              },
+              "alias" : "device"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.impressions"
+              },
+              "alias" : "impressions"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.interaction_event_types"
+              },
+              "alias" : "interaction_event_types"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.interactions"
+              },
+              "alias" : "interactions"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.view_through_conversions"
+              },
+              "alias" : "view_through_conversions"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.final_url_suffix"
+              },
+              "alias" : "final_url_suffix"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager"
+              },
+              "alias" : "manager"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.descriptive_name"
+              },
+              "alias" : "descriptive_name"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.test_account"
+              },
+              "alias" : "test_account"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.tracking_url_template"
+              },
+              "alias" : "tracking_url_template"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.time_zone"
+              },
+              "alias" : "time_zone"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager_customer_id"
+              },
+              "alias" : "manager_customer_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.currency_code"
+              },
+              "alias" : "currency_code"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.optimization_score"
+              },
+              "alias" : "optimization_score"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data._fivetran_synced"
+              },
+              "alias" : "_fivetran_synced"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.auto_tagging_enabled"
+              },
+              "alias" : "auto_tagging_enabled"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.updated_at"
+              },
+              "alias" : "updated_at"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.pay_per_conversion_eligibility_failure_reasons"
+              },
+              "alias" : "pay_per_conversion_eligibility_failure_reasons"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.hidden"
+              },
+              "alias" : "hidden"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "google_account_stats_data",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "_fivetran_synced" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "linkedin_account_history_data",
+            "sourceName" : "linkedin",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "linkedin_account_history_data",
+        "canJoinWith" : [ {
+          "processLabel" : "google_account_history_data",
+          "processId" : "iQKR81vQinxkrJeE291D4",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "currency_code" ],
+            "conditions" : [ {
+              "alias" : "linkedin_account_history_data",
+              "expression" : {
+                "expression" : "google_account_history_data.currency_code = linkedin_account_history_data.currency AND google_account_history_data.id = linkedin_account_history_data.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "linkedin_account_history_data.last_modified_time"
+              },
+              "alias" : "last_modified_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data.created_time"
+              },
+              "alias" : "created_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data.version_tag"
+              },
+              "alias" : "version_tag"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.final_url_suffix"
+              },
+              "alias" : "final_url_suffix"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager"
+              },
+              "alias" : "manager"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.descriptive_name"
+              },
+              "alias" : "descriptive_name"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.test_account"
+              },
+              "alias" : "test_account"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.tracking_url_template"
+              },
+              "alias" : "tracking_url_template"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.time_zone"
+              },
+              "alias" : "time_zone"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager_customer_id"
+              },
+              "alias" : "manager_customer_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.currency_code"
+              },
+              "alias" : "currency_code"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.optimization_score"
+              },
+              "alias" : "optimization_score"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data._fivetran_synced"
+              },
+              "alias" : "_fivetran_synced"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.auto_tagging_enabled"
+              },
+              "alias" : "auto_tagging_enabled"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.updated_at"
+              },
+              "alias" : "updated_at"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.pay_per_conversion_eligibility_failure_reasons"
+              },
+              "alias" : "pay_per_conversion_eligibility_failure_reasons"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.hidden"
+              },
+              "alias" : "hidden"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "linkedin_account_history_data",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "currency_code" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "linkedin_campaign_history_data",
+            "sourceName" : "linkedin",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "linkedin_campaign_history_data",
+        "canJoinWith" : [ {
+          "processLabel" : "google_account_history_data",
+          "processId" : "iQKR81vQinxkrJeE291D4",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id" ],
+            "conditions" : [ {
+              "alias" : "linkedin_campaign_history_data",
+              "expression" : {
+                "expression" : "google_account_history_data.id = linkedin_campaign_history_data.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.last_modified_time"
+              },
+              "alias" : "last_modified_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.account_id"
+              },
+              "alias" : "account_id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.campaign_group_id"
+              },
+              "alias" : "campaign_group_id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.created_time"
+              },
+              "alias" : "created_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.version_tag"
+              },
+              "alias" : "version_tag"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.final_url_suffix"
+              },
+              "alias" : "final_url_suffix"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager"
+              },
+              "alias" : "manager"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.descriptive_name"
+              },
+              "alias" : "descriptive_name"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.test_account"
+              },
+              "alias" : "test_account"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.tracking_url_template"
+              },
+              "alias" : "tracking_url_template"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.time_zone"
+              },
+              "alias" : "time_zone"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager_customer_id"
+              },
+              "alias" : "manager_customer_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.currency_code"
+              },
+              "alias" : "currency_code"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.optimization_score"
+              },
+              "alias" : "optimization_score"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data._fivetran_synced"
+              },
+              "alias" : "_fivetran_synced"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.auto_tagging_enabled"
+              },
+              "alias" : "auto_tagging_enabled"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.updated_at"
+              },
+              "alias" : "updated_at"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.pay_per_conversion_eligibility_failure_reasons"
+              },
+              "alias" : "pay_per_conversion_eligibility_failure_reasons"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.hidden"
+              },
+              "alias" : "hidden"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "linkedin_campaign_history_data",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "dt_go_account_history",
+            "sourceType" : "Seed"
+          }
+        },
+        "sourceComponentKind" : "Seed",
+        "sourceLabel" : "dt_go_account_history",
+        "canJoinWith" : [ {
+          "processLabel" : "google_account_history_data",
+          "processId" : "iQKR81vQinxkrJeE291D4",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "currency_code", "descriptive_name" ],
+            "conditions" : [ {
+              "alias" : "dt_go_account_history",
+              "expression" : {
+                "expression" : "google_account_history_data.currency_code = dt_go_account_history.currency_code AND google_account_history_data.descriptive_name = dt_go_account_history.descriptive_name AND google_account_history_data.id = dt_go_account_history.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "google_account_history_data.final_url_suffix"
+              },
+              "alias" : "final_url_suffix"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager"
+              },
+              "alias" : "manager"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.descriptive_name"
+              },
+              "alias" : "descriptive_name"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.test_account"
+              },
+              "alias" : "test_account"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.tracking_url_template"
+              },
+              "alias" : "tracking_url_template"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.time_zone"
+              },
+              "alias" : "time_zone"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager_customer_id"
+              },
+              "alias" : "manager_customer_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.currency_code"
+              },
+              "alias" : "currency_code"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.optimization_score"
+              },
+              "alias" : "optimization_score"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data._fivetran_synced"
+              },
+              "alias" : "_fivetran_synced"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.auto_tagging_enabled"
+              },
+              "alias" : "auto_tagging_enabled"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.updated_at"
+              },
+              "alias" : "updated_at"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.pay_per_conversion_eligibility_failure_reasons"
+              },
+              "alias" : "pay_per_conversion_eligibility_failure_reasons"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.hidden"
+              },
+              "alias" : "hidden"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "dt_go_account_history",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "currency_code", "descriptive_name" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "google_account_stats_data",
+            "sourceName" : "dais_2024_analytics_data_raw.analytics_data",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "google_account_stats_data",
+        "canJoinWith" : [ {
+          "processLabel" : "google_account_history_data",
+          "processId" : "iQKR81vQinxkrJeE291D4",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "_fivetran_synced" ],
+            "conditions" : [ {
+              "alias" : "google_account_stats_data",
+              "expression" : {
+                "expression" : "google_account_history_data._fivetran_synced = google_account_stats_data._fivetran_synced"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "google_account_stats_data._fivetran_id"
+              },
+              "alias" : "_fivetran_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.date"
+              },
+              "alias" : "date"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.active_view_impressions"
+              },
+              "alias" : "active_view_impressions"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.active_view_measurability"
+              },
+              "alias" : "active_view_measurability"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.active_view_measurable_cost_micros"
+              },
+              "alias" : "active_view_measurable_cost_micros"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.active_view_measurable_impressions"
+              },
+              "alias" : "active_view_measurable_impressions"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.active_view_viewability"
+              },
+              "alias" : "active_view_viewability"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.ad_network_type"
+              },
+              "alias" : "ad_network_type"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.clicks"
+              },
+              "alias" : "clicks"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.conversions"
+              },
+              "alias" : "conversions"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.conversions_value"
+              },
+              "alias" : "conversions_value"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.cost_micros"
+              },
+              "alias" : "cost_micros"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.device"
+              },
+              "alias" : "device"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.impressions"
+              },
+              "alias" : "impressions"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.interaction_event_types"
+              },
+              "alias" : "interaction_event_types"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.interactions"
+              },
+              "alias" : "interactions"
+            }, {
+              "expression" : {
+                "expression" : "google_account_stats_data.view_through_conversions"
+              },
+              "alias" : "view_through_conversions"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.final_url_suffix"
+              },
+              "alias" : "final_url_suffix"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager"
+              },
+              "alias" : "manager"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.descriptive_name"
+              },
+              "alias" : "descriptive_name"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.test_account"
+              },
+              "alias" : "test_account"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.tracking_url_template"
+              },
+              "alias" : "tracking_url_template"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.time_zone"
+              },
+              "alias" : "time_zone"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager_customer_id"
+              },
+              "alias" : "manager_customer_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.currency_code"
+              },
+              "alias" : "currency_code"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.optimization_score"
+              },
+              "alias" : "optimization_score"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data._fivetran_synced"
+              },
+              "alias" : "_fivetran_synced"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.auto_tagging_enabled"
+              },
+              "alias" : "auto_tagging_enabled"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.updated_at"
+              },
+              "alias" : "updated_at"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.pay_per_conversion_eligibility_failure_reasons"
+              },
+              "alias" : "pay_per_conversion_eligibility_failure_reasons"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.hidden"
+              },
+              "alias" : "hidden"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "google_account_stats_data",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "_fivetran_synced" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "linkedin_account_history_data",
+            "sourceName" : "dais_2024_analytics_data_raw.analytics_data",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "linkedin_account_history_data",
+        "canJoinWith" : [ {
+          "processLabel" : "google_account_history_data",
+          "processId" : "iQKR81vQinxkrJeE291D4",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "currency_code" ],
+            "conditions" : [ {
+              "alias" : "linkedin_account_history_data",
+              "expression" : {
+                "expression" : "google_account_history_data.currency_code = linkedin_account_history_data.currency AND google_account_history_data.id = linkedin_account_history_data.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "linkedin_account_history_data.last_modified_time"
+              },
+              "alias" : "last_modified_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data.created_time"
+              },
+              "alias" : "created_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data.version_tag"
+              },
+              "alias" : "version_tag"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.final_url_suffix"
+              },
+              "alias" : "final_url_suffix"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager"
+              },
+              "alias" : "manager"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.descriptive_name"
+              },
+              "alias" : "descriptive_name"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.test_account"
+              },
+              "alias" : "test_account"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.tracking_url_template"
+              },
+              "alias" : "tracking_url_template"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.time_zone"
+              },
+              "alias" : "time_zone"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager_customer_id"
+              },
+              "alias" : "manager_customer_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.currency_code"
+              },
+              "alias" : "currency_code"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.optimization_score"
+              },
+              "alias" : "optimization_score"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data._fivetran_synced"
+              },
+              "alias" : "_fivetran_synced"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.auto_tagging_enabled"
+              },
+              "alias" : "auto_tagging_enabled"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.updated_at"
+              },
+              "alias" : "updated_at"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.pay_per_conversion_eligibility_failure_reasons"
+              },
+              "alias" : "pay_per_conversion_eligibility_failure_reasons"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.hidden"
+              },
+              "alias" : "hidden"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "linkedin_account_history_data",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "currency_code" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "linkedin_campaign_history_data",
+            "sourceName" : "dais_2024_analytics_data_raw.analytics_data",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "linkedin_campaign_history_data",
+        "canJoinWith" : [ {
+          "processLabel" : "google_account_history_data",
+          "processId" : "iQKR81vQinxkrJeE291D4",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id" ],
+            "conditions" : [ {
+              "alias" : "linkedin_campaign_history_data",
+              "expression" : {
+                "expression" : "google_account_history_data.id = linkedin_campaign_history_data.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.last_modified_time"
+              },
+              "alias" : "last_modified_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.account_id"
+              },
+              "alias" : "account_id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.campaign_group_id"
+              },
+              "alias" : "campaign_group_id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.created_time"
+              },
+              "alias" : "created_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.version_tag"
+              },
+              "alias" : "version_tag"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.final_url_suffix"
+              },
+              "alias" : "final_url_suffix"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager"
+              },
+              "alias" : "manager"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.descriptive_name"
+              },
+              "alias" : "descriptive_name"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.test_account"
+              },
+              "alias" : "test_account"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.tracking_url_template"
+              },
+              "alias" : "tracking_url_template"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.time_zone"
+              },
+              "alias" : "time_zone"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager_customer_id"
+              },
+              "alias" : "manager_customer_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.currency_code"
+              },
+              "alias" : "currency_code"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.optimization_score"
+              },
+              "alias" : "optimization_score"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data._fivetran_synced"
+              },
+              "alias" : "_fivetran_synced"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.auto_tagging_enabled"
+              },
+              "alias" : "auto_tagging_enabled"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.updated_at"
+              },
+              "alias" : "updated_at"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.pay_per_conversion_eligibility_failure_reasons"
+              },
+              "alias" : "pay_per_conversion_eligibility_failure_reasons"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.hidden"
+              },
+              "alias" : "hidden"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "linkedin_campaign_history_data",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id" ],
+          "isRecommended" : false
+        } ]
+      } ]
     },
     "version" : 3
   },
@@ -24,7 +1346,7 @@
         "autoUpdateComment" : true
       },
       "properties" : {
-        "columnsSelector" : [ "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX##id", "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX##updated_at", "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX##currency_code", "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX##auto_tagging_enabled", "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX##time_zone", "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX##descriptive_name" ],
+        "columnsSelector" : [ ],
         "expressions" : [ {
           "expression" : {
             "expression" : "'google_ads'"
@@ -325,13 +1647,13 @@
         "autoUpdateOnRun" : false
       }
     },
-    "_HWOMmFfq-tP-gVxSSg70" : {
-      "id" : "_HWOMmFfq-tP-gVxSSg70",
+    "iQKR81vQinxkrJeE291D4" : {
+      "id" : "iQKR81vQinxkrJeE291D4",
       "component" : "Source",
       "metadata" : {
-        "label" : "account_history",
-        "slug" : "account_history",
-        "x" : -580,
+        "label" : "google_account_history_data",
+        "slug" : "google_account_history_data",
+        "x" : -600,
         "y" : -260,
         "phase" : 0
       },
@@ -339,14 +1661,15 @@
         "table" : {
           "name" : "google_account_history_data",
           "sourceType" : "Source",
-          "sourceName" : "google",
-          "alias" : ""
+          "sourceName" : "dais_2024_analytics_data_raw.analytics_data",
+          "alias" : "",
+          "additionalProperties" : null
         }
       },
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "wJzu0_fncZ7Ppxt_SBxDD",
+          "id" : "-zSOL3512mBbK5-gfdVZN",
           "schema" : {
             "providerType" : "databricks",
             "fields" : [ {
@@ -440,9 +1763,9 @@
     "target" : "br_go_account_history##N6LWCnpg",
     "targetPort" : "LIWb4cvI"
   }, {
-    "id" : "dTnADctdN60pbxhH0SC4o$$ezTS8q_M3gJyb4Dy310Wv",
-    "source" : "_HWOMmFfq-tP-gVxSSg70",
-    "sourcePort" : "wJzu0_fncZ7Ppxt_SBxDD",
+    "id" : "4GYSyjH0eSNOUj_4WCJt_$$tB7p9wJnX8p8M6udwqcSY",
+    "source" : "iQKR81vQinxkrJeE291D4",
+    "sourcePort" : "-zSOL3512mBbK5-gfdVZN",
     "target" : "885FrILwBVMd2B_dCr8xd$$lzMHxtqv2huDF4kp_Vt7B",
     "targetPort" : "_9QUjotO3mybGFrmpfpGz$$9E1KD7ceK6pt-SRXxjLmX"
   } ],

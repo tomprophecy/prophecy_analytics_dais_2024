@@ -148,7 +148,7 @@
         "autoUpdateComment" : true
       },
       "properties" : {
-        "columnsSelector" : [ "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##customer_id", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##DATE", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##ad_network_type", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##device", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##clicks", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##cost_micros", "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx##impressions" ],
+        "columnsSelector" : [ ],
         "expressions" : [ {
           "expression" : {
             "expression" : "'google_ads'"
@@ -347,13 +347,13 @@
         "autoUpdateOnRun" : false
       }
     },
-    "g9gplO7TMdaOU4TWSkkbu" : {
-      "id" : "g9gplO7TMdaOU4TWSkkbu",
+    "pCzsJAluqxSrneRfXvlN-" : {
+      "id" : "pCzsJAluqxSrneRfXvlN-",
       "component" : "Source",
       "metadata" : {
-        "label" : "account_stats_data",
-        "slug" : "account_stats_data",
-        "x" : -460,
+        "label" : "google_account_stats_data",
+        "slug" : "google_account_stats_data",
+        "x" : -440,
         "y" : 80,
         "phase" : 0
       },
@@ -361,14 +361,15 @@
         "table" : {
           "name" : "google_account_stats_data",
           "sourceType" : "Source",
-          "sourceName" : "google",
-          "alias" : ""
+          "sourceName" : "dais_2024_analytics_data_raw.analytics_data",
+          "alias" : "",
+          "additionalProperties" : null
         }
       },
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "yoTYdm5ZOPyas1XfBnj2i",
+          "id" : "F7YkNP6yHKJq1S3AcRgDW",
           "schema" : {
             "providerType" : "databricks",
             "fields" : [ {
@@ -482,9 +483,9 @@
     "target" : "br_go_account_stats##aRtlKNys",
     "targetPort" : "T1K5TAjH"
   }, {
-    "id" : "GHI_gJrxIqGldgnF-CXRS$$Cbvm0NnJYip5pUiSHhezS",
-    "source" : "g9gplO7TMdaOU4TWSkkbu",
-    "sourcePort" : "yoTYdm5ZOPyas1XfBnj2i",
+    "id" : "Sunn0Ykia3ekZPnNqCtz8$$Udng3EYHufrh3jbdeWPDY",
+    "source" : "pCzsJAluqxSrneRfXvlN-",
+    "sourcePort" : "F7YkNP6yHKJq1S3AcRgDW",
     "target" : "xW7DQpHIZgJ1jY_WFb2gT$$q3uoMG6tTQcGghXSsoeZ_",
     "targetPort" : "dmwxSs3d_YTtZpjxO-V8z$$p5DSw8QK40tyZ7vutpRBx"
   } ],

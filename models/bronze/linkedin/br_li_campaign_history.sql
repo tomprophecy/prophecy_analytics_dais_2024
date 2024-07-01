@@ -1,8 +1,8 @@
-WITH linkedin_campaign_history_data AS (
+WITH linkedin_campaign_history_data_1 AS (
 
   SELECT * 
   
-  FROM {{ source('linkedin', 'linkedin_campaign_history_data') }}
+  FROM {{ source('dais_2024_analytics_data_raw.analytics_data', 'linkedin_campaign_history_data') }}
 
 ),
 
@@ -37,7 +37,7 @@ linkedin_campaign_history AS (
     created_time AS created_at,
     row_number() OVER (PARTITION BY id ORDER BY last_modified_time DESC) = 1 AS is_latest_version
   
-  FROM linkedin_campaign_history_data AS dt_li_campaign_history
+  FROM linkedin_campaign_history_data_1 AS dt_li_campaign_history
 
 )
 

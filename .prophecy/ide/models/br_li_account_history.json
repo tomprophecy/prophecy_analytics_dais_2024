@@ -8,140 +8,479 @@
       "sources" : [ {
         "source" : {
           "table" : {
-            "name" : "br_li_campaign_history",
-            "sourceType" : "Model"
+            "name" : "dt_am_campaign_history",
+            "sourceType" : "Seed"
           }
         },
-        "sourceComponentKind" : "Model",
-        "sourceLabel" : "br_li_campaign_history",
+        "sourceComponentKind" : "Seed",
+        "sourceLabel" : "dt_am_campaign_history",
         "canJoinWith" : [ {
-          "processLabel" : "linkedin_campaign_history_data",
-          "processId" : "cBWSmnUVOb1dSMVxskG4b",
+          "processLabel" : "linkedin_account_history_data_1",
+          "processId" : "r2vN30a4-r2S7aQ1Dsh-t",
           "properties" : {
             "activeTab" : "conditions",
-            "columnsSelector" : [ "campaign_group_id", "account_id", "version_tag" ],
+            "columnsSelector" : [ "id", "name" ],
             "conditions" : [ {
-              "alias" : "br_li_campaign_history",
+              "alias" : "dt_am_campaign_history",
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id = br_li_campaign_history.account_id AND linkedin_campaign_history_data.campaign_group_id = br_li_campaign_history.campaign_group_id AND linkedin_campaign_history_data.version_tag = br_li_campaign_history.version_tag"
+                "expression" : "linkedin_account_history_data_1.id = dt_am_campaign_history.id AND linkedin_account_history_data_1.name = dt_am_campaign_history.name"
               },
               "joinType" : "inner"
             } ],
             "expressions" : [ {
               "expression" : {
-                "expression" : "br_li_campaign_history.source_relation"
+                "expression" : "dt_am_campaign_history.last_updated_date"
               },
-              "alias" : "source_relation"
+              "alias" : "last_updated_date"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.campaign_id"
+                "expression" : "dt_am_campaign_history._fivetran_synced"
               },
-              "alias" : "campaign_id"
+              "alias" : "_fivetran_synced"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.campaign_name"
+                "expression" : "dt_am_campaign_history.bidding_strategy"
               },
-              "alias" : "campaign_name"
+              "alias" : "bidding_strategy"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.status"
+                "expression" : "dt_am_campaign_history.creation_date"
               },
-              "alias" : "status"
+              "alias" : "creation_date"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.type"
+                "expression" : "dt_am_campaign_history.budget"
               },
-              "alias" : "type"
+              "alias" : "budget"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.cost_type"
+                "expression" : "dt_am_campaign_history.end_date"
               },
-              "alias" : "cost_type"
+              "alias" : "end_date"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.creative_selection"
+                "expression" : "dt_am_campaign_history.portfolio_id"
               },
-              "alias" : "creative_selection"
+              "alias" : "portfolio_id"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.daily_budget_amount"
+                "expression" : "dt_am_campaign_history.profile_id"
               },
-              "alias" : "daily_budget_amount"
+              "alias" : "profile_id"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.daily_budget_currency_code"
+                "expression" : "dt_am_campaign_history.serving_status"
               },
-              "alias" : "daily_budget_currency_code"
+              "alias" : "serving_status"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.unit_cost_amount"
+                "expression" : "dt_am_campaign_history.start_date"
               },
-              "alias" : "unit_cost_amount"
+              "alias" : "start_date"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.unit_cost_currency_code"
+                "expression" : "dt_am_campaign_history.state"
               },
-              "alias" : "unit_cost_currency_code"
+              "alias" : "state"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.format"
+                "expression" : "dt_am_campaign_history.targeting_type"
               },
-              "alias" : "format"
+              "alias" : "targeting_type"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.locale_country"
+                "expression" : "dt_am_campaign_history.budget_type"
               },
-              "alias" : "locale_country"
+              "alias" : "budget_type"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.locale_language"
+                "expression" : "dt_am_campaign_history.effective_budget"
               },
-              "alias" : "locale_language"
+              "alias" : "effective_budget"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.objective_type"
+                "expression" : "linkedin_account_history_data_1.currency"
               },
-              "alias" : "objective_type"
+              "alias" : "currency"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.optimization_target_type"
+                "expression" : "linkedin_account_history_data_1.created_time"
               },
-              "alias" : "optimization_target_type"
+              "alias" : "created_time"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.is_audience_expansion_enabled"
+                "expression" : "linkedin_account_history_data_1.id"
               },
-              "alias" : "is_audience_expansion_enabled"
+              "alias" : "id"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.is_offsite_delivery_enabled"
+                "expression" : "linkedin_account_history_data_1.name"
               },
-              "alias" : "is_offsite_delivery_enabled"
+              "alias" : "name"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.run_schedule_start_at"
+                "expression" : "linkedin_account_history_data_1.last_modified_time"
               },
-              "alias" : "run_schedule_start_at"
+              "alias" : "last_modified_time"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.run_schedule_end_at"
+                "expression" : "linkedin_account_history_data_1.version_tag"
               },
-              "alias" : "run_schedule_end_at"
+              "alias" : "version_tag"
+            } ],
+            "headAlias" : "dt_am_campaign_history",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "name" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "dt_li_campaign_history",
+            "sourceType" : "Seed"
+          }
+        },
+        "sourceComponentKind" : "Seed",
+        "sourceLabel" : "dt_li_campaign_history",
+        "canJoinWith" : [ {
+          "processLabel" : "linkedin_account_history_data_1",
+          "processId" : "r2vN30a4-r2S7aQ1Dsh-t",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "name", "version_tag" ],
+            "conditions" : [ {
+              "alias" : "dt_li_campaign_history",
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.id = dt_li_campaign_history.id AND linkedin_account_history_data_1.name = dt_li_campaign_history.name AND linkedin_account_history_data_1.version_tag = dt_li_campaign_history.version_tag"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "dt_li_campaign_history.account_id"
+              },
+              "alias" : "account_id"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.last_modified_at"
+                "expression" : "dt_li_campaign_history.campaign_group_id"
               },
-              "alias" : "last_modified_at"
+              "alias" : "campaign_group_id"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.created_at"
+                "expression" : "linkedin_account_history_data_1.currency"
               },
-              "alias" : "created_at"
+              "alias" : "currency"
             }, {
               "expression" : {
-                "expression" : "br_li_campaign_history.is_latest_version"
+                "expression" : "linkedin_account_history_data_1.created_time"
               },
-              "alias" : "is_latest_version"
+              "alias" : "created_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.last_modified_time"
+              },
+              "alias" : "last_modified_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.version_tag"
+              },
+              "alias" : "version_tag"
+            } ],
+            "headAlias" : "dt_li_campaign_history",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "name", "version_tag" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "google_account_history_data",
+            "sourceName" : "google",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "google_account_history_data",
+        "canJoinWith" : [ {
+          "processLabel" : "linkedin_account_history_data_1",
+          "processId" : "r2vN30a4-r2S7aQ1Dsh-t",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "currency" ],
+            "conditions" : [ {
+              "alias" : "google_account_history_data",
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.currency = google_account_history_data.currency_code AND linkedin_account_history_data_1.id = google_account_history_data.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "google_account_history_data.updated_at"
+              },
+              "alias" : "updated_at"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data._fivetran_synced"
+              },
+              "alias" : "_fivetran_synced"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.auto_tagging_enabled"
+              },
+              "alias" : "auto_tagging_enabled"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.descriptive_name"
+              },
+              "alias" : "descriptive_name"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.final_url_suffix"
+              },
+              "alias" : "final_url_suffix"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.hidden"
+              },
+              "alias" : "hidden"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager"
+              },
+              "alias" : "manager"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager_customer_id"
+              },
+              "alias" : "manager_customer_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.optimization_score"
+              },
+              "alias" : "optimization_score"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.pay_per_conversion_eligibility_failure_reasons"
+              },
+              "alias" : "pay_per_conversion_eligibility_failure_reasons"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.test_account"
+              },
+              "alias" : "test_account"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.time_zone"
+              },
+              "alias" : "time_zone"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.tracking_url_template"
+              },
+              "alias" : "tracking_url_template"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.currency"
+              },
+              "alias" : "currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.created_time"
+              },
+              "alias" : "created_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.last_modified_time"
+              },
+              "alias" : "last_modified_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.version_tag"
+              },
+              "alias" : "version_tag"
+            } ],
+            "headAlias" : "google_account_history_data",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "currency" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "google_account_history_data",
+            "sourceName" : "dais_2024_analytics_data_raw.analytics_data",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "google_account_history_data",
+        "canJoinWith" : [ {
+          "processLabel" : "linkedin_account_history_data_1",
+          "processId" : "r2vN30a4-r2S7aQ1Dsh-t",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "currency" ],
+            "conditions" : [ {
+              "alias" : "google_account_history_data",
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.currency = google_account_history_data.currency_code AND linkedin_account_history_data_1.id = google_account_history_data.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "google_account_history_data.updated_at"
+              },
+              "alias" : "updated_at"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data._fivetran_synced"
+              },
+              "alias" : "_fivetran_synced"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.auto_tagging_enabled"
+              },
+              "alias" : "auto_tagging_enabled"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.descriptive_name"
+              },
+              "alias" : "descriptive_name"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.final_url_suffix"
+              },
+              "alias" : "final_url_suffix"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.hidden"
+              },
+              "alias" : "hidden"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager"
+              },
+              "alias" : "manager"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.manager_customer_id"
+              },
+              "alias" : "manager_customer_id"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.optimization_score"
+              },
+              "alias" : "optimization_score"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.pay_per_conversion_eligibility_failure_reasons"
+              },
+              "alias" : "pay_per_conversion_eligibility_failure_reasons"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.test_account"
+              },
+              "alias" : "test_account"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.time_zone"
+              },
+              "alias" : "time_zone"
+            }, {
+              "expression" : {
+                "expression" : "google_account_history_data.tracking_url_template"
+              },
+              "alias" : "tracking_url_template"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.currency"
+              },
+              "alias" : "currency"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.created_time"
+              },
+              "alias" : "created_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.last_modified_time"
+              },
+              "alias" : "last_modified_time"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.version_tag"
+              },
+              "alias" : "version_tag"
+            } ],
+            "headAlias" : "google_account_history_data",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "currency" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "linkedin_campaign_history_data",
+            "sourceName" : "linkedin",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "linkedin_campaign_history_data",
+        "canJoinWith" : [ {
+          "processLabel" : "linkedin_account_history_data_1",
+          "processId" : "r2vN30a4-r2S7aQ1Dsh-t",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "created_time", "last_modified_time" ],
+            "conditions" : [ {
+              "alias" : "linkedin_campaign_history_data",
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.created_time = linkedin_campaign_history_data.created_time AND linkedin_account_history_data_1.id = linkedin_campaign_history_data.id AND linkedin_account_history_data_1.last_modified_time = linkedin_campaign_history_data.last_modified_time"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "linkedin_campaign_history_data.account_id"
+              },
+              "alias" : "account_id"
             }, {
               "expression" : {
                 "expression" : "linkedin_campaign_history_data.campaign_group_id"
@@ -149,39 +488,39 @@
               "alias" : "campaign_group_id"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.name"
+                "expression" : "linkedin_account_history_data_1.currency"
               },
-              "alias" : "name"
+              "alias" : "currency"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.version_tag"
+                "expression" : "linkedin_account_history_data_1.created_time"
               },
-              "alias" : "version_tag"
+              "alias" : "created_time"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.id"
+                "expression" : "linkedin_account_history_data_1.id"
               },
               "alias" : "id"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.last_modified_time"
+                "expression" : "linkedin_account_history_data_1.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.last_modified_time"
               },
               "alias" : "last_modified_time"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id"
+                "expression" : "linkedin_account_history_data_1.version_tag"
               },
-              "alias" : "account_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.created_time"
-              },
-              "alias" : "created_time"
+              "alias" : "version_tag"
             } ],
-            "headAlias" : "br_li_campaign_history",
+            "headAlias" : "linkedin_campaign_history_data",
             "allowSelection" : false
           },
-          "joinColumns" : [ "campaign_group_id", "account_id", "version_tag" ],
+          "joinColumns" : [ "id", "created_time", "last_modified_time" ],
           "isRecommended" : true
         } ]
       }, {
@@ -194,15 +533,15 @@
         "sourceComponentKind" : "Seed",
         "sourceLabel" : "dt_go_account_history",
         "canJoinWith" : [ {
-          "processLabel" : "linkedin_campaign_history_data",
-          "processId" : "cBWSmnUVOb1dSMVxskG4b",
+          "processLabel" : "linkedin_account_history_data_1",
+          "processId" : "r2vN30a4-r2S7aQ1Dsh-t",
           "properties" : {
             "activeTab" : "conditions",
-            "columnsSelector" : [ "id" ],
+            "columnsSelector" : [ "id", "currency" ],
             "conditions" : [ {
               "alias" : "dt_go_account_history",
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.id = dt_go_account_history.id"
+                "expression" : "linkedin_account_history_data_1.currency = dt_go_account_history.currency_code AND linkedin_account_history_data_1.id = dt_go_account_history.id"
               },
               "joinType" : "inner"
             } ],
@@ -221,11 +560,6 @@
                 "expression" : "dt_go_account_history.auto_tagging_enabled"
               },
               "alias" : "auto_tagging_enabled"
-            }, {
-              "expression" : {
-                "expression" : "dt_go_account_history.currency_code"
-              },
-              "alias" : "currency_code"
             }, {
               "expression" : {
                 "expression" : "dt_go_account_history.descriptive_name"
@@ -278,425 +612,158 @@
               "alias" : "tracking_url_template"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.campaign_group_id"
-              },
-              "alias" : "campaign_group_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.name"
-              },
-              "alias" : "name"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.version_tag"
-              },
-              "alias" : "version_tag"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.id"
-              },
-              "alias" : "id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.last_modified_time"
-              },
-              "alias" : "last_modified_time"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id"
-              },
-              "alias" : "account_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.created_time"
-              },
-              "alias" : "created_time"
-            } ],
-            "headAlias" : "dt_go_account_history",
-            "allowSelection" : false
-          },
-          "joinColumns" : [ "id" ],
-          "isRecommended" : true
-        } ]
-      }, {
-        "source" : {
-          "table" : {
-            "name" : "dt_li_account_history",
-            "sourceType" : "Seed"
-          }
-        },
-        "sourceComponentKind" : "Seed",
-        "sourceLabel" : "dt_li_account_history",
-        "canJoinWith" : [ {
-          "processLabel" : "linkedin_campaign_history_data",
-          "processId" : "cBWSmnUVOb1dSMVxskG4b",
-          "properties" : {
-            "activeTab" : "conditions",
-            "columnsSelector" : [ "name", "version_tag", "id" ],
-            "conditions" : [ {
-              "alias" : "dt_li_account_history",
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.id = dt_li_account_history.id AND linkedin_campaign_history_data.name = dt_li_account_history.name AND linkedin_campaign_history_data.version_tag = dt_li_account_history.version_tag"
-              },
-              "joinType" : "inner"
-            } ],
-            "expressions" : [ {
-              "expression" : {
-                "expression" : "dt_li_account_history.last_modified_time"
-              },
-              "alias" : "last_modified_time"
-            }, {
-              "expression" : {
-                "expression" : "dt_li_account_history.created_time"
-              },
-              "alias" : "created_time"
-            }, {
-              "expression" : {
-                "expression" : "dt_li_account_history.currency"
+                "expression" : "linkedin_account_history_data_1.currency"
               },
               "alias" : "currency"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.campaign_group_id"
+                "expression" : "linkedin_account_history_data_1.created_time"
               },
-              "alias" : "campaign_group_id"
+              "alias" : "created_time"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.name"
-              },
-              "alias" : "name"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.version_tag"
-              },
-              "alias" : "version_tag"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.id"
+                "expression" : "linkedin_account_history_data_1.id"
               },
               "alias" : "id"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.last_modified_time"
+                "expression" : "linkedin_account_history_data_1.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "linkedin_account_history_data_1.last_modified_time"
               },
               "alias" : "last_modified_time"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id"
+                "expression" : "linkedin_account_history_data_1.version_tag"
               },
-              "alias" : "account_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.created_time"
-              },
-              "alias" : "created_time"
+              "alias" : "version_tag"
             } ],
-            "headAlias" : "dt_li_account_history",
+            "headAlias" : "dt_go_account_history",
             "allowSelection" : false
           },
-          "joinColumns" : [ "name", "version_tag", "id" ],
-          "isRecommended" : true
+          "joinColumns" : [ "id", "currency" ],
+          "isRecommended" : false
         } ]
       }, {
         "source" : {
           "table" : {
-            "name" : "dt_li_campaign_history",
+            "name" : "dt_go_ad_history",
             "sourceType" : "Seed"
           }
         },
         "sourceComponentKind" : "Seed",
-        "sourceLabel" : "dt_li_campaign_history",
+        "sourceLabel" : "dt_go_ad_history",
         "canJoinWith" : [ {
-          "processLabel" : "linkedin_campaign_history_data",
-          "processId" : "cBWSmnUVOb1dSMVxskG4b",
+          "processLabel" : "linkedin_account_history_data_1",
+          "processId" : "r2vN30a4-r2S7aQ1Dsh-t",
           "properties" : {
             "activeTab" : "conditions",
-            "columnsSelector" : [ "name", "campaign_group_id", "id", "account_id", "version_tag" ],
+            "columnsSelector" : [ "name" ],
             "conditions" : [ {
-              "alias" : "dt_li_campaign_history",
+              "alias" : "dt_go_ad_history",
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id = dt_li_campaign_history.account_id AND linkedin_campaign_history_data.campaign_group_id = dt_li_campaign_history.campaign_group_id AND linkedin_campaign_history_data.id = dt_li_campaign_history.id AND linkedin_campaign_history_data.name = dt_li_campaign_history.name AND linkedin_campaign_history_data.version_tag = dt_li_campaign_history.version_tag"
+                "expression" : "linkedin_account_history_data_1.name = dt_go_ad_history.name"
               },
               "joinType" : "inner"
             } ],
             "expressions" : [ {
               "expression" : {
-                "expression" : "dt_li_campaign_history.last_modified_time"
+                "expression" : "dt_go_ad_history.ad_group_id"
               },
-              "alias" : "last_modified_time"
+              "alias" : "ad_group_id"
             }, {
               "expression" : {
-                "expression" : "dt_li_campaign_history.created_time"
+                "expression" : "dt_go_ad_history.updated_at"
               },
-              "alias" : "created_time"
+              "alias" : "updated_at"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.campaign_group_id"
+                "expression" : "dt_go_ad_history.type"
               },
-              "alias" : "campaign_group_id"
+              "alias" : "type"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.name"
+                "expression" : "dt_go_ad_history.status"
               },
-              "alias" : "name"
+              "alias" : "status"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.version_tag"
+                "expression" : "dt_go_ad_history.display_url"
               },
-              "alias" : "version_tag"
+              "alias" : "display_url"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.id"
+                "expression" : "dt_go_ad_history.final_urls"
               },
-              "alias" : "id"
+              "alias" : "final_urls"
             }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.last_modified_time"
-              },
-              "alias" : "last_modified_time"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id"
-              },
-              "alias" : "account_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.created_time"
-              },
-              "alias" : "created_time"
-            } ],
-            "headAlias" : "dt_li_campaign_history",
-            "allowSelection" : false
-          },
-          "joinColumns" : [ "name", "campaign_group_id", "id", "account_id", "version_tag" ],
-          "isRecommended" : true
-        } ]
-      }, {
-        "source" : {
-          "table" : {
-            "name" : "linkedin_account_history_data",
-            "sourceName" : "linkedin",
-            "sourceType" : "Source"
-          }
-        },
-        "sourceComponentKind" : "Source",
-        "sourceLabel" : "linkedin_account_history_data_1",
-        "canJoinWith" : [ {
-          "processLabel" : "linkedin_campaign_history_data",
-          "processId" : "cBWSmnUVOb1dSMVxskG4b",
-          "properties" : {
-            "activeTab" : "conditions",
-            "columnsSelector" : [ "name", "created_time", "last_modified_time", "id", "version_tag" ],
-            "conditions" : [ {
-              "alias" : "linkedin_account_history_data_1",
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.created_time = linkedin_account_history_data_1.created_time AND linkedin_campaign_history_data.id = linkedin_account_history_data_1.id AND linkedin_campaign_history_data.last_modified_time = linkedin_account_history_data_1.last_modified_time AND linkedin_campaign_history_data.name = linkedin_account_history_data_1.name AND linkedin_campaign_history_data.version_tag = linkedin_account_history_data_1.version_tag"
-              },
-              "joinType" : "inner"
-            } ],
-            "expressions" : [ {
               "expression" : {
                 "expression" : "linkedin_account_history_data_1.currency"
               },
               "alias" : "currency"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.campaign_group_id"
+                "expression" : "linkedin_account_history_data_1.created_time"
               },
-              "alias" : "campaign_group_id"
+              "alias" : "created_time"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.name"
-              },
-              "alias" : "name"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.version_tag"
-              },
-              "alias" : "version_tag"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.id"
+                "expression" : "linkedin_account_history_data_1.id"
               },
               "alias" : "id"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.last_modified_time"
-              },
-              "alias" : "last_modified_time"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id"
-              },
-              "alias" : "account_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.created_time"
-              },
-              "alias" : "created_time"
-            } ],
-            "headAlias" : "linkedin_account_history_data_1",
-            "allowSelection" : false
-          },
-          "joinColumns" : [ "name", "created_time", "last_modified_time", "id", "version_tag" ],
-          "isRecommended" : true
-        } ]
-      }, {
-        "source" : {
-          "table" : {
-            "name" : "br_go_account_history",
-            "sourceType" : "Model"
-          }
-        },
-        "sourceComponentKind" : "Model",
-        "sourceLabel" : "br_go_account_history",
-        "canJoinWith" : [ {
-          "processLabel" : "linkedin_campaign_history_data",
-          "processId" : "cBWSmnUVOb1dSMVxskG4b",
-          "properties" : {
-            "activeTab" : "conditions",
-            "columnsSelector" : [ "account_id" ],
-            "conditions" : [ {
-              "alias" : "br_go_account_history",
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id = br_go_account_history.account_id"
-              },
-              "joinType" : "inner"
-            } ],
-            "expressions" : [ {
-              "expression" : {
-                "expression" : "br_go_account_history.source_relation"
-              },
-              "alias" : "source_relation"
-            }, {
-              "expression" : {
-                "expression" : "br_go_account_history.updated_at"
-              },
-              "alias" : "updated_at"
-            }, {
-              "expression" : {
-                "expression" : "br_go_account_history.currency_code"
-              },
-              "alias" : "currency_code"
-            }, {
-              "expression" : {
-                "expression" : "br_go_account_history.auto_tagging_enabled"
-              },
-              "alias" : "auto_tagging_enabled"
-            }, {
-              "expression" : {
-                "expression" : "br_go_account_history.time_zone"
-              },
-              "alias" : "time_zone"
-            }, {
-              "expression" : {
-                "expression" : "br_go_account_history.account_name"
-              },
-              "alias" : "account_name"
-            }, {
-              "expression" : {
-                "expression" : "br_go_account_history.is_most_recent_record"
-              },
-              "alias" : "is_most_recent_record"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.campaign_group_id"
-              },
-              "alias" : "campaign_group_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.name"
+                "expression" : "linkedin_account_history_data_1.name"
               },
               "alias" : "name"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.version_tag"
-              },
-              "alias" : "version_tag"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.id"
-              },
-              "alias" : "id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.last_modified_time"
+                "expression" : "linkedin_account_history_data_1.last_modified_time"
               },
               "alias" : "last_modified_time"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id"
+                "expression" : "linkedin_account_history_data_1.version_tag"
               },
-              "alias" : "account_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.created_time"
-              },
-              "alias" : "created_time"
+              "alias" : "version_tag"
             } ],
-            "headAlias" : "br_go_account_history",
+            "headAlias" : "dt_go_ad_history",
             "allowSelection" : false
           },
-          "joinColumns" : [ "account_id" ],
+          "joinColumns" : [ "name" ],
           "isRecommended" : false
         } ]
       }, {
         "source" : {
           "table" : {
-            "name" : "br_go_account_stats",
-            "sourceType" : "Model"
+            "name" : "linkedin_campaign_history_data",
+            "sourceName" : "dais_2024_analytics_data_raw.analytics_data",
+            "sourceType" : "ExternalSource"
           }
         },
-        "sourceComponentKind" : "Model",
-        "sourceLabel" : "br_go_account_stats",
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "linkedin_campaign_history_data",
         "canJoinWith" : [ {
-          "processLabel" : "linkedin_campaign_history_data",
-          "processId" : "cBWSmnUVOb1dSMVxskG4b",
+          "processLabel" : "linkedin_account_history_data_1",
+          "processId" : "r2vN30a4-r2S7aQ1Dsh-t",
           "properties" : {
             "activeTab" : "conditions",
-            "columnsSelector" : [ "account_id" ],
+            "columnsSelector" : [ "id", "created_time", "last_modified_time" ],
             "conditions" : [ {
-              "alias" : "br_go_account_stats",
+              "alias" : "linkedin_campaign_history_data",
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id = br_go_account_stats.account_id"
+                "expression" : "linkedin_account_history_data_1.created_time = linkedin_campaign_history_data.created_time AND linkedin_account_history_data_1.id = linkedin_campaign_history_data.id AND linkedin_account_history_data_1.last_modified_time = linkedin_campaign_history_data.last_modified_time"
               },
               "joinType" : "inner"
             } ],
             "expressions" : [ {
               "expression" : {
-                "expression" : "br_go_account_stats.source_relation"
+                "expression" : "linkedin_campaign_history_data.account_id"
               },
-              "alias" : "source_relation"
-            }, {
-              "expression" : {
-                "expression" : "br_go_account_stats.date_day"
-              },
-              "alias" : "date_day"
-            }, {
-              "expression" : {
-                "expression" : "br_go_account_stats.ad_network_type"
-              },
-              "alias" : "ad_network_type"
-            }, {
-              "expression" : {
-                "expression" : "br_go_account_stats.device"
-              },
-              "alias" : "device"
-            }, {
-              "expression" : {
-                "expression" : "br_go_account_stats.clicks"
-              },
-              "alias" : "clicks"
-            }, {
-              "expression" : {
-                "expression" : "br_go_account_stats.spend"
-              },
-              "alias" : "spend"
-            }, {
-              "expression" : {
-                "expression" : "br_go_account_stats.impressions"
-              },
-              "alias" : "impressions"
+              "alias" : "account_id"
             }, {
               "expression" : {
                 "expression" : "linkedin_campaign_history_data.campaign_group_id"
@@ -704,346 +771,39 @@
               "alias" : "campaign_group_id"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.name"
-              },
-              "alias" : "name"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.version_tag"
-              },
-              "alias" : "version_tag"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.id"
-              },
-              "alias" : "id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.last_modified_time"
-              },
-              "alias" : "last_modified_time"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id"
-              },
-              "alias" : "account_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.created_time"
-              },
-              "alias" : "created_time"
-            } ],
-            "headAlias" : "br_go_account_stats",
-            "allowSelection" : false
-          },
-          "joinColumns" : [ "account_id" ],
-          "isRecommended" : false
-        } ]
-      }, {
-        "source" : {
-          "table" : {
-            "name" : "br_li_account_history",
-            "sourceType" : "Model"
-          }
-        },
-        "sourceComponentKind" : "Model",
-        "sourceLabel" : "br_li_account_history_1",
-        "canJoinWith" : [ {
-          "processLabel" : "linkedin_campaign_history_data",
-          "processId" : "cBWSmnUVOb1dSMVxskG4b",
-          "properties" : {
-            "activeTab" : "conditions",
-            "columnsSelector" : [ "created_time", "last_modified_time", "account_id", "version_tag" ],
-            "conditions" : [ {
-              "alias" : "br_li_account_history_1",
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id = br_li_account_history_1.account_id AND linkedin_campaign_history_data.created_time = br_li_account_history_1.created_time AND linkedin_campaign_history_data.last_modified_time = br_li_account_history_1.last_modified_time AND linkedin_campaign_history_data.version_tag = br_li_account_history_1.version_tag"
-              },
-              "joinType" : "inner"
-            } ],
-            "expressions" : [ {
-              "expression" : {
-                "expression" : "br_li_account_history_1.source_relation"
-              },
-              "alias" : "source_relation"
-            }, {
-              "expression" : {
-                "expression" : "br_li_account_history_1.account_name"
-              },
-              "alias" : "account_name"
-            }, {
-              "expression" : {
-                "expression" : "br_li_account_history_1.currency"
+                "expression" : "linkedin_account_history_data_1.currency"
               },
               "alias" : "currency"
             }, {
               "expression" : {
-                "expression" : "br_li_account_history_1.status"
+                "expression" : "linkedin_account_history_data_1.created_time"
               },
-              "alias" : "status"
+              "alias" : "created_time"
             }, {
               "expression" : {
-                "expression" : "br_li_account_history_1.type"
-              },
-              "alias" : "type"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.campaign_group_id"
-              },
-              "alias" : "campaign_group_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.name"
-              },
-              "alias" : "name"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.version_tag"
-              },
-              "alias" : "version_tag"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.id"
+                "expression" : "linkedin_account_history_data_1.id"
               },
               "alias" : "id"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.last_modified_time"
-              },
-              "alias" : "last_modified_time"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id"
-              },
-              "alias" : "account_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.created_time"
-              },
-              "alias" : "created_time"
-            } ],
-            "headAlias" : "br_li_account_history_1",
-            "allowSelection" : false
-          },
-          "joinColumns" : [ "created_time", "last_modified_time", "account_id", "version_tag" ],
-          "isRecommended" : false
-        } ]
-      }, {
-        "source" : {
-          "table" : {
-            "name" : "gl_all_account_report",
-            "sourceType" : "Model"
-          }
-        },
-        "sourceComponentKind" : "Model",
-        "sourceLabel" : "gl_all_account_report",
-        "canJoinWith" : [ {
-          "processLabel" : "linkedin_campaign_history_data",
-          "processId" : "cBWSmnUVOb1dSMVxskG4b",
-          "properties" : {
-            "activeTab" : "conditions",
-            "columnsSelector" : [ "account_id" ],
-            "conditions" : [ {
-              "alias" : "gl_all_account_report",
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id = gl_all_account_report.ACCOUNT_ID"
-              },
-              "joinType" : "inner"
-            } ],
-            "expressions" : [ {
-              "expression" : {
-                "expression" : "gl_all_account_report.ACCOUNT_NAME"
-              },
-              "alias" : "ACCOUNT_NAME"
-            }, {
-              "expression" : {
-                "expression" : "gl_all_account_report.CURRENCY_CODE"
-              },
-              "alias" : "CURRENCY_CODE"
-            }, {
-              "expression" : {
-                "expression" : "gl_all_account_report.SPEND"
-              },
-              "alias" : "SPEND"
-            }, {
-              "expression" : {
-                "expression" : "gl_all_account_report.CLICKS"
-              },
-              "alias" : "CLICKS"
-            }, {
-              "expression" : {
-                "expression" : "gl_all_account_report.IMPRESSIONS"
-              },
-              "alias" : "IMPRESSIONS"
-            }, {
-              "expression" : {
-                "expression" : "gl_all_account_report.UPDATED_AT"
-              },
-              "alias" : "UPDATED_AT"
-            }, {
-              "expression" : {
-                "expression" : "gl_all_account_report.SOURCE_RELATION"
-              },
-              "alias" : "SOURCE_RELATION"
-            }, {
-              "expression" : {
-                "expression" : "gl_all_account_report.SOURCE"
-              },
-              "alias" : "SOURCE"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.campaign_group_id"
-              },
-              "alias" : "campaign_group_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.name"
+                "expression" : "linkedin_account_history_data_1.name"
               },
               "alias" : "name"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.version_tag"
-              },
-              "alias" : "version_tag"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.id"
-              },
-              "alias" : "id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.last_modified_time"
+                "expression" : "linkedin_account_history_data_1.last_modified_time"
               },
               "alias" : "last_modified_time"
             }, {
               "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id"
-              },
-              "alias" : "account_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.created_time"
-              },
-              "alias" : "created_time"
-            } ],
-            "headAlias" : "gl_all_account_report",
-            "allowSelection" : false
-          },
-          "joinColumns" : [ "account_id" ],
-          "isRecommended" : false
-        } ]
-      }, {
-        "source" : {
-          "table" : {
-            "name" : "sv_go_account_report",
-            "sourceType" : "Model"
-          }
-        },
-        "sourceComponentKind" : "Model",
-        "sourceLabel" : "sv_go_account_report",
-        "canJoinWith" : [ {
-          "processLabel" : "linkedin_campaign_history_data",
-          "processId" : "cBWSmnUVOb1dSMVxskG4b",
-          "properties" : {
-            "activeTab" : "conditions",
-            "columnsSelector" : [ "account_id" ],
-            "conditions" : [ {
-              "alias" : "sv_go_account_report",
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id = sv_go_account_report.account_id"
-              },
-              "joinType" : "inner"
-            } ],
-            "expressions" : [ {
-              "expression" : {
-                "expression" : "sv_go_account_report.TOTAL_SPEND"
-              },
-              "alias" : "TOTAL_SPEND"
-            }, {
-              "expression" : {
-                "expression" : "sv_go_account_report.TOTAL_CLICKS"
-              },
-              "alias" : "TOTAL_CLICKS"
-            }, {
-              "expression" : {
-                "expression" : "sv_go_account_report.TOTAL_IMPRESSIONS"
-              },
-              "alias" : "TOTAL_IMPRESSIONS"
-            }, {
-              "expression" : {
-                "expression" : "sv_go_account_report.currency_code"
-              },
-              "alias" : "currency_code"
-            }, {
-              "expression" : {
-                "expression" : "sv_go_account_report.updated_at"
-              },
-              "alias" : "updated_at"
-            }, {
-              "expression" : {
-                "expression" : "sv_go_account_report.source_relation"
-              },
-              "alias" : "source_relation"
-            }, {
-              "expression" : {
-                "expression" : "sv_go_account_report.account_name"
-              },
-              "alias" : "account_name"
-            }, {
-              "expression" : {
-                "expression" : "sv_go_account_report.auto_tagging_enabled"
-              },
-              "alias" : "auto_tagging_enabled"
-            }, {
-              "expression" : {
-                "expression" : "sv_go_account_report.time_zone"
-              },
-              "alias" : "time_zone"
-            }, {
-              "expression" : {
-                "expression" : "sv_go_account_report.is_most_recent_record"
-              },
-              "alias" : "is_most_recent_record"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.campaign_group_id"
-              },
-              "alias" : "campaign_group_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.name"
-              },
-              "alias" : "name"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.version_tag"
+                "expression" : "linkedin_account_history_data_1.version_tag"
               },
               "alias" : "version_tag"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.id"
-              },
-              "alias" : "id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.last_modified_time"
-              },
-              "alias" : "last_modified_time"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.account_id"
-              },
-              "alias" : "account_id"
-            }, {
-              "expression" : {
-                "expression" : "linkedin_campaign_history_data.created_time"
-              },
-              "alias" : "created_time"
             } ],
-            "headAlias" : "sv_go_account_report",
+            "headAlias" : "linkedin_campaign_history_data",
             "allowSelection" : false
           },
-          "joinColumns" : [ "account_id" ],
+          "joinColumns" : [ "id", "created_time", "last_modified_time" ],
           "isRecommended" : false
         } ]
       } ]
@@ -1201,7 +961,7 @@
         "comment" : "Reformats account data from the 'linkedin' source relation for analysis. It includes account ID, name, currency, version tag, status, type, last modified time, and created time."
       },
       "properties" : {
-        "columnsSelector" : [ "c9J4a9xL##id", "c9J4a9xL##name", "c9J4a9xL##currency", "c9J4a9xL##version_tag", "c9J4a9xL##last_modified_time", "c9J4a9xL##created_time" ],
+        "columnsSelector" : [ ],
         "expressions" : [ {
           "expression" : {
             "expression" : "'linkedin'"
@@ -1345,12 +1105,12 @@
         "autoUpdateOnRun" : false
       }
     },
-    "7PjZQEjq4hCAgP3cJbCnB" : {
-      "id" : "7PjZQEjq4hCAgP3cJbCnB",
+    "r2vN30a4-r2S7aQ1Dsh-t" : {
+      "id" : "r2vN30a4-r2S7aQ1Dsh-t",
       "component" : "Source",
       "metadata" : {
-        "label" : "linkedin_account_history_data",
-        "slug" : "linkedin_account_history_data",
+        "label" : "linkedin_account_history_data_1",
+        "slug" : "linkedin_account_history_data_1",
         "x" : 20,
         "y" : 20,
         "phase" : 0
@@ -1359,14 +1119,15 @@
         "table" : {
           "name" : "linkedin_account_history_data",
           "sourceType" : "Source",
-          "sourceName" : "linkedin",
-          "alias" : ""
+          "sourceName" : "dais_2024_analytics_data_raw.analytics_data",
+          "alias" : "",
+          "additionalProperties" : null
         }
       },
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "nTiMZEuH8eus2o-fFD-IX",
+          "id" : "N6mEPgFIJpe5WIVqMuOA_",
           "schema" : {
             "providerType" : "databricks",
             "fields" : [ {
@@ -1415,9 +1176,9 @@
     "target" : "br_li_account_history##vg2onY2x",
     "targetPort" : "UpG0AlDe"
   }, {
-    "id" : "jLZ72fKJvcTjmT_MXWWy6$$hQ37rSWIWOX7fYXoZrhly",
-    "source" : "7PjZQEjq4hCAgP3cJbCnB",
-    "sourcePort" : "nTiMZEuH8eus2o-fFD-IX",
+    "id" : "N6krrzHGYF-jKC5s-DBVL$$XmccqDT3-R1LGbHUGDkR6",
+    "source" : "r2vN30a4-r2S7aQ1Dsh-t",
+    "sourcePort" : "N6mEPgFIJpe5WIVqMuOA_",
     "target" : "Reformat_1##A5TvK22C",
     "targetPort" : "c9J4a9xL"
   } ],

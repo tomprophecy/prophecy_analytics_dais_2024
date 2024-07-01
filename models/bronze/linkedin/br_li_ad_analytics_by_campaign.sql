@@ -1,8 +1,8 @@
-WITH linkedin_ad_analytics_by_campaign_data AS (
+WITH linkedin_ad_analytics_by_campaign_data_1 AS (
 
   SELECT * 
   
-  FROM {{ source('linkedin', 'linkedin_ad_analytics_by_campaign_data') }}
+  FROM {{ source('dais_2024_analytics_data_raw.analytics_data', 'linkedin_ad_analytics_by_campaign_data') }}
 
 ),
 
@@ -17,7 +17,7 @@ cleanup AS (
     CAST(impressions AS INT) AS impressions,
     CAST(cost_in_usd AS FLOAT) AS cost
   
-  FROM linkedin_ad_analytics_by_campaign_data AS dt_li_ad_analytics_by_campaign
+  FROM linkedin_ad_analytics_by_campaign_data_1 AS dt_li_ad_analytics_by_campaign
 
 )
 

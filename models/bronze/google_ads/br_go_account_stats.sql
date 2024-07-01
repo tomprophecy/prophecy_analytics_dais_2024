@@ -1,8 +1,8 @@
-WITH account_stats_data AS (
+WITH google_account_stats_data AS (
 
   SELECT * 
   
-  FROM {{ source('google', 'google_account_stats_data') }}
+  FROM {{ source('dais_2024_analytics_data_raw.analytics_data', 'google_account_stats_data') }}
 
 ),
 
@@ -19,7 +19,7 @@ cleanup AS (
     CAST(cost_micros AS FLOAT) / 1000000 AS spend,
     impressions AS impressions
   
-  FROM account_stats_data AS dt_go_account_stats
+  FROM google_account_stats_data AS dt_go_account_stats
 
 )
 

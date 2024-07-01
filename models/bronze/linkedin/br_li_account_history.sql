@@ -1,8 +1,8 @@
-WITH linkedin_account_history_data AS (
+WITH linkedin_account_history_data_1 AS (
 
   SELECT * 
   
-  FROM {{ source('linkedin', 'linkedin_account_history_data') }}
+  FROM {{ source('dais_2024_analytics_data_raw.analytics_data', 'linkedin_account_history_data') }}
 
 ),
 
@@ -20,7 +20,7 @@ linkedin_account_data AS (
     last_modified_time AS last_modified_time,
     created_time AS created_time
   
-  FROM linkedin_account_history_data AS account_history_data
+  FROM linkedin_account_history_data_1 AS account_history_data
 
 )
 
